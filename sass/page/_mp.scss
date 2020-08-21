@@ -458,6 +458,7 @@
                 height: auto;
                 margin: 0 auto 1em;
                 padding: 0;
+                padding-bottom: 3em;
             }
             a {
                 display: block;
@@ -835,6 +836,11 @@
                     .info {
                         font-size: .813rem;
                     }
+                }
+            }
+            .slick-prev,.slick-next{
+                @include screen('mobile') {
+                    display:none;
                 }
             }
         }
