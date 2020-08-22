@@ -2,6 +2,7 @@
 // 首頁區塊設定
 .section {
     padding: 4em 0 3em;
+    position:relative;
     @include screen('mobile') {
         padding: 2em 0;
     }
