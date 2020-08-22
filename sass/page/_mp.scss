@@ -3,7 +3,7 @@
 .section {
     padding: 4em 0 3em;
     @include screen('mobile') {
-        padding: 4em 0 0;
+        padding: 2em 0;
     }
     h2 {
         color: #222;
@@ -72,6 +72,9 @@
     min-height: 500px;
     position: relative;
     overflow: hidden;
+    @include screen('mobile') {
+        padding-bottom: 0em;
+    }
     &.effect {
         &:after {
             left: 0;
@@ -458,7 +461,6 @@
                 height: auto;
                 margin: 0 auto 1em;
                 padding: 0;
-                padding-bottom: 3em;
             }
             a {
                 display: block;
@@ -509,6 +511,10 @@
                     width: 100%;
                     transition: .3s ease-out;
                     box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
+                    @include screen('mobile') {
+                        padding:2em 1em;
+                        min-height:auto;
+                    }
                     &:after {
                         position: absolute;
                         bottom: 0;
@@ -817,6 +823,12 @@
                         background: rgba(0, 0, 0, .8);
                     }
                 }
+            }
+            .slick-prev{
+                left: 0;
+            }
+            .slick-next{
+                right: 0;
             }
             .img-container {
                 @include aspect-ratio(16, 9);
