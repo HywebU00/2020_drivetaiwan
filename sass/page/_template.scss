@@ -22,7 +22,7 @@ body {
     overflow: hidden;
     overflow-y: auto;
     @include screen('mobile') {
-        background: #FFF;
+        background: #000;
         overflow: hidden;
         overflow-y: auto;
     }
