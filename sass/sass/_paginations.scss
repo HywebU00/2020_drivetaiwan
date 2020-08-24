@@ -17,7 +17,7 @@
             display: inline-block;
             min-width: 40px;
             height: 40px;
-            margin-bottom: 5px;
+            margin: 0 1px 5px;
             list-style: none;
             @include box-sizing();
             a {
@@ -143,7 +143,7 @@
     .items {
         display: inline-block;
         vertical-align: middle;
-        
+
         a {
             padding: 0 5px;
             color: $primaryColor;
