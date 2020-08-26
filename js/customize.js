@@ -38,8 +38,58 @@ $(function() {
         ease: 'ease',
         pauseOnHover: false
     });
-    // 廣告輪播
-    $('.topicContent .north .roadSlider').slick({
+    // 主題公路
+    $('.topicContent .roadSlider').slick({
+        mobileFirst: true,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 200,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }]
+    });
+     // 影音專區
+    $('.videoSlider').slick({
         mobileFirst: true,
         dots: false,
         infinite: true,
@@ -182,6 +232,7 @@ $(function() {
         arrows: false,
         fade: true,
         swipe: false,
+        arrows: true,
         swipeToSlide: false,
         lazyLoad: 'ondemand',
         asNavFor: '.Slider-nav',
@@ -195,7 +246,31 @@ $(function() {
         arrows: true,
         lazyLoad: 'ondemand',
         focusOnSelect: true,
-        infinite: true
+        infinite: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        }, {
+            breakpoint: 545,
+            settings: {
+                arrows: true,
+                slidesToShow: 3,
+                slidesToScroll: 1
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                arrows: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: false
+            }
+        }]
     });
     //右側按鈕
     if ($('.quickDot').length > 0) {
@@ -216,6 +291,11 @@ $(function() {
         });
         $('.gotoPhoto').click(function(e) {
             $('html, body').stop(true, true).animate({ scrollTop: $('.photo').offset().top }, 600, 'linear');
+            $(this).blur();
+            e.preventDefault();
+        });
+         $('.gotoVideo').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.video').offset().top }, 600, 'linear');
             $(this).blur();
             e.preventDefault();
         });

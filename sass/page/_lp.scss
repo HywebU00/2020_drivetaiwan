@@ -76,10 +76,10 @@
         li {
             @include make_col(3, 1);
             @include screen('tablet') {
-               @include make_col(2, 1);
+                @include make_col(2, 1);
             }
             @include screen('xs_mobile') {
-               @include make_col(1, 1);
+                @include make_col(1, 1);
             }
             overflow: visible;
             a {
@@ -155,9 +155,22 @@
                 width: 100%;
                 max-width: 90%;
                 margin: 0 auto 1em;
+                a {
+                    &:hover, &:focus {
+                        .img-container {
+                            img {
+                                opacity: 1;
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
                 .img-container {
                     margin-bottom: 0;
+                    background:#000;
                     img {
+                        transition: .3s ease-out;
+                        opacity: .85;
                         object-fit: cover;
                     }
                 }

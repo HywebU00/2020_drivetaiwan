@@ -4,6 +4,36 @@ h1.title, h2.title {
     line-height: 1.25em;
     margin: .4em 0;
 }
+.featureSlider{
+    margin-bottom: 1.5em;
+}
+ .cp_story, .cp_topic {
+    @extend %clearfix;
+        h3 {
+            font-size: 2.5rem;
+            text-align: center;
+            line-height: 1.45em;
+            margin: 0 auto .5rem;
+        }
+        .cp_subContent {
+            max-width: 1000px;
+            border-top: $primaryColor 1px solid;
+            padding: 1.5em 2.5em;
+            line-height: 2em;
+            margin: 0 auto 1em;
+            color:#555;
+            text-align: center;
+            p{
+                font-size:1.25rem;
+            }
+            @include screen('mobile') {
+                padding: 1.5em;
+                p{
+                    font-size:1.125em;
+                }
+            }
+        }
+    }
 .cp {
     .pic {
         float: left;

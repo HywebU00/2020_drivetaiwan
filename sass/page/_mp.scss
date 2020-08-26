@@ -2,7 +2,7 @@
 // 首頁區塊設定
 .section {
     padding: 4em 0 3em;
-    position:relative;
+    position: relative;
     @include screen('mobile') {
         padding: 2em 0;
     }
@@ -73,6 +73,9 @@
     min-height: 500px;
     position: relative;
     overflow: hidden;
+    h2{
+        margin-bottom: 1rem;
+    }
     @include screen('mobile') {
         padding-bottom: 0em;
     }
@@ -166,7 +169,7 @@
                 font-size: .813em;
                 font-weight: 600;
                 z-index: 99;
-                display:none;
+                display: none;
             }
         }
         .north {
@@ -263,10 +266,7 @@
         overflow: hidden;
         padding: 2.5em 4em 3em;
         background: rgba(0, 0, 0, .1);
-        transition:.3s ease-out;
-        &:hover{
-            background: rgba(0, 0, 0, .3);
-        }
+        transition: .3s ease-out;
         @include screen('mobile') {
             max-width: 100%;
             margin: 0 auto;
@@ -285,7 +285,7 @@
             }
         }
         .item {
-            margin: 0 1em;
+            margin: 0 1em 2em;
             background: rgba(255, 255, 255, 1);
             box-shadow: 0px 0px 5px rgba(0, 0, 0, .25);
             position: relative;
@@ -330,7 +330,7 @@
                     display: block;
                     font-size: 1.5rem;
                     font-weight: 600;
-                    line-height: 1.4em;
+                    line-height: 1.5em;
                     margin: 1.15rem 1rem 2rem;
                 }
                 &:after {
@@ -516,8 +516,8 @@
                     transition: .3s ease-out;
                     box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
                     @include screen('mobile') {
-                        padding:2em 1em;
-                        min-height:auto;
+                        padding: 2em 1em;
+                        min-height: auto;
                     }
                     &:after {
                         position: absolute;
@@ -584,7 +584,7 @@
     }
 }
 // playfun
-.playfun {
+.playfun, .wantknow {
     background: #FFF;
     min-height: 200px;
     max-height: 300px;
@@ -592,7 +592,7 @@
     padding: 1em 0;
     @include screen('tablet') {
         max-height: 1000px !important;
-     }
+    }
     .container {
         h2 {
             position: absolute;
@@ -618,23 +618,23 @@
                 height: 100%;
             }
             @include screen('tablet') {
-                position:relative;
+                position: relative;
                 left: 0;
-                width:300px;
+                width: 300px;
                 margin: 0 auto 1rem;
                 padding: 0;
-                &:before{
-                    display:none;
+                &:before {
+                    display: none;
                 }
             }
             @include screen('mobile') {
-                max-width:320px;
+                max-width: 320px;
             }
         }
         .playfunContent {
             position: absolute;
             left: 50%;
-            width:45%;
+            width: 45%;
             padding-top: 4em;
             z-index: 5;
             ul {
@@ -643,49 +643,48 @@
                     display: block;
                     margin-bottom: .5em;
                     border-bottom: 1px dashed #DDD;
-                    padding:.5em 0;
-                    a{
-                        font-size:1.5rem;
-                        color:#222;
+                    padding: .5em 0;
+                    a {
+                        font-size: 1.5rem;
+                        color: #222;
                         font-weight: bold;
-                        position:relative;
-                        display:block;
+                        position: relative;
+                        display: block;
                         padding-left: 1.25em;
                         @include screen('mobile') {
-                            font-size:1.25rem;
+                            font-size: 1.25rem;
                         }
-                        &:hover,&:focus {
-                            color:$aColor;
+                        &:hover, &:focus {
+                            color: $aColor;
                         }
-                        &:before{
-                            position:absolute;
-                            width:1em;
+                        &:before {
+                            position: absolute;
+                            width: 1em;
                             height: 1em;
-                            background:url(../images/icon_reddot.svg) no-repeat center center;
-                            background-size:contain;
-                            content:"";
-                            margin-right:.5em;
-                            left:0;
-                            top:0;
+                            background: url(../images/icon_reddot.svg) no-repeat center center;
+                            background-size: contain;
+                            content: "";
+                            margin-right: .5em;
+                            left: 0;
+                            top: 0;
                         }
-
                     }
                 }
             }
             @include screen('tablet') {
-                position:relative;
-                width:90%;
-                left:auto;
+                position: relative;
+                width: 90%;
+                left: auto;
                 margin: 0 auto 1em;
-                padding:0em;
-                ul{
-                    max-width:600px;
+                padding: 0em;
+                ul {
+                    max-width: 600px;
                     margin: 0 auto;
                 }
             }
             @include screen('mobile') {
-                ul{
-                    max-width:90%;
+                ul {
+                    max-width: 90%;
                     margin: 0 auto;
                 }
             }
@@ -696,7 +695,7 @@
         position: relative;
         z-index: 1;
         @include screen('mobile') {
-            display:none;
+            display: none;
         }
     }
     .road-wrap .road {
@@ -754,6 +753,12 @@
     .road-wrap .lane>div:nth-child(11) {
         height: 15px;
     }
+}
+.wantknow {
+    min-height: 200px;
+    max-height: 500px;
+    overflow: hidden;
+    padding: 1em 0;
 }
 // photo
 .photo {
@@ -821,20 +826,20 @@
         }
         .photoSlider {
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
-            a {
-                &:hover, &:focus {
-                    .caption {
-                        background: rgba(0, 0, 0, .8);
-                    }
+            &:hover, &:focus {
+                .caption {
+                    background: #FFF;
+                    color: #222;
                 }
             }
-            .slick-prev{
-                left: 0;
+            .slick-prev {
+                left: 15px;
             }
-            .slick-next{
-                right: 0;
+            .slick-next {
+                right: 15px;
             }
             .img-container {
+                border: 10px solid #FFF;
                 @include aspect-ratio(16, 9);
                 .caption {
                     transition: .3s ease-out;
@@ -854,9 +859,9 @@
                     }
                 }
             }
-            .slick-prev,.slick-next{
+            .slick-prev, .slick-next {
                 @include screen('mobile') {
-                    display:none;
+                    display: none;
                 }
             }
         }
@@ -877,6 +882,86 @@
     }
     50% {
         transform: translateX(-10px) rotate(15deg);
+    }
+}
+.video {
+    background: url(../images/video_bg.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+    h2 {
+        color: #FFF;
+        small {
+            color: #FFF;
+        }
+    }
+    .videoSlider {
+        padding: 0 5em;
+        .item {
+            margin: 0 1em;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, .25);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
+            margin-bottom: 2em;
+            position: relative;
+            &:focus {
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
+                outline: none;
+            }
+            a {
+                display: block;
+                color: #000;
+                &:hover, &:focus {
+                    color: $aHover;
+                    .img-container {
+                        &:after {
+                            opacity: 1;
+                        }
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+            .img-container {
+                margin-bottom: 0;
+                background: #000;
+                &:after {
+                    position: absolute;
+                    width: 4em;
+                    height: 4em;
+                    background: url(../images/icon_play.svg) no-repeat center center;
+                    background-size: contain;
+                    content: "";
+                    left: 50%;
+                    top: 50%;
+                    margin-left: -2em;
+                    margin-top: -2em;
+                    z-index: 2;
+                    opacity: .75;
+                    transition: .3s ease-out;
+                }
+                img {
+                    transition: .3s ease-out;
+                    object-fit: cover;
+                }
+            }
+            .description {
+                position: relative;
+                height: 10rem;
+                padding-top: 1em;
+                h3 {
+                    height: 3em;
+                    overflow: hidden;
+                    display: block;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    line-height: 1.5em;
+                    margin: 0rem 1rem .5rem;
+                }
+            }
+        }
     }
 }
 // 首頁輪播

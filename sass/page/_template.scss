@@ -59,12 +59,36 @@ body {
     padding-top: 6em;
     @include screen('tablet') {
         padding-top: 60px;
-        background:#FFF;
+        background: #FFF;
+    }
+    .cp_story, .cp_topic {
+        h3 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        .cp_subContent {
+            max-width: 1000px;
+            border-top: $primaryColor 1px solid;
+            padding: 1.5em 2.5em;
+            line-height: 2em;
+            margin: 0 auto 1em;
+            color:#555;
+            text-align: center;
+            p{
+                font-size:1.25rem;
+            }
+            @include screen('mobile') {
+                padding: 1.5em;
+                p{
+                    font-size:1.125em;
+                }
+            }
+        }
     }
     >.container {
-        @include gutter(0); //gutter 代表左右要留白
+        @include gutter; //gutter 代表左右要留白
     }
-    .inner_img {
+    .inner_img, .feature_img {
         height: 150px;
         width: 100%;
         margin-bottom: 1em;
@@ -77,6 +101,18 @@ body {
             object-fit: cover;
             @include screen('xs_mobile') {
                 height: 120px;
+            }
+        }
+    }
+    .feature_img {
+        height: 400px;
+        @include screen('xs_mobile') {
+            height: 400px;
+        }
+        img {
+            height: 400px;
+            @include screen('xs_mobile') {
+                height: 400px;
             }
         }
     }
