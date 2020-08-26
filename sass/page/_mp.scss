@@ -264,13 +264,22 @@
     .topicContent {
         width: auto;
         overflow: hidden;
-        padding: 2.5em 4em 3em;
+        padding: 1.5em 4em 3em;
         background: rgba(0, 0, 0, .1);
         transition: .3s ease-out;
+        h3{
+            text-align: center;
+            font-size:1.5rem;
+            img{
+                width: 1em;
+                height: 1em;
+                display:inline-block;
+            }
+        }
         @include screen('mobile') {
             max-width: 100%;
             margin: 0 auto;
-            padding: 2.5em 2em 4em;
+            padding: 1.5em 2em 4em;
         }
         .slick-prev {
             left: -40px;
@@ -329,6 +338,7 @@
                     overflow: hidden;
                     display: block;
                     font-size: 1.5rem;
+                    text-align: left;
                     font-weight: 600;
                     line-height: 1.5em;
                     margin: 1.15rem 1rem 2rem;
@@ -848,6 +858,9 @@
                     @include text-overflow;
                     text-align: left;
                     line-height: 1em;
+                    @include screen('xs_mobile') {
+                        display:none;
+                    }
                     .title {
                         display: block;
                         font-size: 1.5rem;
@@ -898,6 +911,19 @@
     }
     .videoSlider {
         padding: 0 5em;
+        @include screen('xs_mobile') {
+            padding:0 2em;
+        }
+        .slick-prev{
+            @include screen('xs_mobile') {
+                left:2px;
+            }
+        }
+        .slick-next{
+            @include screen('xs_mobile') {
+                right:2px;
+            }
+        }
         .item {
             margin: 0 1em;
             background: rgba(255, 255, 255, 1);
