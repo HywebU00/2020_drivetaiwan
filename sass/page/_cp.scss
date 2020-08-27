@@ -41,6 +41,11 @@ h1.title, h2.title {
         }
     }
 }
+.change,.othervideo{
+    @include screen('mobile') {
+        padding:1em 0 !important;
+    }
+}
 .cp {
     .pic {
         float: left;
@@ -443,6 +448,9 @@ div.tag {
 }
 .basic {
     padding: 1em 0;
+    @include screen('mobile') {
+        padding:1em 0 !important;
+    }
     .basicContent {
         .googlemap {
             float: left;

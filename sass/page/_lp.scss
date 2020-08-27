@@ -1,4 +1,17 @@
 .lp {
+    .road_search{
+        border-top: 1px solid #DDD;
+        border-bottom: 1px solid #DDD;
+        padding:1em 0;
+        text-align: center;
+        form{
+            display:block;
+            margin: 0 auto;
+            select{
+                min-width:200px;
+            }
+        }
+    }
     table {
         td {
             a {
