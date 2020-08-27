@@ -7,7 +7,7 @@ h1.title, h2.title {
 .featureSlider {
     margin-bottom: 2.5em !important;
 }
-.cp_story, .cp_topic, .change, .othervideo {
+.cp_story, .cp_topic, .change, .othervideo, .basic {
     @extend %clearfix;
     h3 {
         font-size: 2.5rem;
@@ -17,6 +17,10 @@ h1.title, h2.title {
         padding-bottom: 1rem;
         border-bottom: $primaryColor 1px solid;
         max-width: 600px;
+        @include screen('xs_mobile') {
+            max-width:300px;
+            margin: 0 auto .25em;
+        }
     }
     .cp_subContent {
         max-width: 1000px;
@@ -66,12 +70,6 @@ h1.title, h2.title {
             display: block;
             margin-bottom: .5em;
         }
-    }
-    &.small_size {
-        font-size: .938em;
-    }
-    &.large_size {
-        font-size: 1.125em;
     }
     table {
         background: #FFF;
@@ -424,13 +422,11 @@ div.tag {
         }
     }
 }
-.change {
+.change, .othervideo {
     position: relative;
     overflow: hidden;
-    margin-bottom: 1.5em !important;
+    padding: 2em 0 1em;
     max-width: 100% !important;
-    background:url(../images/video_bg.jpg) no-repeat center center;
-    background-size:cover;
     h3 {
         margin-bottom: .5rem;
     }
@@ -445,12 +441,121 @@ div.tag {
         z-index: 1;
     }
 }
-.changeSlider, .othervideo {
+.basic {
+    padding: 1em 0;
+    .basicContent {
+        .googlemap {
+            float: left;
+            width: 500px;
+            height: 400px;
+            margin: 0 1em 1em 0;
+            @include screen('mobile') {
+                float:none;
+                width: 100%;
+                margin: 0 auto 1em;
+            }
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        @include screen('xs_mobile') {
+            @include gutter;
+        }
+    }
+    .basic_info {
+        overflow: hidden;
+        &>ul {
+            display: flex;
+            flex-flow: row wrap;
+            margin: 0;
+            padding: 0;
+            &>li {
+                flex: 1 1 48%;
+                outline: 1px solid red;
+                list-style: none;
+                padding: 1em;
+                @include screen('mobile') {
+                    flex: 1 1 100%;
+                }
+                h4 {
+                    display: block;
+                    font-size: 1.5rem;
+                    margin: 0 0 1em;
+                }
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        display: inline-block;
+                        vertical-align: middle;
+                        img {
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right: .5em;
+                        }
+                    }
+                }
+            }
+        }
+        .weather {
+            padding: 1em;
+            display: flex;
+            flex-flow:row wrap;
+            h4 {
+                flex: 1 1 100%;
+                font-size: 1.5rem;
+                margin: 0 0 .5em;
+            }
+            .weather-container {
+                flex: 0 1 calc(100% / 7);
+                padding-top: 7px;
+                line-height: 15px;
+                line-height: 1;
+                text-align: center;
+                font-weight: 400;
+                height: 90px;
+                width: 75px;
+                border-radius: 1px;
+                @include screen('mobile') {
+                    flex: 0 1 75px;
+                }
+                &.weather-active {
+                    border: 1px solid #e9e9e9;
+                    background: #fcfcfc;
+                }
+                &.gray {
+                    color: #bababa !important;
+                }
+                .weather-week {
+                    font-size: .813rem;
+                    color: #999;
+                }
+                .weather-temperature {
+                    display: flex;
+                    font-size: .813rem;
+                    justify-content: center;
+                    .darkGray {
+                        color: #666;
+                        flex: 0 1 60%;
+                        text-align: right;
+                    }
+                    .gray {
+                        color: #BBB;
+                        flex: 0 1 40%;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+.changeSlider, .othervideoSlider, .basicContent {
     padding: 1em 2em;
     margin: 0 auto;
     position: relative;
     z-index: 2;
-    max-width: $container-max;
+    max-width: 1200px;
     .slick-prev {
         left: 5px;
         background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, .45);
@@ -488,6 +593,7 @@ div.tag {
                 line-height: 1.5em;
                 margin: 0rem 1rem .5rem;
                 border: none;
+                text-shadow: none;
                 color: #222;
             }
         }
@@ -499,6 +605,56 @@ div.tag {
                     color: $aHover;
                 }
             }
+        }
+    }
+}
+.othervideo {
+    background: url(../images/othervideo_bg.jpg) no-repeat top center;
+    background-size: cover;
+    &:after {
+        display: none;
+    }
+    h3 {
+        color: #FFF;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, .75);
+        border-bottom: 1px solid #FFF;
+    }
+}
+.othervideoSlider {
+    a {
+        &:hover, &:focus {
+            color: $aHover;
+            .img-container {
+                &:after {
+                    opacity: 1;
+                }
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    .img-container {
+        margin-bottom: 0;
+        background: #000;
+        &:after {
+            position: absolute;
+            width: 4em;
+            height: 4em;
+            background: url(../images/icon_play.svg) no-repeat center center;
+            background-size: contain;
+            content: "";
+            left: 50%;
+            top: 50%;
+            margin-left: -2em;
+            margin-top: -2em;
+            z-index: 2;
+            opacity: .75;
+            transition: .3s ease-out;
+        }
+        img {
+            transition: .3s ease-out;
+            object-fit: cover;
         }
     }
 }
