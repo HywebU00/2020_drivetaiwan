@@ -1,6 +1,9 @@
 .thumbnail {
     box-shadow: 0 0 3em -1em rgba(0, 0, 0, 0.5);
     background: #FFF;
+    @include screen('xs_mobile') {
+        box-shadow: 0 0 2em -1em rgba(0, 0, 0, 0.5);
+    }
     a {
         display: block;
         @include aSetting(#555);
