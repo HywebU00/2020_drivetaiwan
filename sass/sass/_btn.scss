@@ -12,7 +12,7 @@ $btn-radius: 4px;
 // 按鈕的共用設定
 @mixin btn_setting($btn-bg: #eee, $btn-font-color: $btn-font-color) {
     background-color: $btn-bg;
-      border: 1px solid darken($btn-bg, 0);
+    border: 1px solid darken($btn-bg, 0);
     //   border-bottom: 2px solid darken($btn-bg, 15);
     color: $btn-font-color;
     @include border-radius($btn-radius);

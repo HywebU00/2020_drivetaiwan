@@ -774,12 +774,8 @@
 .photo {
     position: relative;
     overflow: hidden;
-    background: url(../images/photo_bg.jpg) no-repeat top center fixed;
+    background: url(../images/photo_bg.jpg) no-repeat top center;
     background-size: cover;
-    @include screen('tablet') {
-        background: url(../images/photo_bg.jpg) no-repeat top center;
-        background-size: cover;
-    }
     &.effect {
         &:after {
             left: 0;

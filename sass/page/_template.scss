@@ -4,7 +4,7 @@
 html {
     scroll-behavior: smooth;
     @include screen('mobile') {
-        background: #000;
+        background: #FFF;
     }
 }
 body {
