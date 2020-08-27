@@ -3,7 +3,7 @@
         content: "";
         display: inline-block;
         height: 1em;
-        width: 1em; 
+        width: 1em;
         vertical-align: middle;
         speak: none;
     }
@@ -160,4 +160,7 @@
 }
 .i_minus{
     @include hyui_icon('icon_minus');
+}
+.i_location{
+    @include hyui_icon('icon_location');
 }

@@ -1,14 +1,54 @@
 .lp {
-    .road_search{
+    .road_search {
         border-top: 1px solid #DDD;
         border-bottom: 1px solid #DDD;
-        padding:1em 0;
+        padding: 1em 0;
         text-align: center;
-        form{
-            display:block;
+        form {
+            display: block;
             margin: 0 auto;
-            select{
-                min-width:200px;
+            select {
+                min-width: 200px;
+            }
+        }
+    }
+    .taiwan_map {
+        overflow: hidden;
+        .map {
+            float: left;
+            width:40%;
+            min-width: 450px;
+            height: 500px;
+            background: #DDD;
+            margin: 0 1em 1em 0;
+            @include screen('mobile') {
+                display:none;
+            }
+        }
+        .county_list {
+            overflow: hidden;
+            p{
+                margin: 0 0 1em;
+            }
+            ul {
+                @include li-reset;
+                display: flex;
+                flex-flow: row wrap;
+                li {
+                    flex: 0 1 calc(100% / 3 - .5em);
+                    margin: 0 .25em .5em;
+                    a {
+                        display: block;
+                        padding: .5em;
+                        background: #F1F1F1;
+                        color: #222;
+                        text-align: center;
+                        &:hover,&:focus {
+                            background:$primaryColor;
+                            color:#FFF;
+                        }
+                    }
+                }
             }
         }
     }
@@ -180,7 +220,7 @@
                 }
                 .img-container {
                     margin-bottom: 0;
-                    background:#000;
+                    background: #000;
                     img {
                         transition: .3s ease-out;
                         opacity: .85;
