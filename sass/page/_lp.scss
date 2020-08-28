@@ -18,8 +18,7 @@
             float: left;
             width: 40%;
             min-width: 450px;
-            height: 560px;
-            background: #DDD;
+            height: 600px;
             margin: 0 1em 1em 0;
             position:relative;
             @include screen('mobile') {
@@ -27,10 +26,15 @@
             }
             .el{
                 position:absolute;
+                transition:.3s ease-out;
                 img{
                     width: 100%;
                     height: 100%;
                     position:absolute;
+                }
+                &.active{
+                    transform:translate(-10px,-10px);
+                    z-index: 2;
                 }
             }
             .taipei{
@@ -51,6 +55,79 @@
                 height: 92px;
                 top:33px;
                 right: 91px;
+            }
+            .hsinchucounty{
+                width: 79px;
+                height: 91px;
+                top:64px;
+                right: 101px;
+            }
+            .hsinchusi{
+                width: 19px;
+                height: 24px;
+                top:81px;
+                right: 165px;
+                z-index: 1;
+            }
+            .miaoli{
+                width: 103px;
+                height: 79px;
+                top:101px;
+                right: 122px;
+            }
+            .taichung{
+                width: 154px;
+                height: 87px;
+                top:143px;
+                right: 90px;
+            }
+            .changhwa{
+                width: 66px;
+                height: 72px;
+                top:192px;
+                right: 214px;
+            }
+            .nantuo{
+                width: 121px;
+                height: 142px;
+                top:182px;
+                right: 104px;
+            }
+            .yunlin{
+                width: 99px;
+                height: 59px;
+                top:253px;
+                right: 204px;
+            }
+            .chiayicounty{
+                width: 134px;
+                height: 73px;
+                top:290px;
+                right: 170px;
+            }
+            .chiayisi{
+                width: 24px;
+                height: 14px;
+                top:308px;
+                right: 235px;
+            }
+            .tainan{
+                width: 105px;
+                height: 95px;
+                top:328px;
+                right: 214px;
+            }
+            .kaoshiung{
+                width: 143px;
+                height: 177px;
+                top:319px;
+                right: 156px;
+            }
+            .pingtung{
+                width: 83px;
+                height: 174px;
+                top:422px;
+                right: 177px;
             }
             .keelung{
                 width: 23px;
@@ -78,6 +155,54 @@
                 top:322px;
                 right: 85px;
             }
+            .lienchian{
+                width:150px;
+                height: 150px;
+                top:0;
+                left:0;
+                border:1px solid #DDD;
+                background:#F1F1F1;
+                border-radius:.2em;
+                &.active{
+                    transform:translate(20px,-15px);
+                }
+                img{
+                    width:80%;
+                    height: 80%;
+                    left:10%;
+                    top:10%;
+                }
+            }
+            .kinmen{
+                width:150px;
+                height: 150px;
+                top:160px;
+                left:0;
+                border:1px solid #DDD;
+                background:#F1F1F1;
+                border-radius:.2em;
+                &.active{
+                    transform:translate(20px,-15px);
+                }
+                img{
+                    width:80%;
+                    height: 80%;
+                    left:10%;
+                    top:10%;
+                }
+            }
+            .penghu{
+                width:150px;
+                height: 150px;
+                top:320px;
+                left:0;
+                border:1px solid #DDD;
+                background:#F1F1F1;
+                border-radius:.2em;
+                &.active{
+                    transform:translate(20px,-15px);
+                }
+            }
         }
         .county_list {
             overflow: hidden;
@@ -97,7 +222,7 @@
                     margin: 0 .25em .5em;
                     a {
                         display: block;
-                        padding: .5em;
+                        padding: .75em .5em;
                         background: #F1F1F1;
                         color: #222;
                         text-align: center;

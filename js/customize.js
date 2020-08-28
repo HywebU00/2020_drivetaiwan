@@ -2,6 +2,14 @@
 $(function() {
     // 首頁輪播
     // kv
+    $('.county_list').find('ul li a').hover(function() {
+        var COUNTYNAME = $(this).attr('class');
+        $('.taiwan_map').find('.map').find('.'+ COUNTYNAME).addClass('active');
+    }, function() {
+        $('.taiwan_map').find('.el').removeClass('active');
+    });
+
+
     var $carousel = $('.mpSlider').slick({
         mobileFirst: true,
         dots: false,
