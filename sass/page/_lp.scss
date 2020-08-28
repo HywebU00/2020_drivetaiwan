@@ -4,6 +4,7 @@
         border-bottom: 1px solid #DDD;
         padding: 1em 0;
         text-align: center;
+        @extend %clearfix;
         form {
             display: block;
             margin: 0 auto;
