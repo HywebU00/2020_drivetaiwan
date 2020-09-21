@@ -264,7 +264,7 @@
     .topicContent {
         width: auto;
         overflow: hidden;
-        padding: 1.5em 4em 3em;
+        padding: 2.5em 4em;
         background: rgba(0, 0, 0, .1);
         transition: .3s ease-out;
         h3 {
@@ -331,8 +331,19 @@
             }
             .description {
                 position: relative;
-                height: 10rem;
+                height: 16rem;
                 padding-top: 1em;
+                p{
+                    height: 6em;
+                    overflow: hidden;
+                    display: block;
+                    font-size: .938rem;
+                    color:#666;
+                    text-align: left;
+                    font-weight: 600;
+                    line-height: 1.5em;
+                    margin: 0rem 1rem 2rem;
+                }
                 h3 {
                     height: 3em;
                     overflow: hidden;
@@ -341,7 +352,7 @@
                     text-align: left;
                     font-weight: 600;
                     line-height: 1.5em;
-                    margin: 1.15rem 1rem 2rem;
+                    margin: 1.15rem 1rem .5rem;
                 }
                 &:after {
                     position: absolute;

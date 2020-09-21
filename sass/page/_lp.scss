@@ -13,6 +13,308 @@
             }
         }
     }
+    .secret_map {
+        overflow: hidden;
+        display: flex;
+        flex-flow: row wrap;
+        @media screen and (max-width: 600px) {
+            flex-flow: row wrap;
+        }
+        p{
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 100%;
+            min-width: 100%;
+            margin: 0 0 1em;
+            text-align: center;
+        }
+        .google_map {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 450px;
+            min-width: 450px;
+            height: 600px;
+            margin: 0 0em 1em 0;
+            position: relative;
+            @include screen('notebook') {
+                flex-basis: 300px;
+                min-width: 300px;
+            }
+            @include screen('tablet') {
+                min-width: 300px;
+            }
+            @media screen and (max-width:600px) {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 450px;
+                min-width: 450px;
+            }
+        }
+        .secret_list {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: calc(100% - 450px);
+            min-width: calc(100% - 450px);
+            @media screen and (max-width: 600px) {
+                flex-basis: 100%;
+            }
+            ul {
+                @include li-reset;
+                display: flex;
+                flex-flow: row wrap;
+                li {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    flex-basis: 25%;
+                    height: 600px;
+                    float: left;
+                    @include screen('tablet') {
+                        flex-basis: 50%;
+                        height: 300px;
+                    }
+                    a {
+                        display: block;
+                        background: #000;
+                        position: relative;
+                        overflow: hidden;
+                        height: 600px;
+                        transition:.3s ease-out;
+                        &:hover,&:focus {
+                            h3{
+                                color:#FFF;
+                            }
+                            span{
+                                color:#FFF;
+                            }
+
+                        }
+                        @include screen('tablet') {
+                            height: 300px;
+                        }
+                        h3 {
+                            margin: 0;
+                            position: absolute;
+                            color: #FFF;
+                            font-weight: 600;
+                            font-size: 3.5rem;
+                            bottom: 40%;
+                            left: 10%;
+                            @include screen('tablet') {
+                                bottom: 60%;
+                            }
+                        }
+                        &.north {
+                            background: url(../images/s_north.jpg) no-repeat center center;
+                            background-size: cover;
+                        }
+                        &.middle {
+                            background: url(../images/s_middle.jpg) no-repeat center center;
+                            background-size: cover;
+                        }
+                        &.south {
+                            background: url(../images/s_south.jpg) no-repeat center center;
+                            background-size: cover;
+                        }
+                        &.east {
+                            background: url(../images/s_east.jpg) no-repeat center center;
+                            background-size: cover;
+                        }
+                        span {
+                            display: block;
+                            position: absolute;
+                            margin: 0 5%;
+                            width: 90%;
+                            font-size: .938rem;
+                            color: #EEE;
+                            bottom: 10%;
+                            top: auto;
+                            @include screen('tablet') {
+                                font-size: .938rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .secretContent {
+        width: auto;
+        overflow: hidden;
+        padding: 1.5em 4em 3em;
+        transition: .3s ease-out;
+        border-bottom: 1px solid #DDD;
+        &:last-child{
+            border-bottom: none;
+        }
+        h3 {
+            text-align: left;
+            font-size: 1.5rem;
+            @include screen('mobile') {
+                text-align:center;
+            }
+            small{
+                color:#555;
+                margin-left: 4em;
+                @include screen('mobile') {
+                    display:block;
+                }
+            }
+            img {
+                width: 1em;
+                height: 1em;
+                display: inline-block;
+            }
+        }
+        @include screen('mobile') {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 1.5em 2em 4em;
+        }
+        .slick-prev {
+            left: -40px;
+            background: url(../vendor/slick/icon_arrow_left_inverse.png) center center no-repeat;
+            background-size: 80%;
+            @include screen('mobile') {
+                left: -30px;
+            }
+        }
+        .slick-next {
+            right: -40px;
+            background: url(../vendor/slick/icon_arrow_right_inverse.png) center center no-repeat;
+            background-size: 80%;
+            @include screen('mobile') {
+                right: -30px;
+            }
+        }
+        .item {
+            margin: 0 1em 2em;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, .25);
+            position: relative;
+            &:focus {
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
+                outline: none;
+            }
+            a {
+                display: block;
+                color: #000;
+                &:hover, &:focus {
+                    color: $aHover;
+                    .img-container {
+                        img {
+                            opacity: 1;
+                            transform: scale(1.1);
+                        }
+                    }
+                    .description {
+                        &:after {
+                            background: $primaryColor;
+                        }
+                    }
+                }
+            }
+            .img-container {
+                margin-bottom: 0;
+                background: #000;
+                img {
+                    opacity: .75;
+                    transition: .3s ease-out;
+                    object-fit: cover;
+                }
+            }
+            .description {
+                position: relative;
+                height: 10rem;
+                padding-top: 1em;
+                h3 {
+                    height: 3em;
+                    overflow: hidden;
+                    display: block;
+                    font-size: 1.5rem;
+                    text-align: left;
+                    font-weight: 600;
+                    line-height: 1.5em;
+                    margin: 1.15rem 1rem 2rem;
+                }
+                &:after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2rem;
+                    background: #F1F1F1;
+                    content: "";
+                    transition: .3s ease-out;
+                }
+                .collect {
+                    position: absolute;
+                    top: 4px;
+                    right: 8px;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../images/icon_collect.svg) no-repeat center center;
+                    background-size: contain;
+                    font-size: 0;
+                    display: block;
+                    &.active {
+                        background: url(../images/icon_collect_active.svg) no-repeat center center;
+                        background-size: contain;
+                    }
+                }
+                .road {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    font-size: .938rem;
+                    text-align: center;
+                    padding: 0rem 1em;
+                    height: 2rem;
+                    line-height: 2rem;
+                    z-index: 2;
+                    color: #333;
+                    background: #DADADA;
+                }
+                .county {
+                    position: absolute;
+                    left: 0em;
+                    top: 0em;
+                    font-size: .938rem;
+                    width: 5em;
+                    height: 2em;
+                    padding: .25em 1em;
+                    text-align: center;
+                    background: $color-orange;
+                    color: #FFF;
+                }
+                .dot {
+                    position: absolute;
+                    border-radius: .2em;
+                    background: #EEE;
+                    text-align: center;
+                    min-width: 2em;
+                    height: 1.4em;
+                    line-height: 1.4em;
+                    right: .5em;
+                    bottom: .3em;
+                    color: #444;
+                    z-index: 2;
+                    background: #FFF;
+                    border-radius: .2em;
+                    &:before {
+                        position: absolute;
+                        width: 1em;
+                        height: 1em;
+                        background: url(../images/icon_reddot.svg) no-repeat center center;
+                        background-size: contain;
+                        content: "";
+                        left: -1.2em;
+                        top: .2em;
+                    }
+                }
+            }
+        }
+    }
     .taiwan_map {
         .map {
             float: left;
@@ -20,187 +322,187 @@
             min-width: 450px;
             height: 600px;
             margin: 0 1em 1em 0;
-            position:relative;
+            position: relative;
             @include screen('mobile') {
                 display: none;
             }
-            .el{
-                position:absolute;
-                transition:.3s ease-out;
-                img{
+            .el {
+                position: absolute;
+                transition: .3s ease-out;
+                img {
                     width: 100%;
                     height: 100%;
-                    position:absolute;
+                    position: absolute;
                 }
-                &.active{
-                    transform:translate(-10px,-10px);
+                &.active {
+                    transform: translate(-10px, -10px);
                     z-index: 2;
                 }
             }
-            .taipei{
+            .taipei {
                 width: 30px;
                 height: 38px;
-                top:27px;
+                top: 27px;
                 right: 61px;
                 z-index: 1;
             }
-            .taipeicounty{
+            .taipeicounty {
                 width: 119px;
                 height: 110px;
-                top:0px;
+                top: 0px;
                 right: 6px;
             }
-            .taoyuan{
+            .taoyuan {
                 width: 78px;
                 height: 92px;
-                top:33px;
+                top: 33px;
                 right: 91px;
             }
-            .hsinchucounty{
+            .hsinchucounty {
                 width: 79px;
                 height: 91px;
-                top:64px;
+                top: 64px;
                 right: 101px;
             }
-            .hsinchusi{
+            .hsinchusi {
                 width: 19px;
                 height: 24px;
-                top:81px;
+                top: 81px;
                 right: 165px;
                 z-index: 1;
             }
-            .miaoli{
+            .miaoli {
                 width: 103px;
                 height: 79px;
-                top:101px;
+                top: 101px;
                 right: 122px;
             }
-            .taichung{
+            .taichung {
                 width: 154px;
                 height: 87px;
-                top:143px;
+                top: 143px;
                 right: 90px;
             }
-            .changhwa{
+            .changhwa {
                 width: 66px;
                 height: 72px;
-                top:192px;
+                top: 192px;
                 right: 214px;
             }
-            .nantuo{
+            .nantuo {
                 width: 121px;
                 height: 142px;
-                top:182px;
+                top: 182px;
                 right: 104px;
             }
-            .yunlin{
+            .yunlin {
                 width: 99px;
                 height: 59px;
-                top:253px;
+                top: 253px;
                 right: 204px;
             }
-            .chiayicounty{
+            .chiayicounty {
                 width: 134px;
                 height: 73px;
-                top:290px;
+                top: 290px;
                 right: 170px;
             }
-            .chiayisi{
+            .chiayisi {
                 width: 24px;
                 height: 14px;
-                top:308px;
+                top: 308px;
                 right: 235px;
             }
-            .tainan{
+            .tainan {
                 width: 105px;
                 height: 95px;
-                top:328px;
+                top: 328px;
                 right: 214px;
             }
-            .kaoshiung{
+            .kaoshiung {
                 width: 143px;
                 height: 177px;
-                top:319px;
+                top: 319px;
                 right: 156px;
             }
-            .pingtung{
+            .pingtung {
                 width: 83px;
                 height: 174px;
-                top:422px;
+                top: 422px;
                 right: 177px;
             }
-            .keelung{
+            .keelung {
                 width: 23px;
                 height: 21px;
-                top:20px;
+                top: 20px;
                 right: 46px;
                 z-index: 1;
             }
-            .yilan{
+            .yilan {
                 width: 103px;
                 height: 120px;
-                top:50px;
+                top: 50px;
                 right: 12px;
                 z-index: 1;
             }
-            .hwalien{
+            .hwalien {
                 width: 126px;
                 height: 224px;
-                top:159px;
+                top: 159px;
                 right: 41px;
             }
-            .taitung{
+            .taitung {
                 width: 123px;
                 height: 215px;
-                top:322px;
+                top: 322px;
                 right: 85px;
             }
-            .lienchian{
-                width:150px;
+            .lienchian {
+                width: 150px;
                 height: 150px;
-                top:0;
-                left:0;
-                border:1px solid #DDD;
-                background:#F1F1F1;
-                border-radius:.2em;
-                &.active{
-                    transform:translate(20px,-15px);
+                top: 0;
+                left: 0;
+                border: 1px solid #DDD;
+                background: #F1F1F1;
+                border-radius: .2em;
+                &.active {
+                    transform: translate(20px, -15px);
                 }
-                img{
-                    width:80%;
+                img {
+                    width: 80%;
                     height: 80%;
-                    left:10%;
-                    top:10%;
+                    left: 10%;
+                    top: 10%;
                 }
             }
-            .kinmen{
-                width:150px;
+            .kinmen {
+                width: 150px;
                 height: 150px;
-                top:160px;
-                left:0;
-                border:1px solid #DDD;
-                background:#F1F1F1;
-                border-radius:.2em;
-                &.active{
-                    transform:translate(20px,-15px);
+                top: 160px;
+                left: 0;
+                border: 1px solid #DDD;
+                background: #F1F1F1;
+                border-radius: .2em;
+                &.active {
+                    transform: translate(20px, -15px);
                 }
-                img{
-                    width:80%;
+                img {
+                    width: 80%;
                     height: 80%;
-                    left:10%;
-                    top:10%;
+                    left: 10%;
+                    top: 10%;
                 }
             }
-            .penghu{
-                width:150px;
+            .penghu {
+                width: 150px;
                 height: 150px;
-                top:320px;
-                left:0;
-                border:1px solid #DDD;
-                background:#F1F1F1;
-                border-radius:.2em;
-                &.active{
-                    transform:translate(20px,-15px);
+                top: 320px;
+                left: 0;
+                border: 1px solid #DDD;
+                background: #F1F1F1;
+                border-radius: .2em;
+                &.active {
+                    transform: translate(20px, -15px);
                 }
             }
         }
