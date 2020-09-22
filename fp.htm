@@ -34,6 +34,7 @@
                         <li><a href="#">回首頁</a></li>
                         <li><a href="#">交通部公路總局</a></li>
                         <li><a href="#">網站導覽</a></li>
+<li><a data-fancybox data-src="#hidden-content" href="javascript:;">登入</a></li>
                     </ul>
                 </nav>
                 <!-- navigation End -->
@@ -251,6 +252,16 @@
         <!-- footer End -->
     </div>
     <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- 登入視窗 -->
+    <div style="display: none;" id="hidden-content" class="login">
+        <h2>請使用社群帳號登入</h2>
+        <div class="btn_grp">
+            <button type="botton" class="btn btn-fb"><img src="images/icon_fb.svg" alt="">Facebok帳號登入</button>
+            <button type="botton" class="btn btn-google"><img src="images/icon_google.svg" alt="">Google帳號登入</button>
+            <button type="botton" class="btn btn-twitter"><img src="images/icon_twitter.svg" alt="">Twitter帳號登入</button>
+            <button type="botton" class="btn btn-line"><img src="images/icon_line.svg" alt="">LINE帳號登入</button>
+        </div>
+    </div>
     <!-- JQ -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <!-- 外掛 plugin js -->
@@ -274,6 +285,7 @@
     })
     new WOW().init();
     </script>
+
 </body>
 
 </html>
