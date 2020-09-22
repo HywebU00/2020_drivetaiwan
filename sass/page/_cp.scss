@@ -4,6 +4,94 @@ h1.title, h2.title {
     line-height: 1.25em;
     margin: .4em 0;
 }
+.about {
+    overflow: hidden;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width:100% !important;
+    h3 {
+        font-size: 3.2em;
+        margin: 0 0 .5em;
+        @include screen('xs_mobile') {
+            text-align: center;
+            font-size:1.75em;
+        }
+    }
+    h4 {
+        font-size: 1.75em;
+        @include screen('xs_mobile') {
+            text-align: center;
+            font-size:1.25em;
+        }
+    }
+    article {
+        max-width:1400px;
+        margin: 0 auto 1em;
+        &.bgColor {
+            background: #F1F1F1;
+        }
+        display: flex;
+        flex-flow: row nowrap;
+        @include screen('mobile') {
+            flex-flow: row wrap;
+            margin-bottom: 0;
+        }
+        .word {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 200px;
+            min-width: 200px;
+            padding: 1.5em;
+            @include screen('mobile') {
+                flex-basis: 100%;
+                min-width: 100%;
+            }
+        }
+        .img {
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 500px;
+            img {
+                width: 100%;
+            }
+            @include screen('mobile') {
+                flex-basis: 100%;
+                min-width: 100%;
+            }
+        }
+    }
+    .about_bottom{
+        background:url(../images/bg-bottom.jpg) no-repeat center center;
+        background-size:cover;
+        background-attachment: fixed;
+        padding:1em 0 4em;
+        color:#FFF;
+        @include screen('mobile') {
+            background-attachment: scroll;
+        }
+        h3{
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        ul{
+            max-width:1000px;
+            margin: 0 auto 1em;
+            @include screen('mobile') {
+                margin: 0 2em 1em;
+            }
+            li{
+                margin-bottom: 1em;
+            }
+        }
+
+    }
+    p {
+        font-size: 1.125em;
+        @include screen('mobile') {
+            font-size:1em;
+        }
+    }
+}
 .featureSlider {
     margin-bottom: 2.5em !important;
 }
@@ -18,7 +106,7 @@ h1.title, h2.title {
         border-bottom: $primaryColor 1px solid;
         max-width: 600px;
         @include screen('xs_mobile') {
-            max-width:300px;
+            max-width: 300px;
             margin: 0 auto .25em;
         }
     }
@@ -41,9 +129,9 @@ h1.title, h2.title {
         }
     }
 }
-.change,.othervideo{
+.change, .othervideo {
     @include screen('mobile') {
-        padding:1em 0 !important;
+        padding: 1em 0 !important;
     }
 }
 .cp {
@@ -449,7 +537,7 @@ div.tag {
 .basic {
     padding: 1em 0;
     @include screen('mobile') {
-        padding:1em 0 !important;
+        padding: 1em 0 !important;
     }
     .basicContent {
         .googlemap {
@@ -458,7 +546,7 @@ div.tag {
             height: 400px;
             margin: 0 1em 1em 0;
             @include screen('mobile') {
-                float:none;
+                float: none;
                 width: 100%;
                 margin: 0 auto 1em;
             }
@@ -508,7 +596,7 @@ div.tag {
         .weather {
             padding: 1em;
             display: flex;
-            flex-flow:row wrap;
+            flex-flow: row wrap;
             h4 {
                 flex: 1 1 100%;
                 font-size: 1.5rem;

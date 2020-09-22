@@ -2,9 +2,8 @@
     .road_search {
         border-top: 1px solid #DDD;
         border-bottom: 1px solid #DDD;
-        padding: 1em 0;
+        padding: .5em 0;
         text-align: center;
-        @extend %clearfix;
         form {
             display: block;
             margin: 0 auto;
@@ -20,7 +19,7 @@
         @media screen and (max-width: 600px) {
             flex-flow: row wrap;
         }
-        p{
+        p {
             flex-grow: 1;
             flex-shrink: 1;
             flex-basis: 100%;
@@ -78,15 +77,14 @@
                         position: relative;
                         overflow: hidden;
                         height: 600px;
-                        transition:.3s ease-out;
-                        &:hover,&:focus {
-                            h3{
-                                color:#FFF;
+                        transition: .3s ease-out;
+                        &:hover, &:focus {
+                            h3 {
+                                color: #FFF;
                             }
-                            span{
-                                color:#FFF;
+                            span {
+                                color: #FFF;
                             }
-
                         }
                         @include screen('tablet') {
                             height: 300px;
@@ -143,20 +141,20 @@
         padding: 1.5em 4em 3em;
         transition: .3s ease-out;
         border-bottom: 1px solid #DDD;
-        &:last-child{
+        &:last-child {
             border-bottom: none;
         }
         h3 {
             text-align: left;
             font-size: 1.5rem;
             @include screen('mobile') {
-                text-align:center;
+                text-align: center;
             }
-            small{
-                color:#555;
+            small {
+                color: #555;
                 margin-left: 4em;
                 @include screen('mobile') {
-                    display:block;
+                    display: block;
                 }
             }
             img {
@@ -318,8 +316,8 @@
     .taiwan_map {
         .map {
             float: left;
-            width: 40%;
-            min-width: 450px;
+            width: 30%;
+            min-width: 380px;
             height: 600px;
             margin: 0 1em 1em 0;
             position: relative;
@@ -333,10 +331,32 @@
                     width: 100%;
                     height: 100%;
                     position: absolute;
+                    display: none;
                 }
                 &.active {
                     transform: translate(-10px, -10px);
                     z-index: 2;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    background: rgba(0, 0, 0, .75);
+                    text-align: center;
+                    width: 6em;
+                    padding: .25em;
+                    display: none;
+                    border-radius: .2em;
+                    left: 50%;
+                    margin-left: -3em;
+                    top: -3em;
+                    color: #FFF;
+                    z-index: 9;
+                    font-size: .938rem;
+                }
+                &:hover, &:focus {
+                    &:after {
+                        display: block;
+                    }
                 }
             }
             .taipei {
@@ -345,24 +365,44 @@
                 top: 27px;
                 right: 61px;
                 z-index: 1;
+                background: url(../images/map_taipei.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "臺北市";
+                }
             }
             .taipeicounty {
                 width: 119px;
                 height: 110px;
                 top: 0px;
                 right: 6px;
+                background: url(../images/map_taipeicounty.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "新北市";
+                }
             }
             .taoyuan {
                 width: 78px;
-                height: 92px;
+                height: 93px;
                 top: 33px;
                 right: 91px;
+                background: url(../images/map_taoyuan.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "桃園市";
+                }
             }
             .hsinchucounty {
                 width: 79px;
                 height: 91px;
                 top: 64px;
                 right: 101px;
+                background: url(../images/map_hsinchucounty.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "新竹縣";
+                }
             }
             .hsinchusi {
                 width: 19px;
@@ -370,66 +410,121 @@
                 top: 81px;
                 right: 165px;
                 z-index: 1;
+                background: url(../images/map_hsinchusi.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "新竹市";
+                }
             }
             .miaoli {
                 width: 103px;
                 height: 79px;
                 top: 101px;
                 right: 122px;
+                background: url(../images/map_miaoli.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "苗栗縣";
+                }
             }
             .taichung {
                 width: 154px;
                 height: 87px;
                 top: 143px;
                 right: 90px;
+                background: url(../images/map_taichung.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "臺中市";
+                }
             }
             .changhwa {
                 width: 66px;
                 height: 72px;
                 top: 192px;
                 right: 214px;
+                background: url(../images/map_changhwa.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "彰化縣";
+                }
             }
             .nantuo {
                 width: 121px;
                 height: 142px;
                 top: 182px;
                 right: 104px;
+                background: url(../images/map_nantuo.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "南投縣";
+                }
             }
             .yunlin {
                 width: 99px;
                 height: 59px;
                 top: 253px;
                 right: 204px;
+                background: url(../images/map_yunlin.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "雲林縣";
+                }
             }
             .chiayicounty {
                 width: 134px;
                 height: 73px;
                 top: 290px;
                 right: 170px;
+                background: url(../images/map_chiayicounty.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "嘉義縣";
+                }
             }
             .chiayisi {
                 width: 24px;
                 height: 14px;
                 top: 308px;
                 right: 235px;
+                background: url(../images/map_chiayisi.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "嘉義市";
+                }
             }
             .tainan {
                 width: 105px;
                 height: 95px;
                 top: 328px;
                 right: 214px;
+                background: url(../images/map_tainan.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "台南市";
+                }
             }
             .kaoshiung {
                 width: 143px;
                 height: 177px;
                 top: 319px;
                 right: 156px;
+                background: url(../images/map_kaoshiung.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "高雄市";
+                }
             }
             .pingtung {
                 width: 83px;
                 height: 174px;
                 top: 422px;
                 right: 177px;
+                background: url(../images/map_pingtung.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "屏東縣";
+                }
             }
             .keelung {
                 width: 23px;
@@ -437,6 +532,11 @@
                 top: 20px;
                 right: 46px;
                 z-index: 1;
+                background: url(../images/map_keelung.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "基隆市";
+                }
             }
             .yilan {
                 width: 103px;
@@ -444,29 +544,55 @@
                 top: 50px;
                 right: 12px;
                 z-index: 1;
+                background: url(../images/map_yilan.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "宜蘭縣";
+                }
             }
             .hwalien {
                 width: 126px;
                 height: 224px;
                 top: 159px;
                 right: 41px;
+                background: url(../images/map_hwalien.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "花蓮縣";
+                }
             }
             .taitung {
                 width: 123px;
                 height: 215px;
                 top: 322px;
                 right: 85px;
+                background: url(../images/map_taitung.svg) no-repeat center center;
+                background-size: contain;
+                &:after {
+                    content: "臺東縣";
+                }
             }
             .lienchian {
-                width: 150px;
-                height: 150px;
+                width: 100px;
+                height: 100px;
                 top: 0;
                 left: 0;
                 border: 1px solid #DDD;
                 background: #F1F1F1;
                 border-radius: .2em;
+                background: url(../images/map_lienchian.png) no-repeat center center #FFF;
+                background-size: contain;
                 &.active {
                     transform: translate(20px, -15px);
+                }
+                &:after {
+                    bottom:0;
+                    top:auto;
+                    left:0;
+                    width:91px;
+                    height:1.5em;
+                    margin-left: 0;
+                    content: "連江縣";
                 }
                 img {
                     width: 80%;
@@ -476,15 +602,26 @@
                 }
             }
             .kinmen {
-                width: 150px;
-                height: 150px;
-                top: 160px;
+                width: 100px;
+                height: 100px;
+                top: 120px;
                 left: 0;
                 border: 1px solid #DDD;
                 background: #F1F1F1;
                 border-radius: .2em;
+                background: url(../images/map_kinmen.png) no-repeat center center #FFF;
+                background-size: contain;
                 &.active {
                     transform: translate(20px, -15px);
+                }
+                &:after {
+                    bottom:0;
+                    top:auto;
+                    left:0;
+                    width:91px;
+                    height:1.5em;
+                    margin-left: 0;
+                    content: "金門縣";
                 }
                 img {
                     width: 80%;
@@ -494,15 +631,38 @@
                 }
             }
             .penghu {
-                width: 150px;
-                height: 150px;
-                top: 320px;
+                width: 100px;
+                height: 100px;
+                top: 240px;
                 left: 0;
                 border: 1px solid #DDD;
                 background: #F1F1F1;
                 border-radius: .2em;
+                background: url(../images/map_penghu.png) no-repeat center center #FFF;
+                background-size: contain;
                 &.active {
                     transform: translate(20px, -15px);
+                }
+                &:after {
+                    bottom:0;
+                    top:auto;
+                    left:0;
+                    width:91px;
+                    height:1.5em;
+                    margin-left: 0;
+                    content: "澎湖縣";
+                }
+            }
+        }
+        .road_list {
+            overflow: hidden;
+            .album {
+                ul {
+                    li {
+                        .thumbnail {
+                            box-shadow: 0 0 2em -1em rgba(0, 0, 0, 0.5);
+                        }
+                    }
                 }
             }
         }
@@ -613,8 +773,9 @@
         @include li-reset;
         li {
             @include make_col(3, 1);
-            @include screen('tablet') {
+            @media screen and (max-width:1100px) {
                 @include make_col(2, 1);
+
             }
             @include screen('xs_mobile') {
                 @include make_col(1, 1);
@@ -639,13 +800,22 @@
                     transition: .3s ease-out;
                 }
                 h3 {
-                    height: 3em;
                     overflow: hidden;
                     display: block;
-                    font-size: 1.5rem;
+                    font-size: 1.25rem;
                     font-weight: 600;
                     line-height: 1.4em;
-                    margin: 1.15rem 1rem 2rem;
+                    margin: 1.5rem 1rem .5rem;
+                    @include text-overflow;
+                }
+                p {
+                    margin:0em 1rem 1em;
+                    color:#555;
+                    overflow: hidden;
+                    display: block;
+                    line-height: 1.45em;
+                    height: 2.9em;
+                    font-size: .938rem;
                 }
                 .road {
                     display: block;
@@ -691,7 +861,7 @@
             }
             .thumbnail {
                 width: 100%;
-                max-width: 90%;
+                max-width:90%;
                 margin: 0 auto 1em;
                 a {
                     &:hover, &:focus {

@@ -34,6 +34,22 @@ div.function {
                     border-color: darken($aHover, 0);
                 }
             }
+            &.collect {
+                a {
+                    display: inline-block;
+                    width: 2rem;
+                    height: 2rem;
+                    margin-left: .5rem;
+                    position: relative;
+                    @include screen('xs_mobile') {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
             // 回上一頁
             &.icon_back {
                 a:before {
@@ -72,7 +88,7 @@ div.function {
                 height: 60%;
                 top: 20%;
                 left: 20%;
-                background: url(../images/basic/icon_share.png) no-repeat center center  !important;
+                background: url(../images/basic/icon_share.png) no-repeat center center !important;
                 background-size: 24px !important;
             }
             text-indent:-9999px;
@@ -103,27 +119,32 @@ div.function {
                     text-align: center;
                     line-height: 40px;
                     border-radius: 50%;
-                    background: #F1F1F1;
-                    text-indent: -9999px;
+                    background:transparent;
+                    // background: #F1F1F1;
+                    // text-indent: -9999px;
                     position: relative;
                     &:hover,
                     &:focus {
-                        background: $aHover;
+                        background:transparent;
                         color: #FFF;
-                        &:before {
-                            filter: invert(100%);
-                        }
+
                     }
-                    &:before {
+                    &:before,img{
                         content: "";
                         position: absolute;
-                        width: 60%;
-                        height: 60%;
-                        top: 20%;
-                        left: 20%;
+                        width: 80%;
+                        height: 80%;
+                        top: 10%;
+                        left: 10%;
                     }
                 }
                 &.back {
+                    &:hover,&:focus {
+                        a:before {
+                        background: url(../images/basic/icon_back.png) no-repeat center center;
+                        background-size: 100%;
+                    }
+                    }
                     a:before {
                         background: url(../images/basic/icon_back.png) no-repeat center center;
                         background-size: 100%;

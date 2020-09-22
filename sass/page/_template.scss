@@ -63,17 +63,15 @@ body {
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
     padding-top: 6em;
-    padding-bottom: 4em;
     @include screen('tablet') {
         padding-top: 60px;
         background: #FFF;
     }
-
     >.container {
-        max-width:100%;
+        max-width: 100%;
         @include gutter(0); //gutter 代表左右要留白
-        &>*{
-            max-width:$container-max;
+        &>* {
+            max-width: $container-max;
             margin: 0 auto;
             @include gutter;
         }
@@ -85,35 +83,36 @@ body {
         @include screen('xs_mobile') {
             height: 120px;
         }
-        .secret_info{
+        .info {
             position: absolute;
-            width:460px;
-            height:auto;
-            background:rgba(0,0,0,.75);
-            color:#FFF;
-            bottom:1em;
-            left:10%;
-            padding:2em 5em 2em 1em;
+            width: 520px;
+            height: auto;
+            background: rgba(0, 0, 0, .65);
+            color: #FFF;
+            bottom: 1em;
+            left: 10%;
+            padding: 2em 4em 2em 1em;
             @include screen('mobile') {
-                position:absolute;
-                width:90%;
-                left:5%;
-                padding:2em 1em 1em;
-                text-align:center;
+                position: absolute;
+                width: 90%;
+                left: 5%;
+                padding: 2em 1em 1em;
+                text-align: center;
             }
-            .title{
+            .title {
                 font-size: 3em;
                 margin-bottom: 2rem;
-                font-weight:600;
-                small{
-                    font-size:.813rem;
-                    display:block;
-                    font-weight:normal;
-                    margin:2em 0 1em;
+                font-weight: 600;
+                small {
+                    font-size: .813rem;
+                    display: block;
+                    font-weight: normal;
+                    margin: 2em 0 1em;
                 }
             }
-            span{
-                font-size:.875rem;
+            span {
+                font-size: 1.125rem;
+                line-height: 1.65;
             }
         }
         img {
@@ -125,19 +124,33 @@ body {
             }
         }
     }
-    .secret_img{
+    .intro_img {
         height: 450px;
         width: 100%;
         position: relative;
+        .slogan {
+            position: absolute;
+            width: 214px;
+            height: 99px;
+            left: 20%;
+            top: 30%;
+            z-index: 3;
+        }
         @include screen('xs_mobile') {
-            height: 450px;
+            min-height: 300px;
+            height:auto;
+        }
+        h2.title {
+            margin: 0;
+            color: #FFF;
+            text-align: left;
         }
         img {
             width: 100%;
             height: 450px;
             object-fit: cover;
             @include screen('xs_mobile') {
-                height: 450px;
+                height: 300px;
             }
         }
     }
@@ -160,35 +173,22 @@ body {
         font-size: 3.75rem;
         line-height: 1.2;
         position: relative;
-        margin: .5em auto ;
-        a.collect{
-            display:inline-block;
-            width:2rem;
-            height: 2rem;
-            margin-left: .5rem;
-            @include screen('xs_mobile') {
-                width: 1.5rem;
-                height: 1.5rem;
-            }
-            img{
-                width: 100%;
-            }
-        }
+        margin: .5em auto;
         @include screen('mobile') {
             font-size: 2.5rem;
             width: 90%;
             margin-bottom: 1rem;
         }
-        &:before {
-            content: "";
-            width: 12px;
-            height: 1em;
-            transform: skew(-30deg);
-            background: $lightColor;
-            z-index: 0;
-            margin-right: .2em;
-            display: inline-block;
-        }
+        // &:before {
+        //     content: "";
+        //     width: 12px;
+        //     height: 1em;
+        //     transform: skew(-30deg);
+        //     background: $lightColor;
+        //     z-index: 0;
+        //     margin-right: .2em;
+        //     display: inline-block;
+        // }
         small {
             display: block;
             font-size: 1rem;

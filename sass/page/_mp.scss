@@ -19,16 +19,16 @@
             width: 90%;
             margin-bottom: 1rem;
         }
-        &:before {
-            content: "";
-            width: 12px;
-            height: 1em;
-            transform: skew(-30deg);
-            background: $lightColor;
-            z-index: 0;
-            margin-right: .2em;
-            display: inline-block;
-        }
+        // &:before {
+        //     content: "";
+        //     width: 12px;
+        //     height: 1em;
+        //     transform: skew(-30deg);
+        //     background: $lightColor;
+        //     z-index: 0;
+        //     margin-right: .2em;
+        //     display: inline-block;
+        // }
         small {
             display: block;
             font-size: .875rem;
