@@ -943,8 +943,8 @@
         .item {
             margin: 0 1em;
             background: rgba(255, 255, 255, 1);
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, .25);
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
+            // box-shadow: 0px 0px 5px rgba(0, 0, 0, .25);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, .35);
             margin-bottom: 2em;
             position: relative;
             &:focus {
