@@ -4,12 +4,10 @@ $(function() {
     // kv
     $('.county_list').find('ul li a').hover(function() {
         var COUNTYNAME = $(this).attr('class');
-        $('.taiwan_map').find('.map').find('.'+ COUNTYNAME).addClass('active');
+        $('.taiwan_map').find('.map').find('.' + COUNTYNAME).addClass('active');
     }, function() {
         $('.taiwan_map').find('.el').removeClass('active');
     });
-
-
     var $carousel = $('.mpSlider').slick({
         mobileFirst: true,
         dots: false,
@@ -146,7 +144,7 @@ $(function() {
             }
         }]
     });
-     // 主題公路
+    // 主題公路
     $('.secretContent .roadSlider').slick({
         mobileFirst: true,
         dots: false,
@@ -196,7 +194,7 @@ $(function() {
             }
         }]
     });
-     // 影音專區
+    // 影音專區
     $('.videoSlider').slick({
         mobileFirst: true,
         dots: false,
@@ -246,7 +244,7 @@ $(function() {
             }
         }]
     });
-     // 影音專區
+    // 影音專區
     $('.othervideoSlider').slick({
         mobileFirst: true,
         dots: false,
@@ -296,7 +294,6 @@ $(function() {
             }
         }]
     });
-
     // 影音專區
     $('.changeSlider').slick({
         mobileFirst: true,
@@ -503,7 +500,7 @@ $(function() {
             $(this).blur();
             e.preventDefault();
         });
-         $('.gotoVideo').click(function(e) {
+        $('.gotoVideo').click(function(e) {
             $('html, body').stop(true, true).animate({ scrollTop: $('.video').offset().top }, 600, 'linear');
             $(this).blur();
             e.preventDefault();
@@ -563,19 +560,120 @@ $(function() {
             }
         });
     });
-
     $(window).on("load resize scroll", function(e) {
         var window_H = $(window).innerHeight();
         var windowTop = $(window).scrollTop();
         $('.mask').each(function(index, el) {
-          // 可以+130 讓圖進入多點再跑動畫
+            // 可以+130 讓圖進入多點再跑動畫
             var imgTop = Math.floor($(this).offset().top - windowTop + 130);
-          //imgTop < window_H 是指進入到最底部
-          //imgTop>0 是指還沒滾到最上方
-          //同時條件成立 代表物件在看得到的地方才會trigger動畫
+            //imgTop < window_H 是指進入到最底部
+            //imgTop>0 是指還沒滾到最上方
+            //同時條件成立 代表物件在看得到的地方才會trigger動畫
             if (imgTop < window_H && imgTop > 0) {
                 $(this).addClass('effect');
             }
         });
+    });
+    // before
+    $('.before-for').on('init reInit afterChange', function(event, slick, currentSlide) {
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        $('.controls').html(i + '/' + slick.slideCount);
+    });
+    $('.before-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        swipe: false,
+        arrows: true,
+        swipeToSlide: false,
+        lazyLoad: 'ondemand',
+        asNavFor: '.before-nav',
+        infinite: true
+    });
+    $('.before-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.before-for',
+        dots: true,
+        arrows: true,
+        lazyLoad: 'ondemand',
+        focusOnSelect: true,
+        infinite: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        }, {
+            breakpoint: 545,
+            settings: {
+                arrows: true,
+                slidesToShow: 3,
+                slidesToScroll: 1
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                arrows: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: false
+            }
+        }]
+    });
+     // after
+    $('.after-for').on('init reInit afterChange', function(event, slick, currentSlide) {
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        $('.controls').html(i + '/' + slick.slideCount);
+    });
+    $('.after-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        swipe: false,
+        arrows: true,
+        swipeToSlide: false,
+        lazyLoad: 'ondemand',
+        asNavFor: '.after-nav',
+        infinite: true
+    });
+    $('.after-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.after-for',
+        dots: true,
+        arrows: true,
+        lazyLoad: 'ondemand',
+        focusOnSelect: true,
+        infinite: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        }, {
+            breakpoint: 545,
+            settings: {
+                arrows: true,
+                slidesToShow: 3,
+                slidesToScroll: 1
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                arrows: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: false
+            }
+        }]
     });
 });

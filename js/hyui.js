@@ -401,7 +401,7 @@ $(function() {
                 tabwidth = _tab.width(),
                 tabItemHeight = _tabItem.outerHeight(),
                 tabContentHeight = _tab.find('.active').next().innerHeight(),
-                tiGap = 0,
+                tiGap = 5,
                 tabItemLength = _tabItem.length,
                 tabItemWidth;
             _tab.find('.active').next('.tabContent').show();

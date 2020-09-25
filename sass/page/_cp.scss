@@ -4,7 +4,7 @@ h1.title, h2.title {
     line-height: 1.25em;
     margin: .4em 0;
 }
-.about {
+.full {
     overflow: hidden;
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -94,7 +94,7 @@ h1.title, h2.title {
 .featureSlider {
     margin-bottom: 2.5em !important;
 }
-.cp_story, .cp_topic, .change, .othervideo, .basic {
+.cp_story, .cp_topic, .change, .basic {
     @extend %clearfix;
     margin: 0 2em;
     h3 {
@@ -534,6 +534,21 @@ div.tag {
         z-index: 1;
     }
 }
+.othervideo{
+     h3 {
+        font-size: 2.5rem;
+        text-align: center;
+        line-height: 1.45em;
+        margin: 0 auto .5rem;
+        padding-bottom: 1rem;
+        border-bottom: $primaryColor 1px solid;
+        max-width: 600px;
+        @include screen('xs_mobile') {
+            max-width: 300px;
+            margin: 0 auto .25em;
+        }
+    }
+}
 .changeSlider, .othervideoSlider, .basicContent {
     padding: 1em 2em;
     margin: 0 auto;
@@ -813,6 +828,65 @@ div.tag {
         }
     }
 }
+// tab
+.innerpage>.container>.tab_block {
+    max-width: 100% !important;
+}
+.tab_block {
+    max-width: 100%;
+    .tabSet {
+        max-width: 1200px;
+        margin: 0 auto 1em;
+    }
+}
+// 比較
+.comparison {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto 3em;
+    h3 {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        font-size: 2.5rem;
+        text-align: center;
+        line-height: 1.45em;
+        margin: 0 auto .5rem;
+        padding-bottom: 1rem;
+        border-bottom: $primaryColor 1px solid;
+        @include screen('xs_mobile') {
+            max-width: 300px;
+            margin: 0 auto .25em;
+        }
+    }
+    .before, .after {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 45%;
+        max-width: 45%;
+        margin: 0 2% 2em;
+        @include screen('xs_mobile') {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 95%;
+            max-width: 95%;
+        }
+        h4 {
+            background: $primaryColor;
+            color: #FFF;
+            padding: .25em .5em;
+            margin-bottom: .5em;
+        }
+        p{
+            font-size:.938rem;
+            margin: 0 0 .5em 0em;
+            padding-left: 1em;
+            border-left: 1px solid #CCC;
+        }
+    }
+}
 // 簡介
 .cp_intro {
     @extend %clearfix;
@@ -834,11 +908,11 @@ div.tag {
             width: 100%;
             margin: 0 auto 1em;
         }
-        p{
+        p {
             font-size: .938rem !important;
             margin: 0;
-            span{
-                color:$primaryColor;
+            span {
+                color: $primaryColor;
             }
         }
         .row {
@@ -846,16 +920,16 @@ div.tag {
             height: 240px;
             max-width: 100%;
             flex-flow: row wrap;
-            margin:0;
+            margin: 0;
             .video {
                 flex-basis: 60%;
                 height: 240px;
-                min-height:auto;
+                min-height: auto;
                 position: relative;
                 width: 100%;
                 border: 1px solid #FFF;
                 position: relative;
-                background:none;
+                background: none;
                 a {
                     display: block;
                     position: absolute;
@@ -864,7 +938,7 @@ div.tag {
                     right: 0;
                     bottom: 0;
                     height: 240px;
-                    overflow:hidden;
+                    overflow: hidden;
                     &:after {
                         position: absolute;
                         width: 4em;
@@ -881,12 +955,12 @@ div.tag {
                         transition: .3s ease-out;
                     }
                 }
-                &:hover,&:focus {
-                    img{
-                        transform:scale(1.1);
+                &:hover, &:focus {
+                    img {
+                        transform: scale(1.1);
                     }
-                    &:after{
-                        opacity:1;
+                    &:after {
+                        opacity: 1;
                     }
                 }
                 img {
@@ -894,7 +968,7 @@ div.tag {
                     position: absolute;
                     width: 100%;
                     height: 100%;
-                    transition:.3s ease-out;
+                    transition: .3s ease-out;
                     object-fit: cover;
                 }
             }
@@ -905,7 +979,7 @@ div.tag {
                 width: 100%;
                 height: 240px;
                 border: 1px solid #FFF;
-                overflow:hidden;
+                overflow: hidden;
                 a {
                     display: block;
                     position: absolute;
@@ -913,11 +987,11 @@ div.tag {
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    overflow:hidden;
+                    overflow: hidden;
                 }
-                &:hover,&:focus {
-                    img{
-                        transform:scale(1.1);
+                &:hover, &:focus {
+                    img {
+                        transform: scale(1.1);
                     }
                 }
                 img {
@@ -925,7 +999,7 @@ div.tag {
                     position: absolute;
                     width: 100%;
                     height: 100%;
-                    transition:.3s ease-out;
+                    transition: .3s ease-out;
                     object-fit: cover;
                 }
             }
@@ -1112,7 +1186,7 @@ div.tag {
                 font-weight: 600;
                 line-height: 1.5em;
                 margin: 1.15rem 1rem .5rem;
-                color:#555;
+                color: #555;
             }
             &:after {
                 position: absolute;
