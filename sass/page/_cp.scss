@@ -846,6 +846,7 @@ div.tag {
             height: 240px;
             max-width: 100%;
             flex-flow: row wrap;
+            margin:0;
             .video {
                 flex-basis: 60%;
                 height: 240px;
@@ -904,6 +905,7 @@ div.tag {
                 width: 100%;
                 height: 240px;
                 border: 1px solid #FFF;
+                overflow:hidden;
                 a {
                     display: block;
                     position: absolute;
