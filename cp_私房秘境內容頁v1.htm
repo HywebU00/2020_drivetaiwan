@@ -142,10 +142,11 @@
                 <!-- cp intro -->
                 <div class="cp_intro wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">
                     <div class="cp_subContent">
+                        <!-- 照片就用 video class ,照片就用 img class-->
                         <div class="photoSet">
-                            <div class="row">
                                 <div class="video">
-                                    <a href="images/topic_bg.jpg" data-fancybox="gallery">
+                                    <!-- youtube 只要替換下面的url，其餘的autoplay...都不要改 -->
+                                    <a href="https://www.youtube.com/embed/jijL_mz4uoI&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" data-fancybox="gallery">
                                         <img src="images/topic_bg.jpg" alt="">
                                     </a>
                                 </div>
@@ -154,19 +155,32 @@
                                         <img src="images/img-middle-2.png" alt="">
                                     </a>
                                 </div>
-                            </div>
-                            <div class="row">
+
                                 <div class="img">
                                     <a href="images/img-middle-1.png" data-fancybox="gallery">
                                         <img src="images/img-middle-1.png" alt="">
                                     </a>
                                 </div>
-                                <div class="img big"
+                                <div class="img">
                                     <a href="images/secret_04.jpg" data-fancybox="gallery">
                                         <img src="images/secret_04.jpg" alt="">
                                     </a>
                                 </div>
-                            </div>
+                                <!-- 如果有超過5張就加上more class -->
+                                <div class="img more">
+                                    <a href="images/secret_04.jpg" data-fancybox="gallery">
+                                        <!-- 如果有超過5張就加上更多 -->
+                                        <span>更多照片</span>
+                                        <img src="images/secret_04.jpg" alt="">
+                                    </a>
+                                </div>
+                                <!-- 第6個以後我會用css隱藏，但套版不用省略就多少倒多少就可以了
+                                 -->
+                                <div class="img">
+                                    <a href="images/img-middle-1.png" data-fancybox="gallery">
+                                        <img src="images/img-middle-1.png" alt="">
+                                    </a>
+                                </div>
                             <p>共<span>9</span>張照片  相簿瀏覽人次：<span>9,280</span></p>
                         </div>
                         <h3>簡介</h3>

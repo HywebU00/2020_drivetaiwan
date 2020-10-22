@@ -118,8 +118,8 @@
     }
     h1 {
         float: left;
-        width: 250px;
-        height: 100px;
+        width: 330px;
+        height: 70px;
         margin: 0;
         padding: 0;
         @include box-sizing;
@@ -132,8 +132,8 @@
         }
         img {
             display: block;
-            max-width: 250px;
-            max-height: 90px;
+            max-width: 330px;
+            max-height: 70px;
             margin: 5px auto;
         }
         @include screen('tablet') {
@@ -150,6 +150,7 @@
                 height: auto;
                 max-height: 54px;
                 margin: 0px auto;
+                max-width: 100%;
             }
         }
     }

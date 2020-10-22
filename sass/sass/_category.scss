@@ -11,23 +11,27 @@
         }
     }
     a {
-        @include gradient(#FFF, #DDD, vertical);
-        border: 1px solid #CCC;
-        padding: .4em 1em;
+        // @include gradient(#FFF, #DDD, vertical);
+        // border: 1px solid #CCC;
+        background: #DDD;
+        padding: .2em 1em;
         display: block;
         color: #333;
         @include box-sizing();
         border-radius:4px;
+        font-size: .938rem;
         &:hover,
         &:focus {
             color: #FFF;
-            @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
-            border: 1px solid darken($primaryColor, 15);
+            // @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
+            // border: 1px solid darken($primaryColor, 15);
             box-shadow: none;
+            background: $color-orange;
         }
         &.active {
             color: #FFF;
-            @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
+            // @include gradient(darken($primaryColor, 0), darken($primaryColor, 15), vertical);
+            background: $color-orange;
         }
         span {
             font-size: .813em;

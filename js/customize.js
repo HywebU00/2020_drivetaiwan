@@ -344,6 +344,49 @@ $(function() {
             }
         }]
     });
+    // var resizeTimer1;
+    // var window_W = $(window).width();
+    // $(window).bind("load resize", function(event) {
+    //     clearTimeout(resizeTimer1);
+    //     resizeTimer = setTimeout(function() {
+    //         window_W = $(window).width();
+    //     if(window_W < 767){
+    //         $('.secretContent').slick('reinit');
+    //     }, 50);
+    // });
+    // 影音專區
+    $('.secret .secretContent').slick({
+        mobileFirst: true,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 992,
+            settings: "unslick"
+        },{
+            breakpoint: 545,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        },{
+            breakpoint: 544,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true
+            }
+
+        }]
+    });
     // 廣告輪播
     $('.adSlider').slick({
         mobileFirst: true,
@@ -625,7 +668,7 @@ $(function() {
             }
         }]
     });
-     // after
+    // after
     $('.after-for').on('init reInit afterChange', function(event, slick, currentSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
         $('.controls').html(i + '/' + slick.slideCount);

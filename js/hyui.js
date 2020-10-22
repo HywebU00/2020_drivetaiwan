@@ -437,7 +437,12 @@ $(function() {
                     tabContentHeight = _tabItemNow.next().innerHeight();
                     _tab.height(tabContentHeight + tabItemHeight);
                 }
+                $(".after-for").slick("setPosition", 0);
+                $(".after-nav").slick("setPosition", 0);
+                $(".before-for").slick("setPosition", 0);
+                $(".before-nav").slick("setPosition", 0);
                 e.preventDefault();
+
             }
         });
     }
