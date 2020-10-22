@@ -548,6 +548,47 @@ $(function() {
             $(this).blur();
             e.preventDefault();
         });
+        $('.gotoCpIntro').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_intro').offset().top - 40 }, 600, 'linear');
+            $(this).blur();
+            e.preventDefault();
+        });
+        $('.gotoCpLengend').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_legend').offset().top - 40 }, 600, 'linear');
+            $(this).blur();
+            e.preventDefault();
+        });
+        $('.gotoBasic').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.basic').offset().top - 40 }, 600, 'linear');
+            $(this).blur();
+            e.preventDefault();
+        });
+        $('.gotoRecommend').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.recommend').offset().top - 40 }, 600, 'linear');
+            $(this).blur();
+            e.preventDefault();
+        });
+        $('.gotoOtherVideo').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.othervideo').offset().top - 40 }, 600, 'linear');
+            $(this).blur();
+            e.preventDefault();
+        });
+        $('.gotoChange').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.change').offset().top - 40 }, 600, 'linear');
+            $(this).blur();
+            e.preventDefault();
+        });
+        $('.gotoCpTopic').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_topic').offset().top - 40 }, 600, 'linear');
+            $(this).blur();
+            e.preventDefault();
+        });
+        $('.gotoCpStory').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_story').offset().top - 40 }, 600, 'linear');
+            $(this).blur();
+            e.preventDefault();
+        });
+
     }
     //
     $('.map_tag').find('a').each(function(index, el) {

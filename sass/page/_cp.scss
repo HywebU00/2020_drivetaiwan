@@ -908,10 +908,14 @@ div.tag {
         float: left;
         width: 42%;
         min-width: 300px;
+        height: 430px;
         margin: 0 2em 0 0;
+        padding-bottom: 2em;
         overflow: hidden;
+        // outline:1px solid red;
         display: flex;
         flex-flow: row wrap;
+        align-content: stretch;
         &>div {
             display: none;
             &:nth-child(1) {
@@ -956,15 +960,20 @@ div.tag {
         p {
             flex-basis: 100%;
             width: 100%;
+            height:2em;
             font-size: .938rem !important;
             margin: 0;
+            align-self: flex-end;
+            position: absolute;
+            bottom:0;
+            left: 1em;
             span {
                 color: $primaryColor;
             }
         }
         .video {
             flex-basis: 60%;
-            height: 220px;
+
             min-height: auto;
             position: relative;
             width: 100%;
@@ -980,7 +989,7 @@ div.tag {
                 left: 0;
                 right: 0;
                 bottom: 0;
-                height: 240px;
+                height: 100%;
                 overflow: hidden;
                 &:after {
                     position: absolute;
@@ -992,7 +1001,7 @@ div.tag {
                     left: 50%;
                     top: 50%;
                     margin-left: -2em;
-                    margin-top: -3em;
+                    margin-top: -2.5em;
                     z-index: 2;
                     opacity: .75;
                     transition: .3s ease-out;
@@ -1022,7 +1031,7 @@ div.tag {
             flex-shrink: 1;
             position: relative;
             width: 100%;
-            height: 220px;
+
             border: 1px solid #FFF;
             overflow: hidden;
             a {
