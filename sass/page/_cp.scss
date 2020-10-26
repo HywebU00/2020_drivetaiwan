@@ -853,6 +853,12 @@ div.tag {
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto 3em;
+    height: 600px;
+    overflow:hidden;
+    align-content:flex-start;
+    @include screen('mobile') {
+        height:auto;
+    }
     h3 {
         flex-grow: 1;
         flex-shrink: 1;
@@ -861,7 +867,8 @@ div.tag {
         text-align: center;
         line-height: 1.45em;
         margin: 0 auto .5rem;
-        padding-bottom: 1rem;
+        height: 2em;
+        // padding-bottom: 1rem;
         border-bottom: $primaryColor 1px solid;
         @include screen('xs_mobile') {
             max-width: 300px;
