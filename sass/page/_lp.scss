@@ -10,21 +10,25 @@
     }
 }
 .lp {
-    .category {}
+
     .road_search {
         padding: .5em 0;
         text-align: center;
         background: #EAEAEA;
         border-radius: .5em;
         padding: 1em;
-        padding-right: 320px;
+        padding-right: 250px;
         position: relative;
         margin-bottom: 3em;
         @include screen('tablet') {
             padding-right: 1em;
             margin-bottom: 1em;
         }
-        &:after {
+        .category {
+            position: relative;
+            z-index:2;
+        }
+        &:before {
             content: "";
             width: 300px;
             height: 207px;
@@ -32,6 +36,7 @@
             right: 1em;
             bottom: -2em;
             background: url(../images/road_taiwan.png) no-repeat center center;
+            z-index: 1;
             @include screen('tablet') {
                 display: none;
             }
