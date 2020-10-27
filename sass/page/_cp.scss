@@ -75,15 +75,19 @@ h1.title, h2.title {
         margin: 0 auto 2em;
         display: flex;
         flex-flow: row nowrap;
+
         ~article{
             margin: 2em auto;
+            @include screen('mobile') {
+                margin: 0 auto;
+            }
         }
         +.parallax,+.parallax2{
             margin-top: -2em;
         }
         @include screen('mobile') {
             flex-flow: row wrap;
-            margin-bottom: 0;
+            margin: 0 auto;
         }
         .container {
             max-width: 1200px !important;
@@ -91,6 +95,9 @@ h1.title, h2.title {
             margin: 0 auto;
             display: flex;
             flex-flow: row nowrap;
+            @include screen('mobile') {
+                flex-flow: row wrap;
+            }
         }
         .word {
             flex-grow: 1;
@@ -101,6 +108,7 @@ h1.title, h2.title {
             @include screen('mobile') {
                 flex-basis: 100%;
                 min-width: 100%;
+                padding: 1.5em;
             }
         }
         .img {
@@ -113,11 +121,12 @@ h1.title, h2.title {
             img {
                 width: 100%;
                 line-height: 0;
-                margin: auto;
+                margin: 0;
             }
             @include screen('mobile') {
                 flex-basis: 100%;
                 min-width: 100%;
+                margin: 0;
             }
         }
     }
