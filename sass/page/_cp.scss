@@ -22,6 +22,9 @@ h1.title, h2.title {
         @include screen('xs_mobile') {
             text-align: center;
             font-size: 1.25em;
+            br{
+                display:none;
+            }
         }
     }
     .parallax{
@@ -88,6 +91,7 @@ h1.title, h2.title {
         @include screen('mobile') {
             flex-flow: row wrap;
             margin: 0 auto;
+
         }
         .container {
             max-width: 1200px !important;
@@ -97,6 +101,8 @@ h1.title, h2.title {
             flex-flow: row nowrap;
             @include screen('mobile') {
                 flex-flow: row wrap;
+                align-content: flex-start;
+                display:block;
             }
         }
         .word {
@@ -126,7 +132,10 @@ h1.title, h2.title {
             @include screen('mobile') {
                 flex-basis: 100%;
                 min-width: 100%;
-                margin: 0;
+                margin: 0 0 auto;
+                align-self: flex-start;
+                height: auto;
+                display:block;
             }
         }
     }

@@ -8,7 +8,11 @@
             margin: 0px 3px 3px 0px;
             display: block;
             float: left;
-            min-width:5em;
+            min-width: 5em;
+            @include screen('xs_mobile') {
+                margin:0px 1% .5em;
+                min-width:31%;
+            }
         }
     }
     a {
@@ -20,8 +24,11 @@
         text-align: center;
         color: #333;
         @include box-sizing();
-        border-radius:4px;
+        border-radius: 4px;
         font-size: .938rem;
+        @include screen('xs_mobile') {
+            background:#FFF;
+        }
         &:hover,
         &:focus {
             color: #FFF;
