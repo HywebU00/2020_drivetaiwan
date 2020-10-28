@@ -1017,6 +1017,7 @@ div.tag {
     height: 600px;
     overflow: hidden;
     align-content: flex-start;
+    clear:both;
     @include screen('mobile') {
         height: auto;
     }
