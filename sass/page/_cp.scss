@@ -31,6 +31,7 @@ h1.title, h2.title {
         max-width: 100%;
         margin: 0 auto;
         background:url(../images/parallax2.jpg) no-repeat center center fixed;
+        background-size:cover;
         height: 20em;
         position: relative;
         @include screen('tablet') {
@@ -51,6 +52,7 @@ h1.title, h2.title {
         max-width: 100%;
         margin: 0 auto;
         background:url(../images/parallax.jpg) no-repeat center center fixed;
+        background-size:cover;
         height: 24em;
         position: relative;
         @include screen('tablet') {
