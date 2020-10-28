@@ -805,6 +805,11 @@
         .road_list {
             overflow: hidden;
             .album {
+                min-height:750px;
+                overflow:hidden;
+                @include screen('mobile') {
+                    min-height:200px;
+                }
                 ul {
                     li {
                         .thumbnail {
