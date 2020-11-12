@@ -47,6 +47,11 @@
             float: left;
             width: 300px;
             margin: 0 1em 1em 0;
+            @include screen('mobile') {
+            	width:90%;
+            	float:none;
+            	margin: 0 auto 1em;
+            }
         }
         h3 {
             font-size: 2rem;
