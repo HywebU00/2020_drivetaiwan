@@ -1013,8 +1013,8 @@ div.tag {
     flex-flow: row wrap;
     justify-content: center;
     max-width: 1200px;
-    margin: 0 auto 3em;
-    height: 600px;
+    margin: 0 auto 1em;
+    height: 500px;
     overflow: hidden;
     align-content: flex-start;
     clear:both;
@@ -1025,13 +1025,28 @@ div.tag {
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: 100%;
-        font-size: 2.5rem;
+        font-size: 2.25rem;
         text-align: center;
         line-height: 1.45em;
-        margin: 0 auto .5rem;
-        height: 2em;
+        margin: 0 auto .25rem;
+        color:$primaryColor;
+        // height: 2em;
         // padding-bottom: 1rem;
-        border-bottom: $primaryColor 1px solid;
+        position: relative;
+        span{
+            background:#FFF;
+            padding:1em;
+            margin: 0 auto;
+        }
+        &:before{
+            position: absolute;
+            width: 100%;
+            top:50%;
+            left: 0;
+            content:"";
+            border-bottom: #DDD 1px solid;
+            z-index:-2;
+        }
         @include screen('xs_mobile') {
             max-width: 300px;
             margin: 0 auto .25em;
@@ -1050,16 +1065,37 @@ div.tag {
             max-width: 95%;
         }
         h4 {
-            background: $primaryColor;
-            color: #FFF;
-            padding: .25em .5em;
+            // background: $primaryColor;
+            color: darken($primaryColor,10);
+            padding: .15em .5em .15em .75em;
             margin-bottom: .5em;
+            margin-top: 0;
+            position: relative;
+            overflow:hidden;
+            @include screen('mobile') {
+                text-align: left;
+            }
+            &:after{
+                content:"";
+                position: absolute;
+                width: 2em;
+                height: 2em;
+                background:$primaryColor;
+                transform:rotate(45deg);
+                left: -2em;
+                top: 0;
+            }
         }
         p {
             font-size: .938rem;
             margin: 0 0 .5em 0em;
             padding-left: 1em;
             border-left: 1px solid #CCC;
+            height: 3em;
+            line-height: 1.5em;
+            overflow:hidden;
+            display:block;
+            color:#666;
         }
     }
 }
