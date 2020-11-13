@@ -14,7 +14,9 @@
         position: fixed;
         width: 100%;
         height: 60px;
-        background: #FFF;
+        backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+        background: rgba(255, 255, 255, .8);
     }
     // // 虛擬底色 - navigation bg
     // &:before {
@@ -395,8 +397,10 @@
     right: 0;
     top: 0;
     box-shadow: rgba(0, 0, 0, .5) 0 0 25px;
-    background: rgba(0, 0, 0, .85);
+    background: rgba(0, 0, 0, .5);
     z-index: 999;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
     @include screen('tablet') {
         background: #FFF;
     }
