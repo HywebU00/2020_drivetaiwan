@@ -22,7 +22,8 @@
             }
             &.active {
                 a {
-                    color: $color-orange;
+                    background: $aHover;
+                    color: #FFF;
                     border-bottom: $color-orange 3px solid;
                     @include screen('xs_mobile') {
                         background: $aHover;
@@ -51,7 +52,7 @@
                     &:hover, &:focus {
                         background: $aHover;
                         color: #FFF;
-                        border-bottom: none;
+                        border-bottom: $color-orange 3px solid;
                     }
                 }
             }
@@ -59,23 +60,65 @@
     }
 }
 .change_info {
-    padding: 0em 1em;
+    padding: 0em 1em 1em;
     overflow: hidden;
-    .info_block {
-        padding: 1em;
-        background: #F1F1F1;
-        max-width: 1200px;
+    background: rgb(240, 240, 240);
+    background: linear-gradient(180deg, rgba(250, 250, 250, 1) 75%, rgba(221, 221, 221, 1) 100%);
+    max-width: 1200px;
+    margin: 0 auto 2em;
+    border-radius: .5em;
+    &:last-child {
+        border-bottom: none;
+    }
+    @include screen('mobile') {
         margin: 0 auto 1em;
-        overflow:hidden;
+        width: 95%;
+    }
+    .info_block {
+        padding: 1em 1em 1em 360px;
+        margin: 0 auto 1em;
+        overflow: hidden;
+        position: relative;
+        @include screen('mobile') {
+            padding: .5em;
+        }
+        // &:before {
+        //     position: absolute;
+        //     content: "";
+        //     transform: rotate(45deg);
+        //     width: 4em;
+        //     height: 4em;
+        //     background: $color-orange;
+        //     left: -2.5em;
+        //     top: -2.5em;
+        //     z-index: 0;
+        // }
+        ul, ol, p {
+            overflow: hidden;
+            font-size: .938rem !important;
+            line-height: 1.4rem;
+            margin-bottom: 1em;
+            padding: 0;
+        }
+        li {
+            list-style-position: inside;
+        }
         &>img {
-            float: left;
-            width: 300px;
+            width: 320px;
+            border-radius: .5em;
+            position: absolute;
+            top: 1em;
+            left: 1em;
             margin: 0 1em 1em 0;
+            z-index: 2;
             @include screen('mobile') {
-                width: 90%;
+                width: 100%;
                 float: none;
                 display: block;
                 margin: 0 auto 1em;
+                position: relative;
+                left: 0;
+                top: 0;
             }
         }
         h3 {
@@ -95,6 +138,9 @@
     .comparison {
         @extend %clearfix;
         .slick-slide {
+            .img-container{
+                @include aspect-ratio(5,3);
+            }
             p {
                 margin-bottom: 0;
                 color: #FFF;
@@ -103,4 +149,7 @@
             }
         }
     }
+}
+.before-nav, .after-nav {
+    display: none !important;
 }

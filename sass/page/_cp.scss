@@ -22,48 +22,48 @@ h1.title, h2.title {
         @include screen('xs_mobile') {
             text-align: center;
             font-size: 1.25em;
-            br{
-                display:none;
+            br {
+                display: none;
             }
         }
     }
-    .parallax{
+    .parallax {
         max-width: 100%;
         margin: 0 auto;
-        background:url(../images/parallax2.jpg) no-repeat center center fixed;
-        background-size:cover;
+        background: url(../images/parallax2.jpg) no-repeat center center fixed;
+        background-size: cover;
         height: 20em;
         position: relative;
         @include screen('tablet') {
-            display:none;
+            display: none;
         }
-        .white_logo{
+        .white_logo {
             position: absolute;
-            left:50%;
-            top:30%;
-            width:400px;
+            left: 50%;
+            top: 30%;
+            width: 400px;
             margin-left: -500px;
-            img{
+            img {
                 width: 100%;
             }
         }
     }
-    .parallax2{
+    .parallax2 {
         max-width: 100%;
         margin: 0 auto;
-        background:url(../images/parallax.jpg) no-repeat center center fixed;
-        background-size:cover;
+        background: url(../images/parallax.jpg) no-repeat center center fixed;
+        background-size: cover;
         height: 24em;
         position: relative;
         @include screen('tablet') {
-            display:none;
+            display: none;
         }
-        .white_logo{
+        .white_logo {
             position: absolute;
-            right:5%;
-            top:30%;
-            width:400px;
-            img{
+            right: 5%;
+            top: 30%;
+            width: 400px;
+            img {
                 width: 100%;
             }
         }
@@ -80,20 +80,18 @@ h1.title, h2.title {
         margin: 0 auto 2em;
         display: flex;
         flex-flow: row nowrap;
-
-        ~article{
+        ~article {
             margin: 2em auto;
             @include screen('mobile') {
                 margin: 0 auto;
             }
         }
-        +.parallax,+.parallax2{
+        +.parallax, +.parallax2 {
             margin-top: -2em;
         }
         @include screen('mobile') {
             flex-flow: row wrap;
             margin: 0 auto;
-
         }
         .container {
             max-width: 1200px !important;
@@ -104,7 +102,7 @@ h1.title, h2.title {
             @include screen('mobile') {
                 flex-flow: row wrap;
                 align-content: flex-start;
-                display:block;
+                display: block;
             }
         }
         .word {
@@ -124,7 +122,7 @@ h1.title, h2.title {
             flex-shrink: 1;
             flex-basis: 400px;
             line-height: 0;
-            display:flex;
+            display: flex;
             margin: 1em 0;
             img {
                 width: 100%;
@@ -137,7 +135,7 @@ h1.title, h2.title {
                 margin: 0 0 auto;
                 align-self: flex-start;
                 height: auto;
-                display:block;
+                display: block;
             }
         }
     }
@@ -179,6 +177,10 @@ h1.title, h2.title {
     background: #F5F5F5;
     max-width: 100% !important;
     position: relative;
+    .featureSlider {
+        max-width: $container-max;
+        margin: 0 auto 1em;
+    }
     p {
         max-width: 80%;
         margin: 0 auto 1em;
@@ -213,7 +215,7 @@ h1.title, h2.title {
         height: 257px;
         background: url(../images/cp_story_right.png) no-repeat left top;
         right: 10%;
-        top: -10%;
+        bottom: 20%;
         transition: .3s ease-out;
         @include screen('notebook') {
             right: -5%;
@@ -748,8 +750,8 @@ div.tag {
         position: relative;
         .description {
             position: relative;
-            height: 13rem;
-            padding-top: 1em;
+            // height: 13rem;
+            padding: 1em 0;
             h3 {
                 height: 3em;
                 overflow: hidden;
@@ -757,10 +759,13 @@ div.tag {
                 font-size: 1.5rem;
                 font-weight: 600;
                 line-height: 1.5em;
-                margin: 0rem 1rem .5rem;
+                margin: 0rem 1rem 1rem;
                 border: none;
                 text-shadow: none;
                 color: #222;
+                @include screen('xs_mobile') {
+                    font-size: 1.25rem;
+                }
             }
             p {
                 height: 4.5em;
@@ -782,6 +787,38 @@ div.tag {
 }
 .changeSlider {
     .item {
+        .categlog {
+            position: absolute;
+            width: auto;
+            top: 0em;
+            left: 0em;
+            width: 100%;
+            height: 30px;
+            padding: 0em;
+            z-index: 99;
+            font-size: .875rem;
+            overflow:hidden;
+            span {
+                display: inline-block;
+                color: #FFF;
+                background: $primaryColor;
+                padding: .25em 1em;
+                width: auto;
+                position: relative;
+                white-space:nowrap;
+                &:after {
+                    position: absolute;
+                    width: 0;
+                    content: "";
+                    height: 0;
+                    border-style: solid;
+                    border-width: 40px 12px 0 0;
+                    border-color: $primaryColor transparent transparent transparent;
+                    right: -10px;
+                    top: 0;
+                }
+            }
+        }
         .description {
             height: 7rem;
         }
@@ -801,7 +838,7 @@ div.tag {
 }
 .othervideoSlider {
     margin: 0 auto;
-    width: 35%;
+    width: 50%;
     min-width: 400px;
     @include screen('xs_mobile') {
         width: 90%;
@@ -824,6 +861,7 @@ div.tag {
     .img-container {
         margin-bottom: 0;
         background: #000;
+        @include aspect-ratio(16,9);
         &:after {
             position: absolute;
             width: 4em;
@@ -1014,10 +1052,10 @@ div.tag {
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto 1em;
-    height: 500px;
+    // height: 420px;
     overflow: hidden;
     align-content: flex-start;
-    clear:both;
+    clear: both;
     @include screen('mobile') {
         height: auto;
     }
@@ -1025,27 +1063,29 @@ div.tag {
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: 100%;
-        font-size: 2.25rem;
+        font-size: 1.25rem;
         text-align: center;
         line-height: 1.45em;
         margin: 0 auto .25rem;
-        color:$primaryColor;
+        color: #555;
         // height: 2em;
         // padding-bottom: 1rem;
         position: relative;
-        span{
-            background:#FFF;
-            padding:1em;
+        span {
+            background: #fafafa;
+            padding: .25em 1em;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
-        &:before{
+        &:before {
             position: absolute;
             width: 100%;
-            top:50%;
+            top: 50%;
             left: 0;
-            content:"";
-            border-bottom: #DDD 1px solid;
-            z-index:-2;
+            content: "";
+            border-bottom: #AAA 1px dashed;
+            z-index: 1;
         }
         @include screen('xs_mobile') {
             max-width: 300px;
@@ -1057,7 +1097,11 @@ div.tag {
         flex-shrink: 1;
         flex-basis: 45%;
         max-width: 45%;
-        margin: 0 2% 2em;
+        margin: 0 2% 1em;
+        background: #FFF;
+        border-radius: .35em;
+        padding: .5em 1em 1em;
+        border: 3px solid $primaryColor;
         @include screen('xs_mobile') {
             flex-grow: 1;
             flex-shrink: 1;
@@ -1066,22 +1110,22 @@ div.tag {
         }
         h4 {
             // background: $primaryColor;
-            color: darken($primaryColor,10);
+            color: darken($primaryColor, 10);
             padding: .15em .5em .15em .75em;
             margin-bottom: .5em;
             margin-top: 0;
             position: relative;
-            overflow:hidden;
+            overflow: hidden;
             @include screen('mobile') {
                 text-align: left;
             }
-            &:after{
-                content:"";
+            &:after {
+                content: "";
                 position: absolute;
                 width: 2em;
                 height: 2em;
-                background:$primaryColor;
-                transform:rotate(45deg);
+                background: $primaryColor;
+                transform: rotate(45deg);
                 left: -2em;
                 top: 0;
             }
@@ -1091,11 +1135,17 @@ div.tag {
             margin: 0 0 .5em 0em;
             padding-left: 1em;
             border-left: 1px solid #CCC;
-            height: 3em;
+            height: 4.5em;
             line-height: 1.5em;
-            overflow:hidden;
-            display:block;
-            color:#666;
+            overflow: hidden;
+            display: block;
+            color: #666;
+        }
+        .slick-slide {
+            p {
+                font-size: 1rem;
+                height: 3rem;
+            }
         }
     }
 }

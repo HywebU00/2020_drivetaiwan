@@ -86,18 +86,10 @@
         </header>
         <!-- header End -->
         <!-- main Start -->
-        <div id="center" class="main innerpage">
+        <div id="center" class="main innerpage for_secret">
             <!-- 內頁新增一個classname-->
             <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-            <div class="inner_img intro_img mask">
-                <img src="images/secret_img_01.jpg" alt="">
-                <div class="info">
-                    <div class="title">北部地區 <small>(台北市、新北市、桃園市、新竹市、新竹縣、基隆市、宜蘭縣)</small></div>
-                    <span>
-                        在臺北首都光環籠罩下的北部地區，除了高科技的發展外，更致力於新舊事物的融合，在發展經濟繁榮的努力中，卻也沒有忘記保留臺灣最引以為傲的歷史文化與自然景觀；在這裡，您可以看到現代社會與傳統歷史的巧妙融合。
-                    </span>
-                </div>
-            </div>
+
             <div class="container">
                 <!-- breadcrumb 這一頁不要套 -->
                 <!-- <div class="breadcrumb">
@@ -111,339 +103,259 @@
                 <h2 class="title">私房秘境</h2>
                 <!-- LP Start -->
                 <section class="lp">
-                    <!-- 查詢 -->
-                    <div class="road_search">
-                        <form action="" class="form_inline">
-                            <div class="form_grp">
-                                <select name="" id="selectSample">
-                                    <option value="">北部</option>
-                                    <option value="">中部</option>
-                                    <option value="">南部</option>
-                                    <option value="">東部</option>
-                                </select>
+                     <!-- 台灣地圖 -->
+                    <div class="taiwan_map">
+                        <div class="map">
+                            <a href="#" class="el keelung"><img src="images/map_keelung.svg" alt=""></a>
+                            <a href="#" class="el taipeicounty"><img src="images/map_taipeicounty.svg" alt=""></a>
+                            <a href="#" class="el taipei"><img src="images/map_taipei.svg" alt=""></a>
+                            <a href="#" class="el taoyuan"><img src="images/map_taoyuan.svg" alt=""></a>
+                            <a href="#" class="el hsinchusi"><img src="images/map_hsinchusi.svg" alt=""></a>
+                            <a href="#" class="el hsinchucounty"><img src="images/map_hsinchucounty.svg" alt=""></a>
+                            <a href="#" class="el miaoli"><img src="images/map_miaoli.svg" alt=""></a>
+                            <a href="#" class="el taichung"><img src="images/map_taichung.svg" alt=""></a>
+                            <a href="#" class="el changhwa"><img src="images/map_changhwa.svg" alt=""></a>
+                            <a href="#" class="el nantuo"><img src="images/map_nantuo.svg" alt=""></a>
+                            <a href="#" class="el yunlin"><img src="images/map_yunlin.svg" alt=""></a>
+                            <a href="#" class="el chiayicounty"><img src="images/map_chiayicounty.svg" alt=""></a>
+                            <a href="#" class="el chiayisi"><img src="images/map_chiayisi.svg" alt=""></a>
+                            <a href="#" class="el tainan"><img src="images/map_tainan.svg" alt=""></a>
+                            <a href="#" class="el kaoshiung"><img src="images/map_kaoshiung.svg" alt=""></a>
+                            <a href="#" class="el pingtung"><img src="images/map_pingtung.svg" alt=""></a>
+                            <a href="#" class="el yilan"><img src="images/map_yilan.svg" alt=""></a>
+                            <a href="#" class="el hwalien"><img src="images/map_hwalien.svg" alt=""></a>
+                            <a href="#" class="el taitung"><img src="images/map_taitung.svg" alt=""></a>
+                             <a href="#" class="el lienchian"><img src="images/map_lienchian.png" alt=""></a>
+                            <a href="#" class="el kinmen"><img src="images/map_kinmen.png" alt=""></a>
+                            <a href="#" class="el penghu"><img src="images/map_penghu.png" alt=""></a>
+                        </div>
+                        <div class="road_list">
+                            <!-- 查詢 -->
+                            <div class="road_search">
+                                <!--  <form action="" class="form_inline">
+                                    <div class="form_grp">
+                                        <select name="" id="selectSample">
+                                            <option value="">北部</option>
+                                            <option value="">中部</option>
+                                            <option value="">南部</option>
+                                            <option value="">東部</option>
+                                        </select>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <button type="button" class="btn btn-blue">查詢</button>
+                                    </div>
+                                </form> -->
+                                <div class="category">
+                                    <ul>
+                                        <li>
+                                            <a title="全部" class="active" href="#"> 全部 </a></li>
+                                        <li><a href="#" title="臺中市">臺中市</a></li>
+                                        <li><a href="#" title="基隆市">基隆市</a></li>
+                                        <li><a href="#" title="高雄市">高雄市</a></li>
+                                        <li><a href="#" title="新北市">新北市</a></li>
+                                        <li><a href="#" title="宜蘭縣">宜蘭縣</a></li>
+                                        <li><a href="#" title="桃園市">桃園市</a></li>
+                                        <li><a href="#" title="新竹縣">新竹縣</a></li>
+                                        <li><a href="#" title="苗栗縣">苗栗縣</a></li>
+                                        <li><a href="#" title="南投縣">南投縣</a></li>
+                                        <li><a href="#" title="彰化縣">彰化縣</a></li>
+                                        <li><a href="#" title="雲林縣">雲林縣</a></li>
+                                        <li><a href="#" title="嘉義縣">嘉義縣</a></li>
+                                        <li><a href="#" title="屏東縣">屏東縣</a></li>
+                                        <li><a href="#" title="花蓮縣">花蓮縣</a></li>
+                                        <li><a href="#" title="臺東縣">臺東縣</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="btn_grp">
-                                <button type="button" class="btn btn-blue">查詢</button>
+                            <!-- 相簿列表 -->
+                            <div class="album">
+                                <ul>
+                                    <li>
+                                        <div class="thumbnail mask">
+                                            <a href="#">
+                                                <div class="img-container">
+                                                    <!-- 此範例為4:3比例 -->
+                                                    <picture>
+                                                        <source media="(min-width: 1200px)" data-srcset="images/demo/06.jpg">
+                                                        <source media="(min-width: 992px)" data-srcset="images/demo/06.jpg">
+                                                        <source media="(min-width: 576px)" data-srcset="images/demo/06.jpg">
+                                                        <source media="(max-width: 575px)" data-srcset="images/demo/06.jpg">
+                                                        <img data-src="images/demo/06.jpg" class="lazy">
+                                                        <noscript><img src="images/demo/06.jpg"></noscript>
+                                                    </picture>
+                                                </div>
+                                                <div class="caption">
+                                                    <a href="#" class="collect active">收藏</a>
+                                                    <div class="county"> 屏東縣 </div>
+                                                    <h3>公路名稱</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus perferendis laboriosam dolorum amet mollitia aspernatur qui incidunt nulla totam, nobis asperiores sunt dolor aut ad. Et, ad sed aperiam odit.</p>
+                                                    <div class="road"> 台3線 </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="thumbnail mask">
+                                            <a href="#">
+                                                <div class="img-container">
+                                                    <!-- 此範例為4:3比例 -->
+                                                    <picture>
+                                                        <source media="(min-width: 1200px)" data-srcset="images/demo/08.jpg">
+                                                        <source media="(min-width: 992px)" data-srcset="images/demo/08.jpg">
+                                                        <source media="(min-width: 576px)" data-srcset="images/demo/08.jpg">
+                                                        <source media="(max-width: 575px)" data-srcset="images/demo/08.jpg">
+                                                        <img data-src="images/demo/08.jpg" class="lazy">
+                                                        <noscript><img src="images/demo/08.jpg"></noscript>
+                                                    </picture>
+                                                </div>
+                                                <div class="caption">
+                                                    <a href="#" class="collect active">收藏</a>
+                                                    <div class="county"> 屏東縣 </div>
+                                                    <h3>公路名稱</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus perferendis laboriosam dolorum amet mollitia aspernatur qui incidunt nulla totam, nobis asperiores sunt dolor aut ad. Et, ad sed aperiam odit.</p>
+                                                    <div class="road"> 台3線 </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="thumbnail mask">
+                                            <a href="#">
+                                                <div class="img-container">
+                                                    <!-- 此範例為4:3比例 -->
+                                                    <picture>
+                                                        <source media="(min-width: 1200px)" data-srcset="images/demo/09.jpg">
+                                                        <source media="(min-width: 992px)" data-srcset="images/demo/09.jpg">
+                                                        <source media="(min-width: 576px)" data-srcset="images/demo/09.jpg">
+                                                        <source media="(max-width: 575px)" data-srcset="images/demo/09.jpg">
+                                                        <img data-src="images/demo/09.jpg" class="lazy">
+                                                        <noscript><img src="images/demo/09.jpg"></noscript>
+                                                    </picture>
+                                                </div>
+                                                <div class="caption">
+                                                    <a href="#" class="collect active">收藏</a>
+                                                    <div class="county"> 屏東縣 </div>
+                                                    <h3>公路名稱</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus perferendis laboriosam dolorum amet mollitia aspernatur qui incidunt nulla totam, nobis asperiores sunt dolor aut ad. Et, ad sed aperiam odit.</p>
+                                                    <div class="road"> 台3線 </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="thumbnail mask">
+                                            <a href="#">
+                                                <div class="img-container">
+                                                    <!-- 此範例為4:3比例 -->
+                                                    <picture>
+                                                        <source media="(min-width: 1200px)" data-srcset="images/demo/10.jpg">
+                                                        <source media="(min-width: 992px)" data-srcset="images/demo/10.jpg">
+                                                        <source media="(min-width: 576px)" data-srcset="images/demo/10.jpg">
+                                                        <source media="(max-width: 575px)" data-srcset="images/demo/10.jpg">
+                                                        <img data-src="images/demo/10.jpg" class="lazy">
+                                                        <noscript><img src="images/demo/10.jpg"></noscript>
+                                                    </picture>
+                                                </div>
+                                                <div class="caption">
+                                                    <a href="#" class="collect active">收藏</a>
+                                                    <div class="county"> 屏東縣 </div>
+                                                    <h3>公路名稱</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus perferendis laboriosam dolorum amet mollitia aspernatur qui incidunt nulla totam, nobis asperiores sunt dolor aut ad. Et, ad sed aperiam odit.</p>
+                                                    <div class="road"> 台3線 </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="thumbnail mask">
+                                            <a href="#">
+                                                <div class="img-container">
+                                                    <!-- 此範例為4:3比例 -->
+                                                    <picture>
+                                                        <source media="(min-width: 1200px)" data-srcset="images/demo/11.jpg">
+                                                        <source media="(min-width: 992px)" data-srcset="images/demo/11.jpg">
+                                                        <source media="(min-width: 576px)" data-srcset="images/demo/11.jpg">
+                                                        <source media="(max-width: 575px)" data-srcset="images/demo/11.jpg">
+                                                        <img data-src="images/demo/11.jpg" class="lazy">
+                                                        <noscript><img src="images/demo/11.jpg"></noscript>
+                                                    </picture>
+                                                </div>
+                                                <div class="caption">
+                                                    <a href="#" class="collect active">收藏</a>
+                                                    <div class="county"> 屏東縣 </div>
+                                                    <h3>公路名稱</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus perferendis laboriosam dolorum amet mollitia aspernatur qui incidunt nulla totam, nobis asperiores sunt dolor aut ad. Et, ad sed aperiam odit.</p>
+                                                    <div class="road"> 台3線 </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="thumbnail mask">
+                                            <a href="#">
+                                                <div class="img-container">
+                                                    <!-- 此範例為4:3比例 -->
+                                                    <picture>
+                                                        <source media="(min-width: 1200px)" data-srcset="images/demo/12.jpg">
+                                                        <source media="(min-width: 992px)" data-srcset="images/demo/12.jpg">
+                                                        <source media="(min-width: 576px)" data-srcset="images/demo/12.jpg">
+                                                        <source media="(max-width: 575px)" data-srcset="images/demo/12.jpg">
+                                                        <img data-src="images/demo/12.jpg" class="lazy">
+                                                        <noscript><img src="images/demo/12.jpg"></noscript>
+                                                    </picture>
+                                                </div>
+                                                <div class="caption">
+                                                    <a href="#" class="collect active">收藏</a>
+                                                    <div class="county"> 屏東縣 </div>
+                                                    <h3>公路名稱</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus perferendis laboriosam dolorum amet mollitia aspernatur qui incidunt nulla totam, nobis asperiores sunt dolor aut ad. Et, ad sed aperiam odit.</p>
+                                                    <div class="road"> 台3線 </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                        </form>
+                            <!-- Pagination -->
+                            <div class="pagination">
+                                <form action="" class="form_inline">
+                                    <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+                                            <option value="">10</option>
+                                            <option value="">20</option>
+                                            <option value="">30</option>
+                                            <option value="">40</option>
+                                        </select> 筆， <input type="button" class="btn" value="確定">
+                                    </div>
+                                </form>
+                                <ul class="page">
+                                    <li class="first">
+                                        <a href="#" title="第一頁">第一頁 </a></li>
+                                    <li class="prev">
+                                        <a href="#" title="回上一頁">回上一頁 </a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="#">10</a></li>
+                                    <li class="next">
+                                        <a href="#" title="下一頁">下一頁 </a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="#" title="最後一頁">最後一頁 </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <!-- 相簿列表 -->
-                    <div class="album">
-                        <ul>
-                            <li>
-                                <div class="thumbnail mask">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/01.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/01.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/01.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/01.jpg">
-                                                <img data-src="images/demo/01.jpg" class="lazy">
-                                                <noscript><img src="images/demo/01.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <a href="#" class="collect active">收藏</a>
-                                            <div class="county"> 屏東縣 </div>
-                                            <h3>公路名稱</h3>
-                                            <div class="road"> 台3線 </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail mask">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/02.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/02.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/02.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/02.jpg">
-                                                <img data-src="images/demo/02.jpg" class="lazy">
-                                                <noscript><img src="images/demo/02.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <a href="#" class="collect active">收藏</a>
-                                            <div class="county"> 屏東縣 </div>
-                                            <h3>公路名稱</h3>
-                                            <div class="road"> 台3線 </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail mask">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/03.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/03.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/03.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/03.jpg">
-                                                <img data-src="images/demo/03.jpg" class="lazy">
-                                                <noscript><img src="images/demo/03.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <a href="#" class="collect active">收藏</a>
-                                            <div class="county"> 屏東縣 </div>
-                                            <h3>公路名稱</h3>
-                                            <div class="road"> 台3線 </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail mask">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/04.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/04.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/04.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/04.jpg">
-                                                <img data-src="images/demo/04.jpg" class="lazy">
-                                                <noscript><img src="images/demo/04.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <a href="#" class="collect active">收藏</a>
-                                            <div class="county"> 屏東縣 </div>
-                                            <h3>公路名稱</h3>
-                                            <div class="road"> 台3線 </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail mask">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/05.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/05.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/05.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/05.jpg">
-                                                <img data-src="images/demo/05.jpg" class="lazy">
-                                                <noscript><img src="images/demo/05.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <a href="#" class="collect active">收藏</a>
-                                            <div class="county"> 屏東縣 </div>
-                                            <h3>公路名稱</h3>
-                                            <div class="road"> 台3線 </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail mask">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/06.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/06.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/06.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/06.jpg">
-                                                <img data-src="images/demo/06.jpg" class="lazy">
-                                                <noscript><img src="images/demo/06.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <a href="#" class="collect active">收藏</a>
-                                            <div class="county"> 屏東縣 </div>
-                                            <h3>公路名稱</h3>
-                                            <div class="road"> 台3線 </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail mask">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/07.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/07.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/07.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/07.jpg">
-                                                <img data-src="images/demo/07.jpg" class="lazy">
-                                                <noscript><img src="images/demo/07.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <a href="#" class="collect active">收藏</a>
-                                            <div class="county"> 屏東縣 </div>
-                                            <h3>公路名稱</h3>
-                                            <div class="road"> 台3線 </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail mask">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/08.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/08.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/08.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/08.jpg">
-                                                <img data-src="images/demo/08.jpg" class="lazy">
-                                                <noscript><img src="images/demo/08.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <a href="#" class="collect active">收藏</a>
-                                            <div class="county"> 屏東縣 </div>
-                                            <h3>公路名稱</h3>
-                                            <div class="road"> 台3線 </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail mask">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/09.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/09.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/09.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/09.jpg">
-                                                <img data-src="images/demo/09.jpg" class="lazy">
-                                                <noscript><img src="images/demo/09.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <a href="#" class="collect active">收藏</a>
-                                            <div class="county"> 屏東縣 </div>
-                                            <h3>公路名稱</h3>
-                                            <div class="road"> 台3線 </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail mask">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/10.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/10.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/10.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/10.jpg">
-                                                <img data-src="images/demo/10.jpg" class="lazy">
-                                                <noscript><img src="images/demo/10.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <a href="#" class="collect active">收藏</a>
-                                            <div class="county"> 屏東縣 </div>
-                                            <h3>公路名稱</h3>
-                                            <div class="road"> 台3線 </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail mask">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/11.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/11.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/11.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/11.jpg">
-                                                <img data-src="images/demo/11.jpg" class="lazy">
-                                                <noscript><img src="images/demo/11.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <a href="#" class="collect active">收藏</a>
-                                            <div class="county"> 屏東縣 </div>
-                                            <h3>公路名稱</h3>
-                                            <div class="road"> 台3線 </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail mask">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/12.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/12.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/12.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/12.jpg">
-                                                <img data-src="images/demo/12.jpg" class="lazy">
-                                                <noscript><img src="images/demo/12.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <a href="#" class="collect active">收藏</a>
-                                            <div class="county"> 屏東縣 </div>
-                                            <h3>公路名稱</h3>
-                                            <div class="road"> 台3線 </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+
                 </section>
                 <!-- LP End -->
-                <!-- Pagination -->
-                <div class="pagination">
-                    <form action="" class="form_inline">
-                        <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
-                                <option value="">10</option>
-                                <option value="">20</option>
-                                <option value="">30</option>
-                                <option value="">40</option>
-                            </select> 筆， <input type="button" class="btn" value="確定">
-                        </div>
-                    </form>
-                    <ul class="page">
-                        <li class="first">
-                            <a href="#" title="第一頁">第一頁 </a></li>
-                        <li class="prev">
-                            <a href="#" title="回上一頁">回上一頁 </a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">6</a></li>
-                        <li><a href="#">7</a></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">9</a></li>
-                        <li><a href="#">10</a></li>
-                        <li class="next">
-                            <a href="#" title="下一頁">下一頁 </a>
-                        </li>
-                        <li class="last">
-                            <a href="#" title="最後一頁">最後一頁 </a>
-                        </li>
-                    </ul>
-                </div>
+
             </div>
         </div>
         <!-- fatfooter Start -->
