@@ -823,6 +823,15 @@ div.tag {
             height: 7rem;
         }
     }
+    @include screen('xs_mobile') {
+        padding:1em 2.5em;
+        .slick-prev{
+            left:15px;
+        }
+        .slick-next{
+            right:15px;
+        }
+    }
 }
 .othervideo {
     background: url(../images/othervideo_bg.jpg) no-repeat top center;
