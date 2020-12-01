@@ -1,4 +1,7 @@
 @charset "utf-8";
+.cp{
+    min-height:500px;
+}
 // 文章標題
 h1.title, h2.title {
     line-height: 1.25em;
@@ -1081,7 +1084,7 @@ div.tag {
         // padding-bottom: 1rem;
         position: relative;
         span {
-            background: #fafafa;
+            background: #FFF;
             padding: .25em 1em;
             margin: 0 auto;
             position: relative;
@@ -1222,9 +1225,13 @@ div.tag {
                 }
             }
         }
+        @include screen('mobile') {
+            height: 360px;
+        }
         @include screen('xs_mobile') {
             float: none;
             width: 100%;
+            height: 340px;
             margin: 0 auto 1em;
         }
         p {
