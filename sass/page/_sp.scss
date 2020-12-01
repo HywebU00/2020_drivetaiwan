@@ -75,7 +75,7 @@
         width: 95%;
     }
     .info_block {
-        padding: 1em 1em 1em 360px;
+        padding: 1em;
         margin: 0 auto 1em;
         overflow: hidden;
         position: relative;
@@ -93,11 +93,14 @@
         //     top: -2.5em;
         //     z-index: 0;
         // }
-        ul, ol, p {
-            overflow: hidden;
-            font-size: .938rem !important;
-            line-height: 1.4rem;
-            margin-bottom: 1em;
+        .info_block{
+            overflow:hidden;
+        }
+        h2,h3,h4,ul, ol, p {
+            display:block;
+            margin: 0;
+            // font-size: .938rem !important;
+            line-height: 1.75em;
             padding: 0;
         }
         li {
@@ -105,10 +108,9 @@
         }
         &>img {
             width: 320px;
+            float: left;
             border-radius: .5em;
-            position: absolute;
-            top: 1em;
-            left: 1em;
+            position: relative;
             margin: 0 1em 1em 0;
             z-index: 2;
             @include screen('mobile') {

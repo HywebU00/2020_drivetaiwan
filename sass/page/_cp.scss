@@ -1075,7 +1075,7 @@ div.tag {
         font-size: 1.25rem;
         text-align: center;
         line-height: 1.45em;
-        margin: 0 auto .25rem;
+        margin: 0 auto 1rem;
         color: #555;
         // height: 2em;
         // padding-bottom: 1rem;
@@ -1093,7 +1093,7 @@ div.tag {
             top: 50%;
             left: 0;
             content: "";
-            border-bottom: #AAA 1px dashed;
+            border-bottom: #CCC 1px dashed;
             z-index: 1;
         }
         @include screen('xs_mobile') {
@@ -1106,11 +1106,11 @@ div.tag {
         flex-shrink: 1;
         flex-basis: 45%;
         max-width: 45%;
-        margin: 0 2% 1em;
+        margin: 0 2% 2em;
         background: #FFF;
         border-radius: .35em;
         padding: .5em 1em 1em;
-        border: 3px solid $primaryColor;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
         @include screen('xs_mobile') {
             flex-grow: 1;
             flex-shrink: 1;
@@ -1140,7 +1140,7 @@ div.tag {
             }
         }
         p {
-            font-size: .938rem;
+            font-size: .813rem;
             margin: 0 0 .5em 0em;
             padding-left: 1em;
             border-left: 1px solid #CCC;
