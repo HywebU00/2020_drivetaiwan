@@ -44,6 +44,21 @@ $(function() {
         ease: 'ease',
         pauseOnHover: false
     });
+    // video
+    $('.youtubeSlider').slick({
+        mobileFirst: true,
+        dots: false,
+        arrow: true,
+        infinite: true,
+        speed: 1000,
+        autoplaySpeed: 5000,
+        autoplay: true,
+        fade: false,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        pauseOnHover: false
+    });
     // 主題公路
     $('.recommend .roadSlider').slick({
         mobileFirst: true,

@@ -84,6 +84,29 @@
         flex: 0 1 30%;
         border-radius: .5em;
         padding: 0 1em 1em;
+        flex: 1;
+        flex-basis: 30%;
+        overflow: hidden;
+        .youtubeSlider {
+            display: block;
+            max-width: 100%;
+            &:hover{
+                .slick-prev{
+                    opacity: 1;
+                }
+                .slick-next{
+                    opacity:1;
+                }
+            }
+            .slick-prev{
+                left: 0;
+                opacity: 0;
+            }
+            .slick-next{
+                right: 0;
+                opacity: 0;
+            }
+        }
         .youtube {
             width: 100%;
             @include aspect-ratio(4, 3);
