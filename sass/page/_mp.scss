@@ -498,7 +498,7 @@
             @include screen('tablet') {
                 display: block;
                 width: 300px;
-                margin: 0 1em 1em;
+                margin: 0 auto 1em;
                 height: auto;
             }
             @include screen('xs_mobile') {

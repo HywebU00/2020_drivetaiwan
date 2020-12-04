@@ -9,12 +9,12 @@
         bottom: 50px;
     }
 }
-.search_result{
+.search_result {
     min-height: 500px;
     margin-bottom: 1em;
 }
-.lp{
-    min-height:500px;
+.lp {
+    min-height: 500px;
 }
 .for_secret {
     background: rgba(76, 78, 82, 1);
@@ -49,14 +49,22 @@
     }
     h2.title {
         color: #FFF;
-        text-shadow:0px 0px 5px rgba(0,0,0,.75),0px 2px 15px rgba(0,0,0,.75);
-        small{
-            color:#FFF;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, .75), 0px 2px 15px rgba(0, 0, 0, .75);
+        small {
+            color: #FFF;
         }
     }
     .lp {
+         .road_search {
+            &:before {
+                background: url(../images/road_taiwan_white.png) no-repeat center center;
+            }
+        }
         .pagination {
             color: #FFF;
+            span{
+                color:$color-yellow;
+            }
         }
         .taiwan_map {
             .map {
@@ -67,7 +75,7 @@
                     transition: none;
                     &:hover, &:focus {
                         filter: grayscale(0%);
-                        z-index:99999;
+                        z-index: 99999;
                     }
                     &.lienchian {
                         border: 1px solid rgba(0, 0, 0, .65);

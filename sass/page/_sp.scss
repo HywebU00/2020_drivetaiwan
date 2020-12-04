@@ -65,11 +65,14 @@
         font-size: 2rem;
         margin: 1em .5em .5rem;
         border-bottom: 2px solid $primaryColor;
+        flex: 1 1 100%;
     }
     padding: 0em 1em 1em;
     overflow: hidden;
     max-width: 1200px;
     margin: 0 auto 2em;
+    display:flex;
+    flex-flow:row wrap;
     &:last-child {
         border-bottom: none;
     }
@@ -77,16 +80,39 @@
         margin: 0 auto 1em;
         width: 95%;
     }
+    .video_block {
+        flex: 0 1 30%;
+        border-radius: .5em;
+        padding: 0 1em 1em;
+        .youtube {
+            width: 100%;
+            @include aspect-ratio(4, 3);
+            position: relative;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+        }
+        @include screen('tablet') {
+            flex: 0 1 100%;
+            flex-basis: 100%;
+            padding: 0;
+            margin-bottom: 1em;
+        }
+    }
     .info_block {
+        flex: 1 1 60%;
         padding: 1em;
-        margin: 0 auto 1em;
+        margin: 0 1em 1em 0;
         overflow: hidden;
         position: relative;
         border-radius: .5em;
         background: rgb(240, 240, 240);
         background: linear-gradient(180deg, rgba(250, 250, 250, 1) 50%, rgba(221, 221, 221, 1) 100%);
-        @include screen('mobile') {
+        @include screen('tablet') {
             padding: 1em;
+            flex-basis: 100%;
+            margin: 0 auto 1em;
         }
         // &:before {
         //     position: absolute;
@@ -113,7 +139,7 @@
             list-style-position: inside;
         }
         &>img {
-            width: 320px;
+            width: 250px;
             float: left;
             border-radius: .5em;
             position: relative;
@@ -144,6 +170,8 @@
         }
     }
     .comparison {
+        flex-basis: 100%;
+        flex: 1 1 100%;
         @extend %clearfix;
         .slick-slide {
             .img-container {
