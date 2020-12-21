@@ -27,7 +27,7 @@
         border-radius: 4px;
         font-size: .938rem;
         @include screen('xs_mobile') {
-            background:#FFF;
+            background:#F1F1F1;
         }
         &:hover,
         &:focus {

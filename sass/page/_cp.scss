@@ -1,6 +1,6 @@
 @charset "utf-8";
-.cp{
-    min-height:500px;
+.cp {
+    min-height: 500px;
 }
 // 文章標題
 h1.title, h2.title {
@@ -800,7 +800,7 @@ div.tag {
             padding: 0em;
             z-index: 99;
             font-size: .875rem;
-            overflow:hidden;
+            overflow: hidden;
             span {
                 display: inline-block;
                 color: #FFF;
@@ -808,7 +808,7 @@ div.tag {
                 padding: .25em 1em;
                 width: auto;
                 position: relative;
-                white-space:nowrap;
+                white-space: nowrap;
                 &:after {
                     position: absolute;
                     width: 0;
@@ -827,12 +827,12 @@ div.tag {
         }
     }
     @include screen('xs_mobile') {
-        padding:1em 2.5em;
-        .slick-prev{
-            left:15px;
+        padding: 1em 2.5em;
+        .slick-prev {
+            left: 15px;
         }
-        .slick-next{
-            right:15px;
+        .slick-next {
+            right: 15px;
         }
     }
 }
@@ -857,6 +857,20 @@ div.tag {
         min-width: 100px;
         padding: 0 !important;
     }
+    .youtube {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        @include aspect-ratio(4, 3);
+        iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
     a {
         &:hover, &:focus {
             color: $aHover;
@@ -873,7 +887,7 @@ div.tag {
     .img-container {
         margin-bottom: 0;
         background: #000;
-        @include aspect-ratio(16,9);
+        @include aspect-ratio(16, 9);
         &:after {
             position: absolute;
             width: 4em;

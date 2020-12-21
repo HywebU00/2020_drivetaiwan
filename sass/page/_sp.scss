@@ -40,20 +40,23 @@
                 font-size: 1.25rem;
                 font-weight: bold;
                 color: #000;
+                &:hover, &:focus {
+                    background: #FFF;
+                    color: $color-orange;
+                    border-bottom: $color-orange 3px solid;
+                    @include screen('xs_mobile') {
+                        &:hover, &:focus {
+                            color: #FFF;
+                            background: $color-orange;
+                            border-bottom: $color-orange 0px solid;
+                        }
+                    }
+                }
                 @include screen('xs_mobile') {
                     font-size: .938rem;
                     border-bottom: none;
                     background: #F1F1F1;
                     margin-bottom: 2px;
-                }
-                &:hover, &:focus {
-                    color: $color-orange;
-                    border-bottom: $color-orange 3px solid;
-                    &:hover, &:focus {
-                        background: $aHover;
-                        color: #FFF;
-                        border-bottom: $color-orange 3px solid;
-                    }
                 }
             }
         }
@@ -90,19 +93,19 @@
         .youtubeSlider {
             display: block;
             max-width: 100%;
-            &:hover{
-                .slick-prev{
+            &:hover {
+                .slick-prev {
                     opacity: 1;
                 }
-                .slick-next{
-                    opacity:1;
+                .slick-next {
+                    opacity: 1;
                 }
             }
-            .slick-prev{
+            .slick-prev {
                 left: 0;
                 opacity: 0;
             }
-            .slick-next{
+            .slick-next {
                 right: 0;
                 opacity: 0;
             }
