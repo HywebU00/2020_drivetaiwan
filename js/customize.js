@@ -217,7 +217,7 @@ $(function() {
         speed: 300,
         slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         arrow: true,
         lazyLoaded: true,
         lazyLoad: 'ondemand',
@@ -265,6 +265,7 @@ $(function() {
         dots: false,
         infinite: true,
         speed: 300,
+        autoplay:false;
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
