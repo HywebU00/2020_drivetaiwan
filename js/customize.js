@@ -265,7 +265,7 @@ $(function() {
         dots: false,
         infinite: true,
         speed: 300,
-        autoplay:false;
+        autoplay:false,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
