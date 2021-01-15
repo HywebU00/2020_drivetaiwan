@@ -44,12 +44,15 @@
         }
     }
     .img-container {
-        @include aspect-ratio(5,2); //PC版比例
-        @include screen('notebook') {
-            @include aspect-ratio(5, 2); //Mobile版比例
-        }
+        // @include aspect-ratio(5,2); //PC版比例
+        // @include screen('notebook') {
+        //     @include aspect-ratio(5, 2); //Mobile版比例
+        // }
+        width: 100%;
+        height: 100%;
         @include screen('mobile') {
             @include aspect-ratio(5, 3); //Mobile版比例
+            height: auto;
         }
     }
     .slick-prev {

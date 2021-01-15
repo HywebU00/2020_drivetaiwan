@@ -3,6 +3,7 @@
 .section {
     padding: 4em 0 3em;
     position: relative;
+
     @include screen('mobile') {
         padding: 2em 0;
     }
@@ -73,6 +74,8 @@
     min-height: 500px;
     position: relative;
     overflow: hidden;
+    min-height: 90vh;
+
     h2 {
         margin-bottom: 1rem;
     }
@@ -267,6 +270,9 @@
         padding: 2.5em 4em;
         background: rgba(0, 0, 0, .25);
         transition: .3s ease-out;
+        a.more{
+            margin-top: 0;
+        }
         h3 {
             text-align: center;
             font-size: 1.5rem;
@@ -438,6 +444,7 @@
     background: url(../images/secret_bg.jpg) center center no-repeat fixed;
     background-size: cover;
     min-height: 500px;
+    height: 100vh;
     position: relative;
     overflow: hidden;
     @include screen('tablet') {
@@ -621,7 +628,7 @@
     min-height: 200px;
     max-height: 300px;
     overflow: hidden;
-    padding: 1em 0;
+    padding: 2.5em 0 1em;
     @include screen('tablet') {
         max-height: 1000px !important;
     }
@@ -1083,9 +1090,17 @@
 // 首頁輪播
 .mpSlider {
     width: 100%;
+    height: calc(100vh - 100px);
     @include gutter(0);
     .img-container {
         @include aspect-ratio(1, 1);
+    }
+    .slick-list,.slick-track{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left: 0;
     }
     .slick-slide {
         overflow: hidden;

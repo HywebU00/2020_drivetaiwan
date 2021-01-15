@@ -265,7 +265,7 @@ $(function() {
         dots: false,
         infinite: true,
         speed: 300,
-        autoplay:false,
+        autoplay: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -386,21 +386,20 @@ $(function() {
         responsive: [{
             breakpoint: 992,
             settings: "unslick"
-        },{
+        }, {
             breakpoint: 545,
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1,
                 arrows: true
             }
-        },{
+        }, {
             breakpoint: 544,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: true
             }
-
         }]
     });
     // 廣告輪播
@@ -604,7 +603,6 @@ $(function() {
             $(this).blur();
             e.preventDefault();
         });
-
     }
     //
     $('.map_tag').find('a').each(function(index, el) {
@@ -775,5 +773,27 @@ $(function() {
                 arrows: false
             }
         }]
+    });
+    //
+    $.scrollify({
+        section: ".topic,.secret,.photo,.video",
+        sectionName: ".topic,.secret,.photo,.video",
+        interstitialSection: "header,.fatfooter,footer,.playfun,.wantknow",
+        easing: "easeOutExpo",
+        scrollSpeed: 1000,
+        offset: 0,
+        scrollbars: true,
+        standardScrollElements: ".mpSlider",
+        setHeights: true,
+        overflowScroll: true,
+        updateHash: true,
+        touchScroll: false,
+        before: function() {},
+        after: function() {},
+        afterResize: function() {},
+        afterRender: function() {},
+    });
+    $(window).on("resize", function(e) {
+        $.scrollify.update();
     });
 });
