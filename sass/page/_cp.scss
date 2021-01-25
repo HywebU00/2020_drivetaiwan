@@ -131,6 +131,7 @@ h1.title, h2.title {
                 width: 100%;
                 line-height: 0;
                 margin: 0;
+                object-fit: contain;
             }
             @include screen('mobile') {
                 flex-basis: 100%;
