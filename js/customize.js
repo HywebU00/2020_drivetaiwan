@@ -810,6 +810,7 @@ $(function() {
         return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
     };
     $(window).scroll(function() {
+        // 首頁
         if ($('.mpSlider').isOnScreen() === true) {
             $('.quickDot').find('a').removeClass('active');
         }
@@ -841,6 +842,49 @@ $(function() {
         if ($('.fatfooter').isOnScreen() === true) {
             $('.quickDot').find('a').removeClass('active');
         }
+        //內頁
+        if ($('.cp_story').isOnScreen() === true) {
+            $('.quickDot').find('.gotoCpStory').addClass('active').parents('li').siblings().find('a').removeClass('active');
+        } else {
+            $('.quickDot').find('.gotoCpStory').removeClass('active');
+        }
+        if ($('.cp_topic').isOnScreen() === true) {
+            $('.quickDot').find('.gotoCpTopic').addClass('active').parents('li').siblings().find('a').removeClass('active');
+        } else {
+            $('.quickDot').find('.gotoCpTopic').removeClass('active');
+        }
+        if ($('.change').isOnScreen() === true) {
+            $('.quickDot').find('.gotoChange').addClass('active').parents('li').siblings().find('a').removeClass('active');
+        } else {
+            $('.quickDot').find('.gotoChange').removeClass('active');
+        }
+        if ($('.basic').isOnScreen() === true) {
+            $('.quickDot').find('.gotoBasic').addClass('active').parents('li').siblings().find('a').removeClass('active');
+        } else {
+            $('.quickDot').find('.gotoBasic').removeClass('active');
+        }
+        if ($('.othervideo').isOnScreen() === true) {
+            $('.quickDot').find('.gotoOtherVideo').addClass('active').parents('li').siblings().find('a').removeClass('active');
+        } else {
+            $('.quickDot').find('.gotoOtherVideo').removeClass('active');
+        }
+        // 秘境內頁
+        if ($('.cp_intro').isOnScreen() === true) {
+            $('.quickDot').find('.gotoCpIntro').addClass('active').parents('li').siblings().find('a').removeClass('active');
+        } else {
+            $('.quickDot').find('.gotoCpIntro').removeClass('active');
+        }
+        if ($('.cp_legend').isOnScreen() === true) {
+            $('.quickDot').find('.gotoCpLengend').addClass('active').parents('li').siblings().find('a').removeClass('active');
+        } else {
+            $('.quickDot').find('.gotoCpLengend').removeClass('active');
+        }
+        if ($('.recommend').isOnScreen() === true) {
+            $('.quickDot').find('.gotoRecommend').addClass('active').parents('li').siblings().find('a').removeClass('active');
+        } else {
+            $('.quickDot').find('.gotoRecommend').removeClass('active');
+        }
+
     });
 
 });
