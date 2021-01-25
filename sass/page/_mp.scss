@@ -422,11 +422,23 @@
                     height: 1.4em;
                     line-height: 1.4em;
                     right: .5em;
-                    bottom: .3em;
+                    bottom: .63em;
                     color: #444;
                     z-index: 2;
-                    background: #FFF;
+                    font-size:.875em;
+                    line-height: 1.85em;
+                    color:#666;
+                    // background: #FFF;
                     border-radius: .2em;
+                    span{
+                        background:#FFF;
+                        display:inline-block;
+                        padding:0 1em;
+                        border-radius:.25rem;
+                        text-align: center;
+                        color:salmon;
+                        font-weight:bold;
+                    }
                     &:before {
                         position: absolute;
                         width: 1em;
@@ -435,7 +447,7 @@
                         background-size: contain;
                         content: "";
                         left: -1.2em;
-                        top: .2em;
+                        top: .4em;
                     }
                 }
             }
