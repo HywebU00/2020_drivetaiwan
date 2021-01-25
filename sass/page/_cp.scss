@@ -1277,7 +1277,7 @@ div.tag {
             }
         }
         .video {
-            flex-basis: 60%;
+            flex-basis: 66.6666%;
             min-height: auto;
             position: relative;
             width: 100%;
@@ -1286,6 +1286,7 @@ div.tag {
             background: none;
             flex-grow: 1;
             flex-shrink: 1;
+            height:auto;
             a {
                 display: block;
                 position: absolute;

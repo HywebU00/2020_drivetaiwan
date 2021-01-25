@@ -803,7 +803,7 @@ $(function() {
             left: win.scrollLeft()
         };
         viewport.right = viewport.left + win.width();
-        viewport.bottom = viewport.top + win.height()/2;
+        viewport.bottom = viewport.top + win.height() / 2;
         var bounds = this.offset();
         bounds.right = bounds.left + this.outerWidth();
         bounds.bottom = bounds.top + this.outerHeight();
@@ -842,4 +842,5 @@ $(function() {
             $('.quickDot').find('a').removeClass('active');
         }
     });
+
 });
