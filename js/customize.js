@@ -52,7 +52,7 @@ $(function() {
         infinite: true,
         speed: 1000,
         autoplaySpeed: 5000,
-        autoplay: true,
+        autoplay: false,
         fade: false,
         lazyLoaded: true,
         lazyLoad: 'ondemand',
@@ -268,7 +268,7 @@ $(function() {
         autoplay: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         arrow: true,
         lazyLoaded: true,
         lazyLoad: 'ondemand',
@@ -775,25 +775,71 @@ $(function() {
         }]
     });
     //
-    $.scrollify({
-        section: ".topic,.secret,.photo,.video",
-        sectionName: ".topic,.secret,.photo,.video",
-        interstitialSection: "header,.fatfooter,footer,.playfun,.wantknow",
-        easing: "easeOutExpo",
-        scrollSpeed: 1000,
-        offset: 0,
-        scrollbars: true,
-        standardScrollElements: ".mpSlider",
-        setHeights: true,
-        overflowScroll: true,
-        updateHash: true,
-        touchScroll: false,
-        before: function() {},
-        after: function() {},
-        afterResize: function() {},
-        afterRender: function() {},
-    });
-    $(window).on("resize", function(e) {
-        $.scrollify.update();
+    // $.scrollify({
+    //     section: ".mpSlider,.topic,.secret,.photo,.video",
+    //     sectionName: ".mpSlider,.topic,.secret,.photo,.video",
+    //     interstitialSection: "header,.fatfooter,footer,.playfun,.wantknow",
+    //     easing: "easeOutExpo",
+    //     scrollSpeed: 1000,
+    //     offset: 0,
+    //     scrollbars: true,
+    //     standardScrollElements: ".mpSlider",
+    //     setHeights: true,
+    //     overflowScroll: true,
+    //     updateHash: true,
+    //     touchScroll: false,
+    //     before: function() {},
+    //     after: function() {},
+    //     afterResize: function() {},
+    //     afterRender: function() {},
+    // });
+    // $(window).on("resize", function(e) {
+    //     $.scrollify.update();
+    // });
+    $.fn.isOnScreen = function() {
+        var win = $(window);
+        var viewport = {
+            top: win.scrollTop(),
+            left: win.scrollLeft()
+        };
+        viewport.right = viewport.left + win.width();
+        viewport.bottom = viewport.top + win.height()/2;
+        var bounds = this.offset();
+        bounds.right = bounds.left + this.outerWidth();
+        bounds.bottom = bounds.top + this.outerHeight();
+        return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+    };
+    $(window).scroll(function() {
+        if ($('.mpSlider').isOnScreen() === true) {
+            $('.quickDot').find('a').removeClass('active');
+        }
+        if ($('.topic').isOnScreen() === true) {
+            $('.quickDot').find('.gotoTopic').addClass('active').parents('li').siblings().find('a').removeClass('active');
+        } else {
+            $('.quickDot').find('.gotoTopic').removeClass('active');
+        }
+        if ($('.secret').isOnScreen() === true) {
+            $('.quickDot').find('.gotoSecret').addClass('active').parents('li').siblings().find('a').removeClass('active');
+        } else {
+            $('.quickDot').find('.gotoSecret').removeClass('active');
+        }
+        if ($('.playfun').isOnScreen() === true) {
+            $('.quickDot').find('.gotoPlayfun').addClass('active').parents('li').siblings().find('a').removeClass('active');
+        } else {
+            $('.quickDot').find('.gotoPlayfun').removeClass('active');
+        }
+        if ($('.photo').isOnScreen() === true) {
+            $('.quickDot').find('.gotoPhoto').addClass('active').parents('li').siblings().find('a').removeClass('active');
+        } else {
+            $('.quickDot').find('.gotoPhoto').removeClass('active');
+        }
+        if ($('.video').isOnScreen() === true) {
+            $('.quickDot').find('.gotoVideo').addClass('active').parents('li').siblings().find('a').removeClass('active');
+        } else {
+            $('.quickDot').find('.gotoVideo').removeClass('active');
+        }
+        if ($('.fatfooter').isOnScreen() === true) {
+            $('.quickDot').find('a').removeClass('active');
+        }
     });
 });

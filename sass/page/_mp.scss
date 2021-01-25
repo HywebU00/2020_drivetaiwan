@@ -14,7 +14,7 @@
         font-size: 3.75rem;
         line-height: 1.2;
         position: relative;
-        margin: 0 auto 1em;
+        margin: 0 auto .5em;
         @include screen('mobile') {
             font-size: 2.5rem;
             width: 90%;
@@ -43,7 +43,7 @@
         }
     }
     a.more {
-        margin-top: 2em;
+        margin-top: 1em;
         background: $primaryColor;
         border: 1px solid $primaryColor;
         color: #FFF;
@@ -84,7 +84,7 @@
     }
     &.effect {
         &:after {
-            left: 0;
+            left: -50%;
             opacity: 1;
         }
     }
@@ -92,14 +92,14 @@
         content: "";
         position: absolute;
         top: 0;
-        left: -30%;
+        left: 0%;
         background: rgba(0, 0, 0, .25);
         background: linear-gradient(125deg, rgba(255, 255, 255, 1) 60%, rgba(255, 255, 255, 0) 60%);
-        width: 100%;
+        width: 200%;
         height: 100%;
         z-index: 1;
-        opacity: 0;
-        transition: .6s .3s cubic-bezier(.55, .055, .675, .19);
+        opacity: 1;
+        transition: 1.5s .5s cubic-bezier(.55, .055, .675, .19);
     }
     .container {
         position: relative;
@@ -313,6 +313,9 @@
                 color: #000;
                 &:hover, &:focus {
                     color: $aHover;
+                    ~h3{
+                        color: $aHover;
+                    }
                     .img-container {
                         img {
                             opacity: 1;
@@ -444,7 +447,6 @@
     background: url(../images/secret_bg.jpg) center center no-repeat fixed;
     background-size: cover;
     min-height: 500px;
-    height: 100vh;
     position: relative;
     overflow: hidden;
     @include screen('tablet') {
@@ -857,6 +859,8 @@
     overflow: hidden;
     background: url(../images/photo_bg.jpg) no-repeat top center;
     background-size: cover;
+    height:100vh;
+    min-height: 500px;
     &.effect {
         &:after {
             left: 0;
@@ -982,6 +986,7 @@
     background: url(../images/video_bg.jpg) center center no-repeat fixed;
     background-size: cover;
     min-height: 500px;
+    height: 100vh;
     position: relative;
     overflow: hidden;
     @include screen('tablet') {
@@ -1201,7 +1206,7 @@
                     display: none;
                     transition: .3s ease-out;
                 }
-                &:hover, &:focus {
+                &:hover, &:focus,&.active {
                     background: $color-yellow;
                     span {
                         display: block;

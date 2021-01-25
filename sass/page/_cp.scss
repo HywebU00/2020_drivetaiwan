@@ -790,6 +790,20 @@ div.tag {
 }
 .changeSlider {
     .item {
+        a{
+            &:hover,&:focus {
+                .img-container{
+                    img{
+                        transform:scale(1.1);
+                    }
+                }
+            }
+        }
+        .img-container{
+            img{
+                transition:.3s ease-out;
+            }
+        }
         .categlog {
             position: absolute;
             width: auto;
