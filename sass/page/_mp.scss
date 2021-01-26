@@ -3,7 +3,6 @@
 .section {
     padding: 4em 0 3em;
     position: relative;
-
     @include screen('mobile') {
         padding: 2em 0;
     }
@@ -75,12 +74,13 @@
     position: relative;
     overflow: hidden;
     height: 100vh;
-
     h2 {
         margin-bottom: 1rem;
     }
     @include screen('mobile') {
         padding-bottom: 0em;
+        height: auto;
+
     }
     &.effect {
         &:after {
@@ -270,7 +270,7 @@
         padding: 2.5em 4em;
         background: rgba(0, 0, 0, .25);
         transition: .3s ease-out;
-        a.more{
+        a.more {
             margin-top: 0;
         }
         h3 {
@@ -313,7 +313,7 @@
                 color: #000;
                 &:hover, &:focus {
                     color: $aHover;
-                    ~h3{
+                    ~h3 {
                         color: $aHover;
                     }
                     .img-container {
@@ -425,19 +425,19 @@
                     bottom: .63em;
                     color: #444;
                     z-index: 2;
-                    font-size:.875em;
+                    font-size: .875em;
                     line-height: 1.85em;
-                    color:#666;
+                    color: #666;
                     // background: #FFF;
                     border-radius: .2em;
-                    span{
-                        background:#FFF;
-                        display:inline-block;
-                        padding:0 1em;
-                        border-radius:.25rem;
+                    span {
+                        background: #FFF;
+                        display: inline-block;
+                        padding: 0 1em;
+                        border-radius: .25rem;
                         text-align: center;
-                        color:salmon;
-                        font-weight:bold;
+                        color: salmon;
+                        font-weight: bold;
                     }
                     &:before {
                         position: absolute;
@@ -464,6 +464,9 @@
     @include screen('tablet') {
         background: url(../images/secret_bg.jpg) center center no-repeat;
         background-size: cover;
+    }
+    @include screen('mobile') {
+        height: auto;
     }
     &:after {
         content: "";
@@ -871,7 +874,7 @@
     overflow: hidden;
     background: url(../images/photo_bg.jpg) no-repeat top center;
     background-size: cover;
-    height:100vh;
+    height: 100vh;
     min-height: 500px;
     &.effect {
         &:after {
@@ -897,6 +900,9 @@
     @include screen('tablet') {
         min-height: auto;
         padding-bottom: 2em;
+    }
+    @include screen('mobile') {
+        height:auto;
     }
     h2 {
         width: 320px;
@@ -1005,6 +1011,9 @@
         background: url(../images/video_bg.jpg) center center no-repeat;
         background-size: cover;
     }
+    @include screen('mobile') {
+        height:auto;
+    }
     h2 {
         color: #FFF;
         text-shadow: 0px 0px 10px rgba(0, 0, 0, .85);
@@ -1055,7 +1064,7 @@
                 }
             }
             .youtube {
-                @include aspect-ratio(4,3);
+                @include aspect-ratio(4, 3);
                 iframe {
                     position: absolute;
                     width: 100%;
@@ -1108,16 +1117,22 @@
 .mpSlider {
     width: 100%;
     height: calc(100vh - 100px);
+    @include screen('mobile') {
+        height: auto;
+    }
     @include gutter(0);
     .img-container {
         @include aspect-ratio(1, 1);
     }
-    .slick-list,.slick-track{
+    .slick-list, .slick-track {
         position: absolute;
         width: 100%;
         height: 100%;
-        top:0;
+        top: 0;
         left: 0;
+        @include screen('mobile') {
+            position: relative;
+        }
     }
     .slick-slide {
         overflow: hidden;
@@ -1218,7 +1233,7 @@
                     display: none;
                     transition: .3s ease-out;
                 }
-                &:hover, &:focus,&.active {
+                &:hover, &:focus, &.active {
                     background: $color-yellow;
                     span {
                         display: block;

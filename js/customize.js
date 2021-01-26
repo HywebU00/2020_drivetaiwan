@@ -809,82 +809,84 @@ $(function() {
         bounds.bottom = bounds.top + this.outerHeight();
         return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
     };
-    $(window).scroll(function() {
-        // 首頁
-        if ($('.mpSlider').isOnScreen() === true) {
-            $('.quickDot').find('a').removeClass('active');
-        }
-        if ($('.topic').isOnScreen() === true) {
-            $('.quickDot').find('.gotoTopic').addClass('active').parents('li').siblings().find('a').removeClass('active');
-        } else {
-            $('.quickDot').find('.gotoTopic').removeClass('active');
-        }
-        if ($('.secret').isOnScreen() === true) {
-            $('.quickDot').find('.gotoSecret').addClass('active').parents('li').siblings().find('a').removeClass('active');
-        } else {
-            $('.quickDot').find('.gotoSecret').removeClass('active');
-        }
-        if ($('.playfun').isOnScreen() === true) {
-            $('.quickDot').find('.gotoPlayfun').addClass('active').parents('li').siblings().find('a').removeClass('active');
-        } else {
-            $('.quickDot').find('.gotoPlayfun').removeClass('active');
-        }
-        if ($('.photo').isOnScreen() === true) {
-            $('.quickDot').find('.gotoPhoto').addClass('active').parents('li').siblings().find('a').removeClass('active');
-        } else {
-            $('.quickDot').find('.gotoPhoto').removeClass('active');
-        }
-        if ($('.video').isOnScreen() === true) {
-            $('.quickDot').find('.gotoVideo').addClass('active').parents('li').siblings().find('a').removeClass('active');
-        } else {
-            $('.quickDot').find('.gotoVideo').removeClass('active');
-        }
-        if ($('.fatfooter').isOnScreen() === true) {
-            $('.quickDot').find('a').removeClass('active');
-        }
-        //內頁
-        if ($('.cp_story').isOnScreen() === true) {
-            $('.quickDot').find('.gotoCpStory').addClass('active').parents('li').siblings().find('a').removeClass('active');
-        } else {
-            $('.quickDot').find('.gotoCpStory').removeClass('active');
-        }
-        if ($('.cp_topic').isOnScreen() === true) {
-            $('.quickDot').find('.gotoCpTopic').addClass('active').parents('li').siblings().find('a').removeClass('active');
-        } else {
-            $('.quickDot').find('.gotoCpTopic').removeClass('active');
-        }
-        if ($('.change').isOnScreen() === true) {
-            $('.quickDot').find('.gotoChange').addClass('active').parents('li').siblings().find('a').removeClass('active');
-        } else {
-            $('.quickDot').find('.gotoChange').removeClass('active');
-        }
-        if ($('.basic').isOnScreen() === true) {
-            $('.quickDot').find('.gotoBasic').addClass('active').parents('li').siblings().find('a').removeClass('active');
-        } else {
-            $('.quickDot').find('.gotoBasic').removeClass('active');
-        }
-        if ($('.othervideo').isOnScreen() === true) {
-            $('.quickDot').find('.gotoOtherVideo').addClass('active').parents('li').siblings().find('a').removeClass('active');
-        } else {
-            $('.quickDot').find('.gotoOtherVideo').removeClass('active');
-        }
-        // 秘境內頁
-        if ($('.cp_intro').isOnScreen() === true) {
-            $('.quickDot').find('.gotoCpIntro').addClass('active').parents('li').siblings().find('a').removeClass('active');
-        } else {
-            $('.quickDot').find('.gotoCpIntro').removeClass('active');
-        }
-        if ($('.cp_legend').isOnScreen() === true) {
-            $('.quickDot').find('.gotoCpLengend').addClass('active').parents('li').siblings().find('a').removeClass('active');
-        } else {
-            $('.quickDot').find('.gotoCpLengend').removeClass('active');
-        }
-        if ($('.recommend').isOnScreen() === true) {
-            $('.quickDot').find('.gotoRecommend').addClass('active').parents('li').siblings().find('a').removeClass('active');
-        } else {
-            $('.quickDot').find('.gotoRecommend').removeClass('active');
-        }
-
+    var activeTimer;
+    $(window).on('load resize scroll', function() {
+        clearTimeout(activeTimer);
+        activeTimer = setTimeout(function() {
+            // 首頁
+            if ($('.mpSlider').isOnScreen() === true) {
+                $('.quickDot').find('a').removeClass('active');
+            }
+            if ($('.topic').isOnScreen() === true) {
+                $('.quickDot').find('.gotoTopic').addClass('active').parents('li').siblings().find('a').removeClass('active');
+            } else {
+                $('.quickDot').find('.gotoTopic').removeClass('active');
+            }
+            if ($('.secret').isOnScreen() === true) {
+                $('.quickDot').find('.gotoSecret').addClass('active').parents('li').siblings().find('a').removeClass('active');
+            } else {
+                $('.quickDot').find('.gotoSecret').removeClass('active');
+            }
+            if ($('.playfun').isOnScreen() === true) {
+                $('.quickDot').find('.gotoPlayfun').addClass('active').parents('li').siblings().find('a').removeClass('active');
+            } else {
+                $('.quickDot').find('.gotoPlayfun').removeClass('active');
+            }
+            if ($('.photo').isOnScreen() === true) {
+                $('.quickDot').find('.gotoPhoto').addClass('active').parents('li').siblings().find('a').removeClass('active');
+            } else {
+                $('.quickDot').find('.gotoPhoto').removeClass('active');
+            }
+            if ($('.video').isOnScreen() === true) {
+                $('.quickDot').find('.gotoVideo').addClass('active').parents('li').siblings().find('a').removeClass('active');
+            } else {
+                $('.quickDot').find('.gotoVideo').removeClass('active');
+            }
+            //內頁
+            if ($('.cp_story').isOnScreen() === true) {
+                $('.quickDot').find('.gotoCpStory').addClass('active').parents('li').siblings().find('a').removeClass('active');
+            } else {
+                $('.quickDot').find('.gotoCpStory').removeClass('active');
+            }
+            if ($('.cp_topic').isOnScreen() === true) {
+                $('.quickDot').find('.gotoCpTopic').addClass('active').parents('li').siblings().find('a').removeClass('active');
+            } else {
+                $('.quickDot').find('.gotoCpTopic').removeClass('active');
+            }
+            if ($('.change').isOnScreen() === true) {
+                $('.quickDot').find('.gotoChange').addClass('active').parents('li').siblings().find('a').removeClass('active');
+            } else {
+                $('.quickDot').find('.gotoChange').removeClass('active');
+            }
+            if ($('.basic').isOnScreen() === true) {
+                $('.quickDot').find('.gotoBasic').addClass('active').parents('li').siblings().find('a').removeClass('active');
+            } else {
+                $('.quickDot').find('.gotoBasic').removeClass('active');
+            }
+            if ($('.othervideo').isOnScreen() === true) {
+                $('.quickDot').find('.gotoOtherVideo').addClass('active').parents('li').siblings().find('a').removeClass('active');
+            } else {
+                $('.quickDot').find('.gotoOtherVideo').removeClass('active');
+            }
+            // 秘境內頁
+            if ($('.cp_intro').isOnScreen() === true) {
+                $('.quickDot').find('.gotoCpIntro').addClass('active').parents('li').siblings().find('a').removeClass('active');
+            } else {
+                $('.quickDot').find('.gotoCpIntro').removeClass('active');
+            }
+            if ($('.cp_legend').isOnScreen() === true) {
+                $('.quickDot').find('.gotoCpLengend').addClass('active').parents('li').siblings().find('a').removeClass('active');
+            } else {
+                $('.quickDot').find('.gotoCpLengend').removeClass('active');
+            }
+            if ($('.recommend').isOnScreen() === true) {
+                $('.quickDot').find('.gotoRecommend').addClass('active').parents('li').siblings().find('a').removeClass('active');
+            } else {
+                $('.quickDot').find('.gotoRecommend').removeClass('active');
+            }
+            if ($('.fatfooter').isOnScreen() === true) {
+                $('.quickDot').find('a').removeClass('active');
+            }
+        }, 50);
     });
-
 });
