@@ -73,7 +73,10 @@
     min-height: 500px;
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    height: 130vh;
+    @media screen and (min-width:1400px){
+        height: 100vh;
+    }
     h2 {
         margin-bottom: 1rem;
     }

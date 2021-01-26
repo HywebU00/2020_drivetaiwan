@@ -96,7 +96,8 @@
                         background: url(../images/map_lienchian.png) no-repeat center center rgba(0, 0, 0, 0.65);
                         background-size: contain;
                         &:hover,
-                        &:focus {
+                        &:focus,
+                        &.active {
                             border: 1px solid rgba(0, 0, 0, 0.85);
                             background: url(../images/map_lienchian_hover.png) no-repeat center center rgba(0, 0, 0, 0.85);
                             background-size: contain;
@@ -107,7 +108,8 @@
                         background: url(../images/map_kinmen.png) no-repeat center center rgba(0, 0, 0, 0.65);
                         background-size: contain;
                         &:hover,
-                        &:focus {
+                        &:focus,
+                        &.active {
                             border: 1px solid rgba(0, 0, 0, 0.85);
                             background: url(../images/map_kinmen_hover.png) no-repeat center center rgba(0, 0, 0, 0.85);
                             background-size: contain;
@@ -118,7 +120,8 @@
                         background: url(../images/map_penghu.png) no-repeat center center rgba(0, 0, 0, 0.65);
                         background-size: contain;
                         &:hover,
-                        &:focus {
+                        &:focus,
+                        &.active {
                             border: 1px solid rgba(0, 0, 0, 0.85);
                             background: url(../images/map_penghu_hover.png) no-repeat center center rgba(0, 0, 0, 0.85);
                             background-size: contain;
@@ -602,7 +605,8 @@
                     content: '臺北市';
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_taipei_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -624,7 +628,8 @@
                     content: '新北市';
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_taipeicounty_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -645,7 +650,8 @@
                     top: 10%;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_taoyuan_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -668,7 +674,8 @@
                     left: -45%;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_hsinchucounty_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -685,7 +692,8 @@
                     content: '新竹市';
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_hsinchusi_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -707,7 +715,8 @@
                     left: -35%;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_miaoli_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -729,7 +738,8 @@
                     left:-15%;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_taichung_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -751,7 +761,8 @@
                     left: -50%;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_changhwa_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -773,7 +784,8 @@
                     left: 30%;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_nantuo_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -795,7 +807,8 @@
                     left: -50%;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_yunlin_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -817,7 +830,8 @@
                     left: -20%;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_chiayicounty_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -835,7 +849,8 @@
                     content: '嘉義市';
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_chiayisi_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -856,7 +871,8 @@
                     top: 30%;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_tainan_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -879,7 +895,8 @@
                     left:30%;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_kaoshiung_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -902,7 +919,8 @@
                     left: -10%;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_pingtung_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -919,7 +937,8 @@
                     content: '基隆市';
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_keelung_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -944,7 +963,8 @@
                     left: auto;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_yilan_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -968,7 +988,8 @@
                     left: auto;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_hwalien_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -992,7 +1013,8 @@
                     left: auto;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_taitung_hover.svg) no-repeat center center;
                     background-size: contain;
                 }
@@ -1026,7 +1048,8 @@
                     top: 10%;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_lienchian_hover.png) no-repeat center center;
                     background-size: contain;
                 }
@@ -1060,7 +1083,8 @@
                     top: 10%;
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_kinmen_hover.png) no-repeat center center;
                     background-size: contain;
                 }
@@ -1088,7 +1112,8 @@
                     content: '澎湖縣';
                 }
                 &:hover,
-                &:focus {
+                &:focus,
+                &.active {
                     background: url(../images/map_penghu_hover.png) no-repeat center center;
                     background-size: contain;
                 }
