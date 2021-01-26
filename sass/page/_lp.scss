@@ -643,7 +643,7 @@
                 background-size: contain;
                 .count {
                     left: 10%;
-                    top: 20%;
+                    top: -20%;
                 }
                 &:after {
                     content: '桃園市';
@@ -706,13 +706,13 @@
                 background: url(../images/map_miaoli.svg) no-repeat center center;
                 background-size: contain;
                 .count {
-                    left: 10%;
+                    left: 25%;
                     top: 20%;
                 }
                 &:after {
                     content: '苗栗縣';
-                    top: 35%;
-                    left: -35%;
+                    top: 15%;
+                    left: -25%;
                 }
                 &:hover,
                 &:focus,
@@ -734,8 +734,8 @@
                 }
                 &:after {
                     content: '臺中市';
-                    top: 15%;
-                    left:-15%;
+                    top: -15%;
+                    left: 15%;
                 }
                 &:hover,
                 &:focus,
@@ -757,8 +757,8 @@
                 }
                 &:after {
                     content: '彰化縣';
-                    top: 35%;
-                    left: -50%;
+                    top: -35%;
+                    left: 50%;
                 }
                 &:hover,
                 &:focus,
@@ -803,8 +803,8 @@
                 }
                 &:after {
                     content: '雲林縣';
-                    top: 35%;
-                    left: -50%;
+                    top: -35%;
+                    left: 50%;
                 }
                 &:hover,
                 &:focus,
@@ -826,8 +826,8 @@
                 }
                 &:after {
                     content: '嘉義縣';
-                    top: 20%;
-                    left: -20%;
+                    top: -20%;
+                    left: 80%;
                 }
                 &:hover,
                 &:focus,
@@ -844,8 +844,8 @@
                 background: url(../images/map_chiayisi.svg) no-repeat center center;
                 background-size: contain;
                 &:after {
-                    top: 10%;
-                    left: -330%;
+                    top: -50px;
+                    left: 20px;
                     content: '嘉義市';
                 }
                 &:hover,
@@ -892,7 +892,7 @@
                 &:after {
                     content: '高雄市';
                     top: 40%;
-                    left:30%;
+                    left: 30%;
                 }
                 &:hover,
                 &:focus,
@@ -1041,6 +1041,11 @@
                     margin-left: 0;
                     content: '連江縣';
                 }
+                .count {
+                    left: auto;
+                    top: 5%;
+                    right: 5%;
+                }
                 img {
                     width: 80%;
                     height: 80%;
@@ -1076,6 +1081,11 @@
                     margin-left: 0;
                     content: '金門縣';
                 }
+                .count {
+                    left: auto;
+                    top: 5%;
+                    right: 5%;
+                }
                 img {
                     width: 80%;
                     height: 80%;
@@ -1101,6 +1111,11 @@
                 background-size: contain;
                 &.active {
                     transform: translate(20px, -15px);
+                }
+                .count {
+                    left: auto;
+                    top: 5%;
+                    right: 5%;
                 }
                 &:after {
                     bottom: 0;
