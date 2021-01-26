@@ -59,7 +59,7 @@
         content: '';
         z-index: 0;
     }
-    & > * {
+    &>* {
         z-index: 2;
     }
     h2.title {
@@ -87,11 +87,9 @@
                 min-width: 420px;
                 a {
                     filter: grayscale(100%);
-                    transition: none;
                     &:hover,
                     &:focus {
                         filter: grayscale(0%);
-                        z-index: 99999;
                     }
                     &.lienchian {
                         border: 1px solid rgba(0, 0, 0, 0.65);
@@ -100,8 +98,7 @@
                         &:hover,
                         &:focus {
                             border: 1px solid rgba(0, 0, 0, 0.85);
-                            background: url(../images/map_lienchian_hover.png) no-repeat center center
-                                rgba(0, 0, 0, 0.85);
+                            background: url(../images/map_lienchian_hover.png) no-repeat center center rgba(0, 0, 0, 0.85);
                             background-size: contain;
                         }
                     }
@@ -538,6 +535,21 @@
             .el {
                 position: absolute;
                 transition: 0.2s ease-out;
+                .count {
+                    position: absolute;
+                    background: darken($primaryColor, 15);
+                    text-align: center;
+                    display: block;
+                    padding: 0 .75em;
+                    border-radius: .25em;
+                    left: 0;
+                    top: -1em;
+                    z-index: 1;
+                    color: #FFF;
+                    line-height: 1.25em;
+                    font-size: .75rem;
+                    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+                }
                 img {
                     width: 100%;
                     height: 100%;
@@ -547,7 +559,6 @@
                 &.active {
                     transform: translate(-10px, -10px);
                     z-index: 2;
-
                 }
                 &:after {
                     content: '';
@@ -558,7 +569,7 @@
                     padding: 0.25em;
                     display: none;
                     border-radius: 0.2em;
-                    left: 50%;
+                    left: 0%;
                     margin-left: -3em;
                     top: -3em;
                     color: #fff;
@@ -566,12 +577,12 @@
                     font-size: 0.938rem;
                 }
                 &:hover,
-                &:focus {
-                    transform:scale(1.2);
-                    z-index:99;
+                &:focus,
+                &.active {
+                    transform: scale(1.2);
                     &:after {
                         display: block;
-                        transform:scale(.8);
+                        transform: scale(.8);
                     }
                 }
             }
@@ -583,6 +594,10 @@
                 z-index: 1;
                 background: url(../images/map_taipei.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    left: -105;
+                    top: 10%;
+                }
                 &:after {
                     content: '臺北市';
                 }
@@ -599,6 +614,12 @@
                 right: 6px;
                 background: url(../images/map_taipeicounty.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    left: auto;
+                    right: 60%;
+                    top: auto;
+                    bottom: 30%;
+                }
                 &:after {
                     content: '新北市';
                 }
@@ -615,8 +636,13 @@
                 right: 91px;
                 background: url(../images/map_taoyuan.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    left: 10%;
+                    top: 20%;
+                }
                 &:after {
                     content: '桃園市';
+                    top: 10%;
                 }
                 &:hover,
                 &:focus {
@@ -631,8 +657,15 @@
                 right: 101px;
                 background: url(../images/map_hsinchucounty.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    left: auto;
+                    right: 20%;
+                    top: 40%;
+                }
                 &:after {
                     content: '新竹縣';
+                    top: 15%;
+                    left: -45%;
                 }
                 &:hover,
                 &:focus {
@@ -664,8 +697,14 @@
                 right: 122px;
                 background: url(../images/map_miaoli.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    left: 10%;
+                    top: 20%;
+                }
                 &:after {
                     content: '苗栗縣';
+                    top: 35%;
+                    left: -35%;
                 }
                 &:hover,
                 &:focus {
@@ -680,8 +719,14 @@
                 right: 90px;
                 background: url(../images/map_taichung.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    left: 10%;
+                    top: 20%;
+                }
                 &:after {
                     content: '臺中市';
+                    top: 15%;
+                    left:-15%;
                 }
                 &:hover,
                 &:focus {
@@ -696,8 +741,14 @@
                 right: 214px;
                 background: url(../images/map_changhwa.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    left: 10%;
+                    top: 20%;
+                }
                 &:after {
                     content: '彰化縣';
+                    top: 35%;
+                    left: -50%;
                 }
                 &:hover,
                 &:focus {
@@ -712,8 +763,14 @@
                 right: 104px;
                 background: url(../images/map_nantuo.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    top: 50%;
+                    left: 30%;
+                }
                 &:after {
                     content: '南投縣';
+                    top: 15%;
+                    left: 30%;
                 }
                 &:hover,
                 &:focus {
@@ -728,8 +785,14 @@
                 right: 204px;
                 background: url(../images/map_yunlin.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    left: 10%;
+                    top: 20%;
+                }
                 &:after {
                     content: '雲林縣';
+                    top: 35%;
+                    left: -50%;
                 }
                 &:hover,
                 &:focus {
@@ -744,8 +807,14 @@
                 right: 170px;
                 background: url(../images/map_chiayicounty.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    left: 10%;
+                    top: 30%;
+                }
                 &:after {
                     content: '嘉義縣';
+                    top: 20%;
+                    left: -20%;
                 }
                 &:hover,
                 &:focus {
@@ -761,6 +830,8 @@
                 background: url(../images/map_chiayisi.svg) no-repeat center center;
                 background-size: contain;
                 &:after {
+                    top: 10%;
+                    left: -330%;
                     content: '嘉義市';
                 }
                 &:hover,
@@ -776,8 +847,13 @@
                 right: 214px;
                 background: url(../images/map_tainan.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    top: 20%;
+                    left: 30%;
+                }
                 &:after {
                     content: '台南市';
+                    top: 30%;
                 }
                 &:hover,
                 &:focus {
@@ -792,8 +868,15 @@
                 right: 156px;
                 background: url(../images/map_kaoshiung.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    left: auto;
+                    right: 30%;
+                    top: 30%;
+                }
                 &:after {
                     content: '高雄市';
+                    top: 40%;
+                    left:30%;
                 }
                 &:hover,
                 &:focus {
@@ -808,8 +891,15 @@
                 right: 177px;
                 background: url(../images/map_pingtung.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    left: auto;
+                    right: 30%;
+                    top: 60%;
+                }
                 &:after {
                     content: '屏東縣';
+                    top: 30%;
+                    left: -10%;
                 }
                 &:hover,
                 &:focus {
@@ -842,8 +932,16 @@
                 z-index: 1;
                 background: url(../images/map_yilan.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    left: auto;
+                    right: 30%;
+                    top: 60%;
+                }
                 &:after {
                     content: '宜蘭縣';
+                    top: 30%;
+                    right: 10%;
+                    left: auto;
                 }
                 &:hover,
                 &:focus {
@@ -858,8 +956,16 @@
                 right: 41px;
                 background: url(../images/map_hwalien.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    left: auto;
+                    right: 50%;
+                    top: 60%;
+                }
                 &:after {
                     content: '花蓮縣';
+                    top: 30%;
+                    right: 10%;
+                    left: auto;
                 }
                 &:hover,
                 &:focus {
@@ -874,8 +980,16 @@
                 right: 85px;
                 background: url(../images/map_taitung.svg) no-repeat center center;
                 background-size: contain;
+                .count {
+                    left: auto;
+                    right: 50%;
+                    top: 60%;
+                }
                 &:after {
                     content: '臺東縣';
+                    top: 30%;
+                    right: 10%;
+                    left: auto;
                 }
                 &:hover,
                 &:focus {
@@ -1052,19 +1166,19 @@
         }
     }
     .list {
-        & > ul,
+        &>ul,
         ol {
             list-style-type: none;
             padding: 0;
             border-top: 2px solid $primaryColor;
-            & > li {
+            &>li {
                 padding: 1em 0;
                 border-bottom: 1px solid #ddd;
                 position: relative; // outline: 1px solid blue;
                 .tag {
                     margin-left: 2em;
                 }
-                & > a {
+                &>a {
                     display: block;
                     padding-left: 2em;
                     position: relative;
@@ -1101,7 +1215,7 @@
         }
     }
 }
-.album,.video_list{
+.album, .video_list {
     margin: 1em auto;
     ul {
         @include li-reset;
@@ -1220,11 +1334,11 @@
         }
     }
 }
-.video_list{
-    ul{
-        li{
-            .img-container{
-                iframe{
+.video_list {
+    ul {
+        li {
+            .img-container {
+                iframe {
                     z-index: 4;
                 }
                 &:after {
@@ -1243,16 +1357,16 @@
                     transition: .3s ease-out;
                 }
             }
-            .caption{
+            .caption {
                 height: 8em;
-                h3{
+                h3 {
                     margin-top: .5em;
                 }
-                &:after{
-                    display:none;
+                &:after {
+                    display: none;
                 }
-                .county,.road,.collect{
-                    display:none;
+                .county, .road, .collect {
+                    display: none;
                 }
             }
         }

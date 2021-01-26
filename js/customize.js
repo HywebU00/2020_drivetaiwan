@@ -1,6 +1,19 @@
 // 自行加入的JS請寫在這裡
 $(function() {
-    // 首頁輪播
+    // Load document before calculating window height
+    var winHeight = $(window).height(),
+        docHeight = $(document).height(),
+        progressBar = $('progress'),
+        max, value;
+        console.log(docHeight);
+        console.log(winHeight);
+    /* Set the max scrollable area */
+    max = docHeight - winHeight;
+    progressBar.attr('max', max);
+    $(document).on('load scroll resize', function() {
+        value = $(window).scrollTop();
+        progressBar.attr('value', value*3.6);
+    });
     // kv
     $('.county_list').find('ul li a').hover(function() {
         var COUNTYNAME = $(this).attr('class');
@@ -802,6 +815,7 @@ $(function() {
             top: win.scrollTop(),
             left: win.scrollLeft()
         };
+        if (!this.offset()) { return false };
         viewport.right = viewport.left + win.width();
         viewport.bottom = viewport.top + win.height() / 2;
         var bounds = this.offset();
