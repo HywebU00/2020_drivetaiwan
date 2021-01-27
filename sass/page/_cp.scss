@@ -181,7 +181,6 @@ h1.title, h2.title {
     background: #F5F5F5;
     max-width: 100% !important;
     position: relative;
-    height:80vh;
     @include screen('xs_mobile') {
         height:auto;
     }
