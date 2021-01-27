@@ -181,6 +181,7 @@ h1.title, h2.title {
     background: #F5F5F5;
     max-width: 100% !important;
     position: relative;
+    padding-top: 2em;
     @include screen('xs_mobile') {
         height:auto;
     }
@@ -235,6 +236,7 @@ h1.title, h2.title {
 .cp_topic {
     border-bottom: 1px dashed #F1F1F1;
     position: relative;
+    padding-top: 2em;
     p {
         max-width: 80%;
         margin: 0 auto 1em;
@@ -266,7 +268,7 @@ h1.title, h2.title {
 .cp_story, .cp_topic, .change, .basic {
     @extend %clearfix;
     margin: 0 2em;
-    padding: 1em 0;
+    padding: 3em 0 1em;
     h3 {
         font-size: 2.5rem;
         text-align: center;

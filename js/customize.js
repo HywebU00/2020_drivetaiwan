@@ -551,72 +551,86 @@ $(function() {
     if ($('.quickDot').length > 0) {
         $('.gotoTopic').click(function(e) {
             $('html, body').stop(true, true).animate({ scrollTop: $('.topic').offset().top }, 600, 'linear');
+            $(this).parent().siblings().find('a').removeClass('active');
             $(this).blur();
             e.preventDefault();
         });
         $('.gotoSecret').click(function(e) {
             $('html, body').stop(true, true).animate({ scrollTop: $('.secret').offset().top }, 600, 'linear');
             $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
         $('.gotoPlayfun').click(function(e) {
             $('html, body').stop(true, true).animate({ scrollTop: $('.playfun').offset().top - 40 }, 600, 'linear');
             $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
         $('.gotoPhoto').click(function(e) {
             $('html, body').stop(true, true).animate({ scrollTop: $('.photo').offset().top }, 600, 'linear');
             $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
         $('.gotoVideo').click(function(e) {
             $('html, body').stop(true, true).animate({ scrollTop: $('.video').offset().top }, 600, 'linear');
             $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
         $('.gotoCpIntro').click(function(e) {
             $('html, body').stop(true, true).animate({ scrollTop: $('.cp_intro').offset().top - 40 }, 600, 'linear');
             $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
         $('.gotoCpLengend').click(function(e) {
             $('html, body').stop(true, true).animate({ scrollTop: $('.cp_legend').offset().top - 40 }, 600, 'linear');
             $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
         $('.gotoBasic').click(function(e) {
             $('html, body').stop(true, true).animate({ scrollTop: $('.basic').offset().top - 40 }, 600, 'linear');
             $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
         $('.gotoRecommend').click(function(e) {
             $('html, body').stop(true, true).animate({ scrollTop: $('.recommend').offset().top - 40 }, 600, 'linear');
             $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
         $('.gotoOtherVideo').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.othervideo').offset().top - 40 }, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.othervideo').offset().top}, 600, 'linear');
             $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
         $('.gotoChange').click(function(e) {
             $('html, body').stop(true, true).animate({ scrollTop: $('.change').offset().top - 40 }, 600, 'linear');
             $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
         $('.gotoCpTopic').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_topic').offset().top - 40 }, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_topic').offset().top}, 600, 'linear');
             $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
         $('.gotoCpStory').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_story').offset().top - 40 }, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_story').offset().top}, 600, 'linear');
             $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
         $('.gotoFeatureSlider').click(function(e) {
             $('html, body').stop(true, true).animate({ scrollTop: $('.featureSlider').offset().top - 200 }, 600, 'linear');
             $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
     }
