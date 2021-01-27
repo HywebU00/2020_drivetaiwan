@@ -70,17 +70,50 @@
         border-bottom: 2px solid $primaryColor;
         flex: 1 1 100%;
     }
-    padding: 0em 1em 1em;
+    padding: 0em 3em 1em 1em;
     overflow: hidden;
     max-width: 1200px;
     margin: 0 auto 2em;
     display:flex;
     flex-flow:row wrap;
+    position: relative;
+    .here {
+        position: absolute;
+        transform: translateZ(0);
+        width: 3em;
+        padding: 1em 0;
+        height: 100%;
+        right: 0;
+
+        text-align: center;
+        overflow:hidden;
+        // &.fixed{
+        //     position: fixed;
+        //     right:auto;
+        //     top:4em;
+        // }
+        @include screen('mobile') {
+            display: none;
+        }
+        span {
+            display: block;
+            position: absolute;
+            background: rgb(0, 119, 142);
+            color: #FFF;
+            width: 2em;
+            left:.5em;
+            padding:.5em;
+            border-radius:.25rem;
+            margin: 0 auto;
+            line-height: 1.45em;
+        }
+    }
     &:last-child {
         border-bottom: none;
     }
     @include screen('mobile') {
         margin: 0 auto 1em;
+        padding: 0em 1em 1em;
         width: 95%;
     }
     .video_block {
@@ -164,7 +197,7 @@
         li {
             list-style-position: inside;
         }
-        a.float{
+        a.float {
             width: 250px;
             float: left;
             border-radius: .5em;

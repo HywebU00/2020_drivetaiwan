@@ -21,6 +21,9 @@ progress {
   border: none;
   color: $color-green;
   z-index:999999999;
+  @include screen('mobile') {
+    display:none;
+  }
 }
 
 progress::-webkit-progress-bar {

@@ -5,14 +5,12 @@ $(function() {
         docHeight = $(document).height(),
         progressBar = $('progress'),
         max, value;
-        console.log(docHeight);
-        console.log(winHeight);
     /* Set the max scrollable area */
     max = docHeight - winHeight;
     progressBar.attr('max', max);
     $(document).on('load scroll resize', function() {
         value = $(window).scrollTop();
-        progressBar.attr('value', value*3.6);
+        progressBar.attr('value', value * 3.6);
     });
     // kv
     $('.county_list').find('ul li a').hover(function() {
@@ -901,6 +899,34 @@ $(function() {
             if ($('.fatfooter').isOnScreen() === true) {
                 $('.quickDot').find('a').removeClass('active');
             }
+            $('.change_info').each(function(index, el) {
+                if ($(this).isOnScreen() === true) {
+                    $(this).find('.here').addClass('fixed');
+                } else {
+                    $(this).find('.here').removeClass('fixed');
+                }
+            });
         }, 50);
+    });
+    // 公路蛻變
+    $('.change_info').each(function(index, el) {
+        $(this).append('<div class="here"><span></span></div>');
+        var changeTitle = $(this).find('h3').text();
+        $(this).find('.here').find('span').text(changeTitle);
+        // changePos = $(this).offset().left + $(this).width();
+        // hereRight = $(window).width() - changePos -100;
+        // console.log(hereRight);
+    });
+    $(window).on('load resize scroll', function() {
+        var scrollTop = Math.floor($(window).scrollTop());
+        // console.log("window" + scrollTop);
+        $('.change_info').each(function(index, el) {
+            var elementOffset = Math.floor($(this).offset().top),
+                distance = (scrollTop - elementOffset);
+                // console.log("div" + elementOffset);
+            if (scrollTop >= distance) {
+                $(this).find('.here').find('span').css('top', distance + 80);
+            };
+        });
     });
 });
