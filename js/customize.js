@@ -1,6 +1,7 @@
 // 自行加入的JS請寫在這裡
 $(function() {
     // Load document before calculating window height
+    $(document).on('load scroll resize', function() {
     var winHeight = $(window).height(),
         docHeight = $(document).height(),
         progressBar = $('progress'),
@@ -8,9 +9,9 @@ $(function() {
     /* Set the max scrollable area */
     max = docHeight - winHeight;
     progressBar.attr('max', max);
-    $(document).on('load scroll resize', function() {
+
         value = $(window).scrollTop();
-        progressBar.attr('value', value * 3.7);
+        progressBar.attr('value', value);
     });
     // kv
     $('.county_list').find('ul li a').hover(function() {
