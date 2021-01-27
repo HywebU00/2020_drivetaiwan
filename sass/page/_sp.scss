@@ -70,7 +70,7 @@
         border-bottom: 2px solid $primaryColor;
         flex: 1 1 100%;
     }
-    padding: 0em 3em 1em 1em;
+    padding: 0em 3.5em 1em 1em;
     overflow: hidden;
     max-width: 1200px;
     margin: 0 auto 2em;
@@ -84,9 +84,10 @@
         padding: 1em 0;
         height: 100%;
         right: 0;
-
         text-align: center;
         overflow:hidden;
+        background: rgb(224,224,224);
+        background: linear-gradient(180deg, rgba(224,224,224,1) 0%, rgba(255,255,255,1) 100%);
         // &.fixed{
         //     position: fixed;
         //     right:auto;
@@ -98,14 +99,15 @@
         span {
             display: block;
             position: absolute;
-            background: rgb(0, 119, 142);
-            color: #FFF;
+            color: #444;
             width: 2em;
             left:.5em;
             padding:.5em;
-            border-radius:.25rem;
             margin: 0 auto;
-            line-height: 1.45em;
+            line-height: 1.15em;
+            font-size:.938rem;
+            letter-spacing: .1em;
+            writing-mode: vertical-lr;
         }
     }
     &:last-child {

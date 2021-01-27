@@ -917,16 +917,16 @@ $(function() {
         // hereRight = $(window).width() - changePos -100;
         // console.log(hereRight);
     });
-    $(window).on('load resize scroll', function() {
-        var scrollTop = Math.floor($(window).scrollTop());
-        // console.log("window" + scrollTop);
-        $('.change_info').each(function(index, el) {
-            var elementOffset = Math.floor($(this).offset().top),
-                distance = (scrollTop - elementOffset);
-                // console.log("div" + elementOffset);
-            if (scrollTop >= distance) {
-                $(this).find('.here').find('span').css('top', distance + 80);
-            };
-        });
-    });
+    // $(window).on('load resize scroll', function() {
+    //     var scrollTop = Math.floor($(window).scrollTop());
+    //     // console.log("window" + scrollTop);
+    //     $('.change_info').each(function(index, el) {
+    //         var elementOffset = Math.floor($(this).offset().top),
+    //             distance = (scrollTop - elementOffset);
+    //             // console.log("div" + elementOffset);
+    //         if (scrollTop >= distance) {
+    //             $(this).find('.here').find('span').css('top', distance + 80);
+    //         };
+    //     });
+    // });
 });
