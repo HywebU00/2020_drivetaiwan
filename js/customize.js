@@ -10,7 +10,7 @@ $(function() {
     progressBar.attr('max', max);
     $(document).on('load scroll resize', function() {
         value = $(window).scrollTop();
-        progressBar.attr('value', value * 3.6);
+        progressBar.attr('value', value * 3.7);
     });
     // kv
     $('.county_list').find('ul li a').hover(function() {
@@ -820,7 +820,8 @@ $(function() {
         };
         if (!this.offset()) { return false };
         viewport.right = viewport.left + win.width();
-        viewport.bottom = viewport.top + win.height() / 2;
+        viewport.bottom = viewport.top + win.height() / 3;
+        console.log(viewport.bottom);
         var bounds = this.offset();
         bounds.right = bounds.left + this.outerWidth();
         bounds.bottom = bounds.top + this.outerHeight();

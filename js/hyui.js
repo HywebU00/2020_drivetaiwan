@@ -408,8 +408,8 @@ $(function() {
             if (ww >= wwSmall) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
-                console.log("tabContentHeight"+tabContentHeight);
-                console.log("tabItemHeight"+tabContentHeight);
+                console.log("tabContentHeight" + tabContentHeight);
+                console.log("tabItemHeight" + tabContentHeight);
                 tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
                 _tabItem.width(tabItemWidth).css('margin-left', tiGap);
                 _tabItem.first().css('margin-left', 0);
@@ -444,7 +444,6 @@ $(function() {
                 $(".before-for").slick("setPosition", 0);
                 $(".before-nav").slick("setPosition", 0);
                 e.preventDefault();
-
             }
         });
     }
