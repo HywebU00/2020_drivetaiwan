@@ -836,7 +836,7 @@ $(function() {
         if (!this.offset()) { return false };
         viewport.right = viewport.left + win.width();
         viewport.bottom = viewport.top + win.height() / 3;
-        console.log(viewport.bottom);
+        // console.log(viewport.bottom);
         var bounds = this.offset();
         bounds.right = bounds.left + this.outerWidth();
         bounds.bottom = bounds.top + this.outerHeight();

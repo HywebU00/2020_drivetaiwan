@@ -1119,7 +1119,7 @@
 // 首頁輪播
 .mpSlider {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 100px) !important;
     @include screen('mobile') {
         height: auto;
     }

@@ -568,6 +568,7 @@
     <script src="js/customize.js"></script><!-- 客製js -->
     <script src="js/wow.min.js"></script><!-- wow -->
     <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.scrollify.js"></script>
     <script>
     wow = new WOW({
         boxClass: 'wow', // default
@@ -577,7 +578,36 @@
         live: true // default
     })
     new WOW().init();
-
+    </script>
+    <script>
+    $.scrollify({
+        section: ".mpSlider,.topic,.secret,.playfun,.photo,.video",
+        sectionName: "section-name",
+        interstitialSection: "",
+        easing: "easeOutExpo",
+        scrollSpeed: 1000,
+        offset: 0,
+        scrollbars: true,
+        standardScrollElements: "",
+        setHeights: true,
+        overflowScroll: true,
+        updateHash: true,
+        touchScroll: true,
+        before: function() {},
+        after: function() {},
+        afterResize: function() {},
+        afterRender: function() {}
+    });
+    $(window).resize(function() {
+        var width = $(this).width();
+        if (width < 768) {
+            $.scrollify.disable();
+            // console.log("AAA");
+        } else {
+            $.scrollify.enable();
+        }
+    });
+    $(window).trigger('resize');
     </script>
 </body>
 
