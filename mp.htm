@@ -595,25 +595,40 @@
         touchScroll: true,
         before: function() {},
         after: function() {},
-        afterResize: function() {
-            if ($(window).width() < 768) {
-                $.scrollify.disable()
-            } else {
-                $.scrollify.enable()
-            }
-        },
+        afterResize: function() {},
         afterRender: function() {}
     });
-    // $(window).resize(function() {
-    //     var width = $(this).width();
-    //     if (width < 768) {
-    //         $.scrollify.disable();
-    //         // console.log("AAA");
-    //     } else {
-    //         $.scrollify.enable();
-    //     }
-    // });
-    // $(window).trigger('resize');
+
+    function debounce(func, wait, immediate) {
+        var timeout;
+        return function() {
+            var context = this,
+                args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) {
+                    func.apply(context, args);
+                }
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) {
+                func.apply(context, args);
+            }
+        };
+    };
+    $(window).resize(debounce(function() {
+        var width = $(this).width();
+        console.log(width)
+        if (width < 768) {
+            $.scrollify.disable();
+            $('.mpSlider').removeAttr('style');
+        } else {
+            $.scrollify.enable();
+        }
+    }, 50));
+    $(window).trigger('resize');
     </script>
 </body>
 
