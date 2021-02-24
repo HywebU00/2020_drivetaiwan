@@ -580,55 +580,57 @@
     new WOW().init();
     </script>
     <script>
-    $.scrollify({
-        section: ".mpSlider,.topic,.secret,.playfun,.photo,.video",
-        sectionName: "section-name",
-        interstitialSection: "",
-        easing: "easeOutExpo",
-        scrollSpeed: 1000,
-        offset: 0,
-        scrollbars: true,
-        standardScrollElements: "",
-        setHeights: true,
-        overflowScroll: true,
-        updateHash: true,
-        touchScroll: true,
-        before: function() {},
-        after: function() {},
-        afterResize: function() {},
-        afterRender: function() {}
-    });
+    if (!(/Android|webOS|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent))) { //if not these devices(userAgents)
+        $.scrollify({
+            section: ".mpSlider,.topic,.secret,.playfun,.photo,.video",
+            sectionName: "section-name",
+            interstitialSection: "",
+            easing: "easeOutExpo",
+            scrollSpeed: 1000,
+            offset: 0,
+            scrollbars: true,
+            standardScrollElements: "",
+            setHeights: true,
+            overflowScroll: true,
+            updateHash: true,
+            touchScroll: true,
+            before: function() {},
+            after: function() {},
+            afterResize: function() {},
+            afterRender: function() {}
+        });
 
-    function debounce(func, wait, immediate) {
-        var timeout;
-        return function() {
-            var context = this,
-                args = arguments;
-            var later = function() {
-                timeout = null;
-                if (!immediate) {
+        function debounce(func, wait, immediate) {
+            var timeout;
+            return function() {
+                var context = this,
+                    args = arguments;
+                var later = function() {
+                    timeout = null;
+                    if (!immediate) {
+                        func.apply(context, args);
+                    }
+                };
+                var callNow = immediate && !timeout;
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+                if (callNow) {
                     func.apply(context, args);
                 }
             };
-            var callNow = immediate && !timeout;
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-            if (callNow) {
-                func.apply(context, args);
-            }
         };
-    };
-    $(window).resize(debounce(function() {
-        var width = $(this).width();
-        console.log(width)
-        if (width < 768) {
-            $.scrollify.disable();
-            $('section').removeAttr('style');
-        } else {
-            $.scrollify.enable();
-        }
-    }, 50));
-    $(window).trigger('resize');
+        $(window).resize(debounce(function() {
+            var width = $(this).width();
+            console.log(width)
+            if (width < 768) {
+                $.scrollify.disable();
+                $('section').removeAttr('style');
+            } else {
+                $.scrollify.enable();
+            }
+        }, 50));
+        $(window).trigger('resize');
+    }
     </script>
 </body>
 
