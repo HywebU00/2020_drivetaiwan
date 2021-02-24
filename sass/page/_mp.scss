@@ -1121,7 +1121,7 @@
     width: 100%;
     height: calc(100vh - 100px) !important;
     @include screen('mobile') {
-        height: auto;
+        height: auto !important;
     }
     @include gutter(0);
     .img-container {
