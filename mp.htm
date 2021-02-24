@@ -595,19 +595,25 @@
         touchScroll: true,
         before: function() {},
         after: function() {},
-        afterResize: function() {},
+        afterResize: function() {
+            if ($(window).width() < 768) {
+                $.scrollify.disable()
+            } else {
+                $.scrollify.enable()
+            }
+        },
         afterRender: function() {}
     });
-    $(window).resize(function() {
-        var width = $(this).width();
-        if (width < 768) {
-            $.scrollify.disable();
-            // console.log("AAA");
-        } else {
-            $.scrollify.enable();
-        }
-    });
-    $(window).trigger('resize');
+    // $(window).resize(function() {
+    //     var width = $(this).width();
+    //     if (width < 768) {
+    //         $.scrollify.disable();
+    //         // console.log("AAA");
+    //     } else {
+    //         $.scrollify.enable();
+    //     }
+    // });
+    // $(window).trigger('resize');
     </script>
 </body>
 
