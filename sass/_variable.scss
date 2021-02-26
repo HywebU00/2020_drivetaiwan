@@ -30,9 +30,23 @@ $box-shadow:		0 10px 32px rgba(0,0,0,.3);
 $form-focus: 		$primaryColor; //表單
 $form-btn: 			$primaryColor; //表單
 //-------------------------------------------------------------字型--------//
+@font-face {
+  font-family: '新微軟正黑體';
+  unicode-range: U+7db0, U+78A7, U+7B75;
+  font-style: normal;
+  font-weight: bold;
+  src: local(MS Gothic), local(Yu Gothic);
+}
+@font-face {
+  font-family: '新微軟正黑體';
+  unicode-range: U+7db0, U+78A7, U+7B75;
+  font-style: normal;
+  font-weight: normal;
+  src: local(微軟正黑體), local(Microsoft JhengHei);
+}
 
 // 字型設定
-$font-family: Lato, 'PingFang TC', 'Helvetica Neue', Helvetica, 微軟正黑體,
+$font-family: Lato, 'PingFang TC', 'Helvetica Neue', Helvetica,"新微軟正黑體", "微軟正黑體",
   Arial, sans-serif;
 
 $font-size: 1em;
