@@ -1685,15 +1685,6 @@ div.tag {
             border: 1px solid $secondaryColor;
         }
     }
-    h3 {
-        text-align: center;
-        font-size: 1.5rem;
-        img {
-            width: 1em;
-            height: 1em;
-            display: inline-block;
-        }
-    }
     @include screen('mobile') {
         max-width: 100%;
         margin: 0 auto;
