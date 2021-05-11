@@ -955,4 +955,104 @@ $(function() {
     //         };
     //     });
     // });
+    // 主題公路
+    $('.topicNewest .roadSlider').slick({
+        mobileFirst: true,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 200,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }]
+    });
+    // 秘境
+    $('.secretNewest .roadSlider').slick({
+        mobileFirst: true,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 200,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }]
+    });
 });
