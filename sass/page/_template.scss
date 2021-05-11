@@ -195,7 +195,7 @@ body {
         position: relative;
         margin: .25em auto;
         @include screen('mobile') {
-            font-size: 2.5rem;
+            font-size: 2rem;
             width: 90%;
             margin-bottom: 1rem;
         }
