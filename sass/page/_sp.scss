@@ -788,6 +788,9 @@
             @include li-reset;
             display: flex;
             justify-content: flex-start;
+            @include screen('xs_mobile') {
+                flex-wrap:wrap;
+            }
             li {
                 width: 19%;
                 height: 80px;
@@ -799,6 +802,11 @@
                 flex-grow: 0;
                 flex-shrink: 1;
                 flex-basis: 19%;
+                @include screen('xs_mobile') {
+                    width: 45%;
+                    height: 80px;
+                    flex-basis: 45%;
+                }
                 .deleteThis {
                     width: 20px;
                     height: 20px;
@@ -849,22 +857,62 @@
             }
         }
     }
+    // chooseTemplate
+    .chooseTemplate {
+        background: #F1F1F1;
+        padding: 1em;
+        ul {
+            @include li-reset;
+            display: flex;
+            li {
+                width: 30%;
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 30%;
+                position: relative;
+                background: #DDD;
+                margin:0 1.5% .5em;
+                img {
+                    width: 100%;
+                    display:block;
+                }
+                .photoMask {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
     // btn_grp
     .settingOption {
-        display:flex;
+        display: flex;
         justify-content: center;
-        flex-wrap:wrap;
+        flex-wrap: wrap;
         .shareOption {
-            display:flex;
+            display: flex;
             flex-grow: 1;
             flex-shrink: 1;
             flex-basis: 45%;
             justify-content: center;
             padding: 1em;
-            span{
-                font-size:.938em;
-                color:#777;
-
+            span {
+                font-size: .938em;
+                color: #777;
+                @include text-overflow;
+                @include screen('xs_mobile') {
+                    font-size:.813rem;
+                }
             }
             input[type=checkbox] {
                 height: 0;
@@ -903,12 +951,12 @@
                 width: 50px;
             }
         }
-        .btn_grp{
-            display:flex;
+        .btn_grp {
+            display: flex;
             flex-grow: 1;
             flex-shrink: 1;
             flex-basis: 100%;
-            display:flex;
+            display: flex;
             justify-content: center;
         }
     }
