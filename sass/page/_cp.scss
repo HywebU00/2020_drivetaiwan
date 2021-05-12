@@ -1691,7 +1691,7 @@ div.tag {
         padding: 1.5em 2em 4em;
     }
     .slick-prev {
-        left: -50px;
+        left: -45px;
         background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, .45);
         background-size: 80%;
         &:hover, &:focus {
@@ -1703,7 +1703,7 @@ div.tag {
         }
     }
     .slick-next {
-        right: -50px;
+        right: -45px;
         background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, .45);
         background-size: 80%;
         &:hover, &:focus {
@@ -1898,6 +1898,80 @@ div.tag {
                     top: .4em;
                 }
             }
+        }
+    }
+}
+.peopleShare {
+    width: auto;
+    overflow: hidden;
+    padding: 1em 2em;
+    background: transparent;
+    transition: .3s ease-out;
+    .photoSlider{
+        margin: 0 4em;
+        @include screen('xs_mobile') {
+            margin: 0 1em;
+        }
+    }
+    h3 {
+        font-size: 2.5rem;
+        text-align: center;
+        line-height: 1.45em;
+        margin: 0 auto .5rem;
+        padding-bottom: .75rem;
+        border-bottom: $primaryColor 1px solid;
+        max-width: 600px;
+        @include screen('xs_mobile') {
+            max-width: 300px;
+            margin: 0 auto .25em;
+            font-size: 2rem;
+        }
+    }
+    a.more {
+        margin-top: 0;
+        &:hover, &:focus {
+            border: 1px solid $secondaryColor;
+        }
+    }
+    @include screen('mobile') {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1.5em 2em 4em;
+    }
+    ul{
+        @include li-reset;
+        li{
+            width: 23%;
+            float: left;
+            margin: 0 1% 1em;
+            @include screen('mobile') {
+                width: 31.3333%;
+            }
+            @include screen('xs_mobile') {
+                width: 48%;
+            }
+            a{
+                &:hover,&:focus {
+                    .img-container{
+                        img{
+                            transform:scale(1.1);
+                        }
+                    }
+                }
+            }
+            .img-container{
+                @include aspect-ratio(4,3);
+                img{
+                    transition:.3s ease-out;
+                }
+            }
+            span{
+                font-size:.875rem;
+                color:#888;
+                display:block;
+                @include text-overflow;
+            }
+
         }
     }
 }

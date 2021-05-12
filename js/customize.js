@@ -634,6 +634,12 @@ $(function() {
             $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
+        $('.gotoRelativeSecret').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.relatveSecret').offset().top}, 600, 'linear');
+            $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
+            e.preventDefault();
+        });
     }
     //
     $('.map_tag').find('a').each(function(index, el) {
@@ -1105,4 +1111,5 @@ $(function() {
             }
         }]
     });
+
 });
