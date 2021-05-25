@@ -1111,5 +1111,10 @@ $(function() {
             }
         }]
     });
+    // adv_filter
+    $('.filter_btn').off().click(function(e) {
+        $('.adv_filter').stop().slideToggle();
+        e.preventDefault();
+    });
 
 });

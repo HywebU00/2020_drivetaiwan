@@ -1,5 +1,343 @@
 .sp {
     margin-bottom: 5em !important;
+    // download_list
+    .download_list {
+        padding: 1em;
+        @include screen('xs_mobile') {
+            padding: 0;
+        }
+        ul {
+            @include li-reset;
+            li {
+                display: block;
+                background: #F1F1F1;
+                margin: 0 auto 1em;
+                max-width: 100%;
+                @include screen('tablet') {
+                    max-width: 700px;
+                }
+                .img-container {
+                    float: left;
+                    margin: 1em 0em 0 1em;
+                    height: auto;
+                    width: 300px;
+                    @include aspect-ratio(4, 3);
+                    @include screen('mobile') {
+                        width: 200px;
+                    }
+                    @include screen('xs_mobile') {
+                        width: 100%;
+                        margin: 0 auto 1em;
+                    }
+                }
+                .photo_info {
+                    position: relative;
+                    text-align: left;
+                    padding: 1em;
+                    overflow: hidden;
+                    @include screen('xs_mobile') {
+                        padding: 0 1em 1em;
+                    }
+                    .whereisit {
+                        margin-right: 6em;
+                        @include screen('xs_mobile') {
+                            margin-right: 5em;
+                        }
+                        ul {
+                            @include li-reset;
+                            li {
+                                background: $primaryColor;
+                                padding: .5em;
+                                float: left;
+                                margin: 0 1em 1em 0;
+                                color: #FFF;
+                                font-size: .875rem;
+                                @include screen('xs_mobile') {
+                                    font-size:.813rem;
+                                }
+                            }
+                        }
+                    }
+                    .photo_title {
+                        font-size: 1.25em;
+                        text-align: left;
+                        clear: both;
+                        margin: 0 0 .5em 0;
+                        padding-bottom: .25em;
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                    .tag {
+                        margin-bottom: 0;
+                        ul {
+                            li {
+                                width: auto;
+                                float: left;
+                                background: #FFF;
+                                margin: 0 .5em .25em 0;
+                                a {
+                                    &:before {
+                                        content: "#";
+                                        display: inline-block;
+                                        margin-right: .25em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .download_content{
+                        background:#FFF;
+                        padding:1em;
+                        ul{
+                            list-style-type: decimal;
+                            list-style-position: inside;
+                            li{
+                                border-bottom: 1px dashed #CCC;
+                                background: #FFF;
+                                padding-left: 1em;
+                                font-size:.938rem;
+                                list-style-type: decimal;
+                                position: relative;
+                                &:before{
+                                    content:"";
+                                    width: 4px;
+                                    height: 4px;
+                                    position: absolute;
+                                    top:.6em;
+                                    left: 0.25em;
+                                    background:#555;
+                                    border-radius:50%;
+                                }
+                                a,span{
+                                    display:inline-block;
+                                    margin: 0 .25em;
+                                }
+                            }
+                        }
+                    }
+                    .download_count{
+                        clear:both;
+                        margin-bottom: .25em;
+                        color:#777;
+                        a,span{
+                        color:$color-orange;
+                        font-weight:bold;
+
+                        text-decoration:underline;
+
+                        }
+                    }
+                    time {
+                        display: block;
+                        overflow: hidden;
+                        color: #555;
+                        font-size: .875rem;
+                        text-align: left;
+                        white-space: nowrap;
+                    }
+                    .county {
+                        position: absolute;
+                        right: 0em;
+                        top: 0em;
+                        font-size: 0.938rem;
+                        width: 5em;
+                        height: 2em;
+                        padding: 0.25em 1em;
+                        text-align: center;
+                        background: #FF7365;
+                        color: #fff;
+                        z-index: 9;
+                    }
+                }
+            }
+        }
+    }
+    //adv_filter
+    .adv_filter {
+        background: $primaryColor;
+        padding: 1em;
+        margin: 0 1em 1em;
+        color: #FFF;
+        display: none;
+        .form_grid {
+            border: none;
+        }
+        .form_grp {
+            border: none;
+        }
+        .form_title, .form_content {
+            color: #FFF;
+        }
+    }
+    p {
+        font-size: .875rem;
+        color: #555;
+    }
+    // photo_download
+    .photo_download {
+        ul {
+            @include li-reset;
+            display: flex;
+            flex-flow: row wrap;
+            li {
+                flex-grow: 0;
+                flex-shrink: 1;
+                flex-basis: 47%;
+                padding: 3em 2em 1.5em;
+                background: #F1F1F1;
+                margin: 0 1.5% 2em;
+                position: relative;
+                .county {
+                    position: absolute;
+                    left: 0em;
+                    top: 0em;
+                    font-size: 0.938rem;
+                    width: 5em;
+                    height: 2em;
+                    padding: 0.25em 1em;
+                    text-align: center;
+                    background: #FF7365;
+                    color: #fff;
+                    z-index: 9;
+                }
+                @include screen('xs_mobile') {
+                    flex-basis: 100%;
+                    margin: 0 0% 1em;
+                    flex-grow: 1;
+                }
+                .photo_title {
+                    float: left;
+                    width: 80%;
+                    margin: 0 .5em .5em 0;
+                    text-align: left;
+                    font-size: 1.125em;
+                    @include screen('xs_mobile') {
+                        width: 70%;
+                    }
+                }
+                time {
+                    display: block;
+                    overflow: hidden;
+                    color: #555;
+                    font-size: .875rem;
+                    text-align: right;
+                    white-space: nowrap;
+                    position: relative;
+                    top: .25em;
+                }
+                .img-container {
+                    @include aspect-ratio(4, 3);
+                    width: 100%;
+                    margin-bottom: 1em;
+                    .photoMask {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        z-index: 2;
+                    }
+                }
+                .download_function {
+                    display: flex;
+                    justify-content: flex-start;
+                    width: 100%;
+                    margin: 0 0 0 auto;
+                    .counter {
+                        font-size: .875rem;
+                        flex-grow: 0;
+                        flex-shrink: 1;
+                        flex-basis: 150px;
+                        text-align: left;
+                        span {
+                            color: $primaryColor;
+                        }
+                    }
+                    .settingOption {
+                        display: flex;
+                        flex-grow: 1;
+                        button {
+                            flex-grow: 0;
+                            flex-shrink: 1;
+                            flex-basis: 30px;
+                            padding: 0em;
+                            width: 2em;
+                            height: 1.8em;
+                            margin: 0 0 0 auto;
+                            min-width: auto;
+                            background: transparent;
+                            border: none;
+                            background: rgba(0, 0, 0, .05);
+                            &:hover, &:focus {
+                                background: $color-red;
+                                img {
+                                    opacity: 1;
+                                    filter: invert(100%);
+                                }
+                            }
+                            img {
+                                width: 1em;
+                                height: 1em;
+                                opacity: .5;
+                            }
+                        }
+                        .shareOption {
+                            margin-right: 1em;
+                            display: flex;
+                            flex-grow: 1;
+                            flex-shrink: 1;
+                            flex-basis: 75%;
+                            justify-content: flex-end;
+                            span {
+                                font-size: .938em;
+                                color: #777;
+                                @include text-overflow;
+                                @include screen('xs_mobile') {
+                                    font-size: .813rem;
+                                }
+                            }
+                            input[type=checkbox] {
+                                height: 0;
+                                width: 0;
+                                visibility: hidden;
+                            }
+                            label {
+                                cursor: pointer;
+                                text-indent: -9999px;
+                                width: 50px;
+                                height: 26px;
+                                background: grey;
+                                display: block;
+                                border-radius: 100px;
+                                position: relative;
+                            }
+                            label:after {
+                                content: '';
+                                position: absolute;
+                                top: 5px;
+                                left: 5px;
+                                width: 16px;
+                                height: 16px;
+                                background: #fff;
+                                border-radius: 90px;
+                                transition: 0.3s;
+                            }
+                            input:checked+label {
+                                background: #bada55;
+                            }
+                            input:checked+label:after {
+                                left: calc(100% - 5px);
+                                transform: translateX(-100%);
+                            }
+                            label:active:after {
+                                width: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .highlight {
         color: $secondaryColor;
         margin-left: .25em;
@@ -449,6 +787,8 @@
         }
         .link_grp {
             @extend %clearfix;
+            padding: 0 .5em;
+            margin-bottom: .5em;
             a.more {
                 float: left;
                 border: 1px solid #E1E1E1;
@@ -789,7 +1129,7 @@
             display: flex;
             justify-content: flex-start;
             @include screen('xs_mobile') {
-                flex-wrap:wrap;
+                flex-wrap: wrap;
             }
             li {
                 width: 19%;
@@ -838,7 +1178,7 @@
     .photoEdit {
         position: relative;
         background: #DDD;
-        min-height:120px;
+        min-height: 120px;
         img {
             width: 100%;
         }
@@ -872,10 +1212,10 @@
                 flex-basis: 30%;
                 position: relative;
                 background: #DDD;
-                margin:0 1.5% .5em;
+                margin: 0 1.5% .5em;
                 img {
                     width: 100%;
-                    display:block;
+                    display: block;
                 }
                 .photoMask {
                     position: absolute;
@@ -912,7 +1252,7 @@
                 color: #777;
                 @include text-overflow;
                 @include screen('xs_mobile') {
-                    font-size:.813rem;
+                    font-size: .813rem;
                 }
             }
             input[type=checkbox] {

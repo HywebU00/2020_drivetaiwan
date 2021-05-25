@@ -27,7 +27,7 @@ $aHover: 			$color-orange;
 $mainColor:	 		#FFF;
 $box-shadow:		0 10px 32px rgba(0,0,0,.3);
 // 表單focus顏色
-$form-focus: 		$primaryColor; //表單
+$form-focus: 		darken($primaryColor,0); //表單
 $form-btn: 			$primaryColor; //表單
 //-------------------------------------------------------------字型--------//
 @font-face {
