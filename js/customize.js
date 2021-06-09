@@ -640,6 +640,12 @@ $(function() {
             $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
+        $('.gotopeopleShare').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.peopleShare').offset().top}, 600, 'linear');
+            $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
+            e.preventDefault();
+        });
     }
     //
     $('.map_tag').find('a').each(function(index, el) {
