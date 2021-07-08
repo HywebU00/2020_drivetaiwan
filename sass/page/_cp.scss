@@ -187,7 +187,7 @@ h1.title, h2.title {
         bottom: 4em;
         right: 2em;
         span {
-            color: $secondaryColor;
+            color: $importantColor;
         }
         @include screen('tablet') {
             left: 50%;
@@ -312,6 +312,7 @@ h1.title, h2.title {
         position: relative;
         p {
             font-size: 1.25rem;
+            text-align: justify;
         }
         @include screen('mobile') {
             padding: 1.5em;
@@ -731,8 +732,7 @@ div.tag {
         font-size: 2.5rem;
         text-align: center;
         line-height: 1.45em;
-        margin: 0 auto .5rem;
-        padding-bottom: 1rem;
+        margin: 0 auto 1rem;
         border-bottom: $primaryColor 1px solid;
         max-width: 600px;
         @include screen('xs_mobile') {
@@ -844,7 +844,8 @@ div.tag {
             span {
                 display: inline-block;
                 color: #FFF;
-                background: $primaryColor;
+                background: $tag-color;
+                color: $tag-word;
                 padding: .25em 1em;
                 width: auto;
                 position: relative;
@@ -856,7 +857,7 @@ div.tag {
                     height: 0;
                     border-style: solid;
                     border-width: 40px 12px 0 0;
-                    border-color: $primaryColor transparent transparent transparent;
+                    border-color: $tag-color transparent transparent transparent;
                     right: -10px;
                     top: 0;
                 }
@@ -886,6 +887,7 @@ div.tag {
         color: #FFF;
         text-shadow: 0px 0px 5px rgba(0, 0, 0, .75);
         border-bottom: 1px solid #FFF;
+
     }
 }
 .othervideoSlider {
@@ -1079,19 +1081,19 @@ div.tag {
                 }
                 .weather-week {
                     font-size: .813rem;
-                    color: #999;
+                    color: #555;
                 }
                 .weather-temperature {
                     display: flex;
                     font-size: .813rem;
                     justify-content: center;
                     .darkGray {
-                        color: #666;
+                        color: #333;
                         flex: 0 1 60%;
                         text-align: right;
                     }
                     .gray {
-                        color: #BBB;
+                        color: #333;
                         flex: 0 1 40%;
                         text-align: left;
                     }
@@ -1205,7 +1207,7 @@ div.tag {
             line-height: 1.5em;
             overflow: hidden;
             display: block;
-            color: #666;
+            color: #555;
         }
         .slick-slide {
             p {
@@ -1411,6 +1413,7 @@ div.tag {
         p {
             line-height: 1.7em;
             font-size: 1.25rem;
+            text-align: justify;
         }
     }
 }
@@ -1424,7 +1427,7 @@ div.tag {
     text-align: left;
     padding: 2em 0;
     max-width: 100%;
-    background: darken($primaryColor, 5);
+    background: darken($primaryColor, 0);
     color: #FFF;
     img {
         float: left;
@@ -1461,6 +1464,7 @@ div.tag {
             line-height: 1.7em;
             font-size: 1.25rem;
             color: #FFF;
+            text-align: justify;
         }
     }
 }
@@ -1472,7 +1476,7 @@ div.tag {
     width: auto;
     overflow: hidden;
     padding: 2.5em 4em;
-    background: darken($primaryColor, 25);
+    background: $color-green;
     transition: .3s ease-out;
     .roadSlider {
         max-width: 1200px;
@@ -1485,9 +1489,8 @@ div.tag {
         font-size: 2.5rem;
         text-align: center;
         line-height: 1.45em;
-        margin: 0 auto .5rem;
-        padding-bottom: 1rem;
-        border-bottom: $primaryColor 1px solid;
+        margin: 0 auto 1rem;
+        border-bottom: #fff 1px solid;
         max-width: 600px;
         color: #FFF;
         @include screen('xs_mobile') {
@@ -1659,7 +1662,7 @@ div.tag {
     padding: 1em 2em;
     background: transparent;
     transition: .3s ease-out;
-    .roadSlider{
+    .roadSlider {
         margin: 0 4em;
         @include screen('xs_mobile') {
             margin: 0 1em;
@@ -1858,8 +1861,8 @@ div.tag {
                 height: 2em;
                 padding: .25em 1em;
                 text-align: center;
-                background: $color-orange;
-                color: #FFF;
+                background: $tag-color;
+                color: $tag-word;
             }
             .dot {
                 position: absolute;
@@ -1884,7 +1887,7 @@ div.tag {
                     padding: 0 1em;
                     border-radius: .25rem;
                     text-align: center;
-                    color: salmon;
+                    color: $importantColor;
                     font-weight: bold;
                 }
                 &:before {
@@ -1907,7 +1910,7 @@ div.tag {
     padding: 1em 2em;
     background: transparent;
     transition: .3s ease-out;
-    .photoSlider{
+    .roadSlider {
         margin: 0 4em;
         @include screen('xs_mobile') {
             margin: 0 1em;
@@ -1938,39 +1941,67 @@ div.tag {
         margin: 0 auto;
         padding: 1.5em 2em 4em;
     }
-    ul{
+    ul {
         @include li-reset;
-        li{
-            width: 23%;
+        padding: 0 4em;
+        .slick-prev {
+            background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, .45);
+            background-size: 80%;
+            &:hover, &:focus {
+                background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, .75);
+                background-size: 80%;
+            }
+
+        }
+        .slick-next {
+            background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, .45);
+            background-size: 80%;
+            &:hover, &:focus {
+                background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, .75);
+                background-size: 80%;
+            }
+
+        }
+        li {
             float: left;
             margin: 0 1% 1em;
+            margin: 0 1em 2em;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, .45);
             @include screen('mobile') {
                 width: 31.3333%;
             }
             @include screen('xs_mobile') {
                 width: 48%;
             }
-            a{
-                &:hover,&:focus {
-                    .img-container{
-                        img{
-                            transform:scale(1.1);
+            a {
+                padding-bottom: 3em;
+                min-height: 300px;
+                display: block;
+                &:hover, &:focus {
+                    .img-container {
+                        img {
+                            transform: scale(1.1);
                         }
                     }
                 }
             }
-            .img-container{
-                @include aspect-ratio(4,3);
-                img{
-                    transition:.3s ease-out;
+            .img-container {
+                @include aspect-ratio(4, 3);
+                img {
+                    transition: .3s ease-out;
                 }
             }
-            span{
-                font-size:.875rem;
-                color:#888;
-                display:block;
+            span {
+                font-size: .875rem;
+                width: 90%;
+                margin-top: .5em;
+                margin-left: 5%;
+                color: #555;
+                display: block;
                 @include text-overflow;
             }
+
 
         }
     }

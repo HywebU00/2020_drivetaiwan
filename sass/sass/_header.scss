@@ -15,7 +15,7 @@
         width: 100%;
         height: 60px;
         backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
         background: rgba(255, 255, 255, .8);
     }
     // // 虛擬底色 - navigation bg
@@ -51,8 +51,8 @@
             display: block !important;
             &:hover, &:focus {
                 border: none !important;
-                box-shadow:none !important;
-                outline:none !important;
+                box-shadow: none !important;
+                outline: none !important;
             }
         }
     }
@@ -92,6 +92,10 @@
             width: 40px !important;
             height: 40px !important;
             @extend %mobileCtrlBtn;
+            &:hover, &:focus {
+                outline: none;
+                box-shadow: 0px 0px 0px 2px $secondaryColor;
+            }
             &:before {
                 width: 40px;
                 height: 40px;
@@ -138,12 +142,17 @@
             max-height: 70px;
             margin: 5px auto;
         }
+        @media screen and (max-width: 1200px) {
+            margin: -.25em 0 0 0px;
+            transform: scale(.9);
+        }
         @include screen('tablet') {
             margin: 0px 60px;
             width: calc(100% - 120px);
             text-align: center;
             height: 60px;
             left: 0;
+            transform: scale(1);
             a {
                 padding: 2px 0;
             }
@@ -231,7 +240,7 @@
             &[type="text"] {
                 margin-top: -2.1em;
                 &:focus {
-                    box-shadow: 0px 0px 0px 3px $aHover;
+                    box-shadow: 0px 0px 0px 3px $secondaryColor;
                     outline: none;
                     border: none;
                 }
@@ -360,6 +369,7 @@
                     // outline:1px solid red;
                     &:hover, &:focus {
                         opacity: 1;
+                        box-shadow: 0px 0px 0px 2px $secondaryColor;
                     }
                 }
             }
@@ -374,6 +384,10 @@
                 width: 100% !important;
                 padding: .6em .5em !important;
                 margin: 0;
+                &:hover, &:focus {
+                    box-shadow: 0px 0px 0px 2px $secondaryColor;
+                    outline: none;
+                }
             }
         }
         .keywordHot {
@@ -382,9 +396,10 @@
             @extend %clearfix;
             a {
                 color: #FFF;
+                padding: .25em;
                 &:hover,
                 &:focus {
-                    color: $primaryColor;
+                    color: $color-yellow;
                 }
             }
         }

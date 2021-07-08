@@ -3,69 +3,72 @@
 
 //-------------------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor: 		#00a799; //主色
-$secondaryColor: 	#FF7365; //輔色
-$lightColor: 		#fcc211; //點綴
-$linkColor: 		#21baff; //連結
-$importantColor: 	#ff3e4d; //重要
-$lightColor:		#f77810;
+$primaryColor: #0a7f75; //主色
+$secondaryColor: #FF7365; //輔色
+$lightColor: #fcc211; //點綴
+$linkColor: #21baff; //連結
+$importantColor: #cb3e3a; //重要
+$lightColor: #f77810;
 // 但注意真實顏色與語意的關聯必須易於辨識
-$color-blue: 		#21baff;
-$color-green: 		#5cb85c;
-$color-orange: 		#FF7365;
-$color-red: 		#ff3e4d;
-$color-yellow: 		#fcc211;
-$color-purple: 		#aa5ac5;
-$color-gray: 		#F1F1F1;
-$color-dark: 		#333333;
-$color-hr: 			#666; //hr顏色
-$color-word: 		#222; //一般字的顏色
-// 連結顏色
-$aColor: 			$primaryColor;
-$aHover: 			$color-orange;
+$color-blue: #21baff;
+$color-green: #4a8205;
+$color-orange: #4a8205;
+$color-red: #ff3e4d;
+$color-yellow: #fcc211;
+$color-purple: #aa5ac5;
+$color-gray: #F1F1F1;
+$color-dark: #333333;
+$color-hr: #666; //hr顏色
+$color-word: #222; //一般字的顏色
 
-$mainColor:	 		#FFF;
-$box-shadow:		0 10px 32px rgba(0,0,0,.3);
+$tag-color:#fbbc00;
+$tag-word:#5f3f02; // 連結顏色
+$salmon:#c55135;
+$aColor: $primaryColor;
+$aHover: $color-orange;
+
+$mainColor: #FFF;
+$box-shadow: 0 10px 32px rgba(0, 0, 0, .3);
 // 表單focus顏色
-$form-focus: 		darken($primaryColor,0); //表單
-$form-btn: 			$primaryColor; //表單
+$form-focus: $color-green; //表單
+$form-btn: $secondaryColor; //表單
 //-------------------------------------------------------------字型--------//
 @font-face {
-  font-family: '新微軟正黑體';
-  unicode-range: U+7db0, U+78A7, U+7B75;
-  font-style: normal;
-  font-weight: bold;
-  src: local(MS Gothic), local(Yu Gothic);
+    font-family: '新微軟正黑體';
+    unicode-range: U+7db0, U+78A7, U+7B75;
+    font-style: normal;
+    font-weight: bold;
+    src: local(MS Gothic), local(Yu Gothic);
 }
 @font-face {
-  font-family: '新微軟正黑體';
-  unicode-range: U+7db0, U+78A7, U+7B75;
-  font-style: normal;
-  font-weight: normal;
-  src: local(微軟正黑體), local(Microsoft JhengHei);
+    font-family: '新微軟正黑體';
+    unicode-range: U+7db0, U+78A7, U+7B75;
+    font-style: normal;
+    font-weight: normal;
+    src: local(微軟正黑體), local(Microsoft JhengHei);
 }
 
 // 字型設定
-$font-family: Lato, 'PingFang TC', 'Helvetica Neue', Helvetica,"新微軟正黑體", "微軟正黑體",
-  Arial, sans-serif;
+$font-family: Lato, 'PingFang TC', 'Helvetica Neue', Helvetica, "新微軟正黑體", "微軟正黑體",
+Arial, sans-serif;
 
 $font-size: 1em;
 
 //-------------------------------------------------------------格線系統-----//
 
 // 格線系統
-$grid-columns: 		12 !default; //格線欄位數
+$grid-columns: 12 !default; //格線欄位數
 $grid-gutter-width: 30px !default; //左右padding
-$container-max: 	1200px !default; //container最大寬
+$container-max: 1200px !default; //container最大寬
 
 //mediaquery
-$screen-lg: 		1400px !default; //電腦
-$screen-md: 		992px !default; //平板
-$screen-sm: 		768px !default; //手機
-$screen-xs: 		576px !default; //極小尺寸
+$screen-lg: 1400px !default; //電腦
+$screen-md: 992px !default; //平板
+$screen-sm: 768px !default; //手機
+$screen-xs: 576px !default; //極小尺寸
 
 //-------------------------------------------------------------客製化------//
-$fatfooter-length: 	6; //fatfooter選單一行個數
+$fatfooter-length: 6; //fatfooter選單一行個數
 $fatfooterBgColor: #f1f1f1; //fatFooter 底色
 
 //-------------------------------------------------------------客製化------//

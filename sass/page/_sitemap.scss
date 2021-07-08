@@ -1,6 +1,6 @@
  /* sitemap */
  .sitemap {
-     min-height:500px;
+     min-height: 500px;
      margin: 0px auto 1em;
      @extend %clearfix;
      p {
@@ -9,7 +9,7 @@
              border: 1px solid #AAA;
              background: transparent;
              color: $color-word;
-             padding:0 .3em;
+             padding: 0 .3em;
              margin: 0 .2em .1em;
              kbd {
                  border: none;
@@ -49,10 +49,10 @@
              display: block;
              font-size: 1.25em;
              font-weight: bold;
-             border-bottom: 2px solid $primaryColor;
+             border-bottom: 2px solid $aHover;
              &:hover,
              &:focus {
-                 color: $primaryColor !important;
+                 color: $aHover !important;
                  text-decoration: none;
              }
          }

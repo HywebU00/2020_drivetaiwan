@@ -68,6 +68,19 @@
         small {
             color: #fff;
         }
+        &~p {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            margin: 1em auto;
+            line-height: 1.5;
+            color: #FFF;
+            max-width: 800px;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75), 0px 2px 15px rgba(0, 0, 0, 0.75);
+            @include screen('mobile') {
+                font-size: .875rem;
+            }
+        }
     }
     .lp {
         .road_search {
@@ -1327,8 +1340,8 @@
                     height: 2em;
                     padding: 0.25em 1em;
                     text-align: center;
-                    background: $color-orange;
-                    color: #fff;
+                    background: $tag-color;
+                    color: $tag-word;
                 }
                 .collect {
                     position: absolute;
@@ -1401,7 +1414,7 @@
                         padding: 0 1em;
                         border-radius: .25rem;
                         text-align: center;
-                        color: salmon;
+                        color: $importantColor;
                         font-weight: bold;
                     }
                     &:before {

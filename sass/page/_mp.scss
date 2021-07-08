@@ -52,9 +52,9 @@
             top: 21px;
         }
         &:hover, &:focus {
-            border: 1px solid $color-orange;
+            border: 1px solid $importantColor;
             &:before {
-                background: $color-orange;
+                background: $importantColor;
             }
         }
     }
@@ -74,7 +74,7 @@
     position: relative;
     overflow: hidden;
     height: 130vh;
-    @media screen and (min-width:1400px){
+    @media screen and (min-width: 1400px) {
         height: 100vh;
     }
     h2 {
@@ -327,7 +327,7 @@
                     }
                     .description {
                         &:after {
-                            background: $primaryColor;
+                            // background: $primaryColor;
                         }
                     }
                 }
@@ -345,7 +345,6 @@
                 height: 16rem;
                 padding-top: 1em;
                 p {
-                    height: 6em;
                     overflow: hidden;
                     display: block;
                     font-size: .938rem;
@@ -354,6 +353,7 @@
                     font-weight: 600;
                     line-height: 1.5em;
                     margin: 0rem 1rem 2rem;
+                    @include text-line(4, 1.5em);
                 }
                 h3 {
                     height: 3em;
@@ -375,7 +375,7 @@
                     content: "";
                     transition: .3s ease-out;
                 }
-                 .collect {
+                .collect {
                     position: absolute;
                     top: 4px;
                     text-indent: -9999px;
@@ -446,8 +446,8 @@
                     height: 2em;
                     padding: .25em 1em;
                     text-align: center;
-                    background: $color-orange;
-                    color: #FFF;
+                    background: $tag-color;
+                    color: $tag-word;
                 }
                 .dot {
                     position: absolute;
@@ -472,7 +472,7 @@
                         padding: 0 1em;
                         border-radius: .25rem;
                         text-align: center;
-                        color: salmon;
+                        color: $importantColor;
                         font-weight: bold;
                     }
                     &:before {
@@ -531,9 +531,11 @@
         z-index: 2;
         display: flex;
         flex-flow: row wrap;
-        @include screen('tablet') {
-            display: block;
-            padding: 0 3em 0;
+        justify-content: center;
+        @include screen('xs_mobile') {
+            overflow: hidden;
+            width: 90%;
+            margin: 0 auto;
         }
         .slick-prev {
             left: 0px;
@@ -551,23 +553,50 @@
         }
         .item {
             flex-basis: 40%;
+            flex-grow: 0;
+            flex-shrink: 1;
             height: 250px;
             margin: 0 5% 3em;
             display: flex;
             position: relative;
+            @include screen('notebook') {
+                height: 220px;
+            }
             @include screen('tablet') {
                 display: block;
                 width: 300px;
-                margin: 0 auto 1em;
+                margin: 0 .5em 1em;
                 height: auto;
             }
             @include screen('xs_mobile') {
                 margin: 0 auto 1em;
+                flex-basis: 90%;
+                width: 90%;
+                max-width: 300px;
+
             }
-            a.img-container {
+            a {
+                display: block;
+                width: 100%;
+                display: flex;
+                &:hover, &:focus {
+                    h3 {
+                        color: $aHover;
+                    }
+                }
+                @include screen('xs_mobile') {
+                    flex-flow: row wrap;
+                }
+            }
+            .img-container {
                 flex-basis: 50%;
                 @include aspect-ratio(4, 3);
                 img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
                     object-fit: cover;
                     transition: .3s ease-out;
                 }
@@ -576,26 +605,35 @@
                     width: 100%;
                     left: 0;
                 }
+                @include screen('xs_mobile') {
+                    flex-basis: 100%;
+                    max-width: 300px;
+                }
                 &:hover, &:focus {
                     img {
                         transform: scale(1.1);
+                        width: 100% !important;
+                        height: 100% !important;
                     }
                 }
                 @include screen('tablet') {
                     display: block;
                     width: 100%;
+                    height: 200px;
                 }
             }
             .description {
                 flex-basis: 50%;
                 background: #FFF;
                 position: relative;
-                min-height: 15em;
                 padding: 2em 1em 1em;
                 @include screen('tablet') {
                     padding: 2em 1em;
                     min-height: auto;
                     width: 100%;
+                }
+                @include screen('xs_mobile') {
+                    flex-grow: 1;
                 }
                 .collect {
                     position: absolute;
@@ -664,8 +702,8 @@
                     height: 2em;
                     padding: .25em 1em;
                     text-align: center;
-                    background: $color-orange;
-                    color: #FFF;
+                    background: $tag-color;
+                    color: $tag-word;
                 }
                 .road {
                     display: block;
@@ -685,24 +723,25 @@
                     min-height: auto;
                 }
                 h3 {
-                    height: 3em;
                     overflow: hidden;
                     display: block;
-                    font-size: 1.5rem;
+                    font-size: 1.25rem;
                     font-weight: 600;
-                    line-height: 1.4em;
                     margin: 0 0 .2em 0;
                     color: #222;
                     border-bottom: 1px solid $lightColor;
+                    @include text-line(2, 1.45em);
+                    height: 3em;
+
                 }
                 p {
-                    height: 6em;
                     overflow: hidden;
                     display: block;
-                    font-size: .938rem;
-                    line-height: 1.5em;
+                    font-size: .875rem;
+                    text-align: justify;
                     margin: 0 0 .5em 0;
                     color: #666;
+                    @include text-line(3, 1.5em);
                 }
             }
         }
@@ -781,7 +820,7 @@
                             font-size: 1.25rem;
                         }
                         &:hover, &:focus {
-                            color: $aColor;
+                            color: $aHover;
                         }
                         &:before {
                             position: absolute;
@@ -971,7 +1010,7 @@
         padding-bottom: 2em;
     }
     @include screen('mobile') {
-        height:auto;
+        height: auto;
     }
     h2 {
         width: 320px;
@@ -1081,7 +1120,7 @@
         background-size: cover;
     }
     @include screen('mobile') {
-        height:auto;
+        height: auto;
     }
     h2 {
         color: #FFF;

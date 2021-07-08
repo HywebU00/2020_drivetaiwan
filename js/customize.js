@@ -2,13 +2,13 @@
 $(function() {
     // Load document before calculating window height
     $(document).on('load scroll resize', function() {
-    var winHeight = $(window).height(),
-        docHeight = $(document).height(),
-        progressBar = $('progress'),
-        max, value;
-    /* Set the max scrollable area */
-    max = docHeight - winHeight;
-    progressBar.attr('max', max);
+        var winHeight = $(window).height(),
+            docHeight = $(document).height(),
+            progressBar = $('progress'),
+            max, value;
+        /* Set the max scrollable area */
+        max = docHeight - winHeight;
+        progressBar.attr('max', max);
 
         value = $(window).scrollTop();
         progressBar.attr('value', value);
@@ -271,6 +271,7 @@ $(function() {
             }
         }]
     });
+
     // 影音專區
     $('.othervideoSlider').slick({
         mobileFirst: true,
@@ -383,37 +384,30 @@ $(function() {
     //     }, 50);
     // });
     // 影音專區
-    $('.secret .secretContent').slick({
-        mobileFirst: true,
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        arrow: true,
-        lazyLoaded: true,
-        lazyLoad: 'ondemand',
-        ease: 'ease',
-        responsive: [{
-            breakpoint: 992,
-            settings: "unslick"
-        }, {
-            breakpoint: 545,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                arrows: true
-            }
-        }, {
-            breakpoint: 544,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: true
-            }
-        }]
-    });
+    // $('.secret .secretContent').slick({
+    //     mobileFirst: true,
+    //     dots: false,
+    //     infinite: true,
+    //     speed: 300,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     autoplay: false,
+    //     arrow: true,
+    //     lazyLoaded: true,
+    //     lazyLoad: 'ondemand',
+    //     ease: 'ease',
+    //     responsive: [{
+    //         breakpoint: 545,
+    //         settings: "unslick"
+    //     }, {
+    //         breakpoint: 544,
+    //         settings: {
+    //             slidesToShow: 1,
+    //             slidesToScroll: 1,
+    //             arrows: true
+    //         }
+    //     }]
+    // });
     // 廣告輪播
     $('.adSlider').slick({
         mobileFirst: true,
@@ -605,7 +599,7 @@ $(function() {
             e.preventDefault();
         });
         $('.gotoOtherVideo').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.othervideo').offset().top}, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.othervideo').offset().top }, 600, 'linear');
             $(this).blur();
             $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
@@ -617,13 +611,13 @@ $(function() {
             e.preventDefault();
         });
         $('.gotoCpTopic').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_topic').offset().top}, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_topic').offset().top }, 600, 'linear');
             $(this).blur();
             $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
         $('.gotoCpStory').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_story').offset().top}, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.cp_story').offset().top }, 600, 'linear');
             $(this).blur();
             $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
@@ -635,13 +629,13 @@ $(function() {
             e.preventDefault();
         });
         $('.gotoRelativeSecret').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.relatveSecret').offset().top}, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.relatveSecret').offset().top }, 600, 'linear');
             $(this).blur();
             $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
         $('.gotopeopleShare').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.peopleShare').offset().top}, 600, 'linear');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.peopleShare').offset().top }, 600, 'linear');
             $(this).blur();
             $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
@@ -1121,6 +1115,57 @@ $(function() {
     $('.filter_btn').off().click(function(e) {
         $('.adv_filter').stop().slideToggle();
         e.preventDefault();
+    });
+
+    // peopleShare
+    $('.peopleShare .photoSlider ul').slick({
+        mobileFirst: true,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 200,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }]
     });
 
 });

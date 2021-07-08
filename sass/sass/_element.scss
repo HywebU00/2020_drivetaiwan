@@ -1,6 +1,6 @@
 // scrollbar
-body::-webkit-scrollbar,body::-webkit-scrollbar-track {
-    background-color: rgba(0,0,0,.4)
+body::-webkit-scrollbar, body::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, .4)
 }
 
 body::-webkit-scrollbar {
@@ -9,38 +9,38 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
     border-radius: 0px;
-    background-color: $color-orange;
+    background-color: $secondaryColor;
 }
 // progress
 progress {
-  width: 100%;
-  position: fixed;
-  height: 6px;
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  color: $color-green;
-  z-index:999999999;
-  @include screen('mobile') {
-    display:none;
-  }
+    width: 100%;
+    position: fixed;
+    height: 6px;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    color: $color-green;
+    z-index: 999999999;
+    @include screen('mobile') {
+        display: none;
+    }
 }
 
 progress::-webkit-progress-bar {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 progress::-webkit-progress-value {
-  background-color:  $color-green;
+    background-color: $color-green;
 }
 
 progress::-moz-progress-bar {
-  background-color:  $color-green;
+    background-color: $color-green;
 }
 // tab的外框線
 a:focus {
     outline: none;
-    box-shadow: 0 0px 0px 1px $aHover inset;
+    box-shadow: 0 0px 0px 1px $secondaryColor inset;
     @include screen('mobile') {
         box-shadow: none;
     }
@@ -56,8 +56,8 @@ a:focus {
         position: absolute;
         left: auto;
         right: 0;
-        top:0;
-        background-color: $primaryColor;
+        top: 0;
+        background-color: #37b699;
         z-index: 9;
     }
     //設定第2層綠色動畫
@@ -68,7 +68,7 @@ a:focus {
         position: absolute;
         left: auto;
         right: 0;
-        top:0;
+        top: 0;
         background-color: #FFF;
         z-index: 8;
     }
@@ -142,7 +142,7 @@ a.more {
         left: 0;
         right: 0;
         bottom: 0;
-        background: $color-orange;
+        background: $primaryColor;
         -webkit-transform: scale(0);
         transform: scale(0);
         -webkit-transition-property: transform;
@@ -159,7 +159,7 @@ a.more {
         &:before {
             -webkit-transform: scale(1);
             transform: scale(1);
-            background: $color-orange;
+            background: $importantColor;
         }
         &:after {
             right: 15px;
@@ -171,7 +171,7 @@ a.more {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: url(../images/basic/top.png) no-repeat center top $primaryColor;
+    background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, .35);
     text-align: center;
     color: #FFF;
     line-height: 50px;
@@ -185,7 +185,7 @@ a.more {
     z-index: 99999999;
     text-indent: -999999px;
     &:hover, &:focus {
-        background: url(../images/basic/top.png) no-repeat center top $color-orange;
+        background: url(../images/basic/top.png) no-repeat center top $secondaryColor;
         box-shadow: none;
     }
 }

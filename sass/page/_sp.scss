@@ -53,7 +53,7 @@
                                 color: #FFF;
                                 font-size: .875rem;
                                 @include screen('xs_mobile') {
-                                    font-size:.813rem;
+                                    font-size: .813rem;
                                 }
                             }
                         }
@@ -85,45 +85,45 @@
                             }
                         }
                     }
-                    .download_content{
-                        background:#FFF;
-                        padding:1em;
-                        ul{
+                    .download_content {
+                        background: #FFF;
+                        padding: 1em;
+                        ul {
                             list-style-type: decimal;
                             list-style-position: inside;
-                            li{
+                            li {
                                 border-bottom: 1px dashed #CCC;
                                 background: #FFF;
                                 padding-left: 1em;
-                                font-size:.938rem;
+                                font-size: .938rem;
                                 list-style-type: decimal;
                                 position: relative;
-                                &:before{
-                                    content:"";
+                                &:before {
+                                    content: "";
                                     width: 4px;
                                     height: 4px;
                                     position: absolute;
-                                    top:.6em;
+                                    top: .6em;
                                     left: 0.25em;
-                                    background:#555;
-                                    border-radius:50%;
+                                    background: #555;
+                                    border-radius: 50%;
                                 }
-                                a,span{
-                                    display:inline-block;
+                                a, span {
+                                    display: inline-block;
                                     margin: 0 .25em;
                                 }
                             }
                         }
                     }
-                    .download_count{
-                        clear:both;
+                    .download_count {
+                        clear: both;
                         margin-bottom: .25em;
-                        color:#777;
-                        a,span{
-                        color:$color-orange;
-                        font-weight:bold;
+                        color: #777;
+                        a, span {
+                            color: $color-orange;
+                            font-weight: bold;
 
-                        text-decoration:underline;
+                            text-decoration: underline;
 
                         }
                     }
@@ -144,8 +144,8 @@
                         height: 2em;
                         padding: 0.25em 1em;
                         text-align: center;
-                        background: #FF7365;
-                        color: #fff;
+                        background: $tag-color;
+                        color: $tag-word;
                         z-index: 9;
                     }
                 }
@@ -154,7 +154,7 @@
     }
     //adv_filter
     .adv_filter {
-        background: $primaryColor;
+        background: $color-green;
         padding: 1em;
         margin: 0 1em 1em;
         color: #FFF;
@@ -364,31 +364,33 @@
         button {
             margin: 0 0 .5em;
             &.btn-line {
-                border: 2px solid #00B900;
                 background: #00B900;
                 &:hover, &:focus {
-                    border: 2px solid darken(#00B900, 15);
+                    background: darken(#00B900, 10);
+                    box-shadow: 0px 0px 0px 2px $secondaryColor;
                 }
             }
             &.btn-fb {
-                border: 2px solid #1877F2;
                 background: #1877F2;
                 &:hover, &:focus {
-                    border: 2px solid darken(#1877F2, 15);
+                    background: darken(#1877F2, 10);
+                    box-shadow: 0px 0px 0px 2px $secondaryColor;
                 }
             }
             &.btn-twitter {
-                border: 2px solid #FFF;
-                background: #FFF;
+                background: #EEE;
+                color: #333;
+                text-shadow: none;
                 &:hover, &:focus {
-                    border: 2px solid #AAA;
+                    background: #FFF;
+                    box-shadow: 0px 0px 0px 2px $secondaryColor;
                 }
             }
             &.btn-google {
-                border: 2px solid #E94335;
                 background: #E94335;
                 &:hover, &:focus {
-                    border: 2px solid darken(#E94335, 15);
+                    background: darken(#E94335, 10);
+                    box-shadow: 0px 0px 0px 2px $secondaryColor;
                 }
             }
         }
@@ -723,8 +725,8 @@
                         height: 2em;
                         padding: .25em 1em;
                         text-align: center;
-                        background: $color-orange;
-                        color: #FFF;
+                        background: $tag-color;
+                        color: $tag-word;
                     }
                     .dot {
                         position: absolute;
@@ -749,7 +751,7 @@
                             padding: 0 1em;
                             border-radius: .25rem;
                             text-align: center;
-                            color: salmon;
+                            color: $importantColor;
                             font-weight: bold;
                         }
                         &:before {

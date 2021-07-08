@@ -98,7 +98,7 @@ $(function() {
     // 先複製過去
     _nav.clone().prependTo(_mArea);
     _menu.clone().prependTo(_mArea);
-    _search.clone().prependTo(_body).addClass('m_search');
+    _search.clone().insertAfter('.searchCtrl').addClass('m_search');
     var liHasChild_level1 = $('aside .menu ul').children('li.hasChild'),
         liHasChild_level2 = $('aside .menu ul ul').children('li.hasChild'),
         liHasChild_level3 = $('aside .menu ul ul ul').children('li.hasChild'),
@@ -158,7 +158,7 @@ $(function() {
             hideSidebar();
             _body.removeClass('noscroll');
             _nav.prependTo('.header .container');
-            _search.appendTo('.header .container');
+            // _search.appendTo('.header .container');
             _menu.appendTo('.header .container');
             _search.removeClass('m_search');
             search_mode = false;
@@ -200,13 +200,16 @@ $(function() {
         if (!search_mode) {
             $('.m_search').stop(true, false).slideDown('400', 'easeOutQuint');
             _window.off('resize');
-            // $('.m_search').find('input[type="text"]').focus();
+            $('.m_search').find('input[type="text"]').focus();
             search_mode = true;
         } else {
             $('.m_search').hide();
             search_mode = false;
         }
     });
+    $('.m_search').find('a:last').focusout(function(e) {
+        $('.m_search').stop().slideUp('400', 'easeOutQuint');
+    })
     // 如果點在外面
     $('.main').off().on('click touchend', function(e) {
         $('.m_search').hide();
@@ -467,7 +470,7 @@ $(function() {
         e.preventDefault();
     });
     $('.scrollToTop').keydown(function(e) {
-        _body.find('a:first').focus();
+        $('body').find('a.goCenter').focus().addClass('active');
         e.preventDefault();
     });
     /*--------------------------------------------------------*/
@@ -627,6 +630,9 @@ $(function() {
             $('html, body').stop(true, true).animate({ scrollTop: $('.main').find('.accesskey').offset().top }, 800, 'easeOutExpo');
         }
     });
+    $('a.goCenter').focusout(function(e) {
+        $(this).removeClass('active');
+    })
     /*-----------------------------------*/
     //////// 語言模組 無障礙遊走設定  ////////
     /*-----------------------------------*/

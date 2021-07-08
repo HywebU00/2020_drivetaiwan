@@ -18,7 +18,7 @@ a.goCenter {
     @include screen("mobile") {
         display: none;
     }
-    &:hover, &:focus {
+    &.active, &:hover, &:focus {
         outline: none;
         top: 0;
         opacity: 1;
