@@ -184,7 +184,8 @@
                 flex-shrink: 1;
                 flex-basis: 47%;
                 padding: 3em 2em 1.5em;
-                background: #F1F1F1;
+                background: #FFF;
+                border: 1px solid #DDD;
                 margin: 0 1.5% 2em;
                 position: relative;
                 .county {
@@ -229,6 +230,13 @@
                     @include aspect-ratio(4, 3);
                     width: 100%;
                     margin-bottom: 1em;
+                    border: 1px solid #CCC;
+                    &.portrait {
+                        @include aspect-ratio(3, 4);
+                        width: 56.5%;
+                        left: 50%;
+                        margin-left: -28%;
+                    }
                     .photoMask {
                         position: absolute;
                         width: 100%;
@@ -237,6 +245,7 @@
                         left: 0;
                         z-index: 2;
                     }
+
                 }
                 .download_function {
                     display: flex;
@@ -1135,7 +1144,6 @@
             }
             li {
                 width: 19%;
-                height: 80px;
                 padding: .25em;
                 border: 1px solid #AAA;
                 background: #FFF;
@@ -1144,10 +1152,12 @@
                 flex-grow: 0;
                 flex-shrink: 1;
                 flex-basis: 19%;
+                max-width: 19%;
+                @include aspect-ratio(1, 1);
                 @include screen('xs_mobile') {
-                    width: 45%;
-                    height: 80px;
-                    flex-basis: 45%;
+                    width: 28%;
+                    flex-basis: 28%;
+                    max-width: 28%;
                 }
                 .deleteThis {
                     width: 20px;
@@ -1163,6 +1173,7 @@
                         height: 100%;
                         object-fit: cover;
                         filter: invert(100%);
+                        transform: scale(80%);
                     }
                     &:hover, &:focus {
                         background: $secondaryColor;
@@ -1181,8 +1192,14 @@
         position: relative;
         background: #DDD;
         min-height: 120px;
+        margin-bottom: .5em;
         img {
             width: 100%;
+        }
+        &.portrait {
+            width: 80%;
+            margin: 0 auto .5em;
+            @include aspect-ratio(3, 4);
         }
         .photoMask {
             position: absolute;
@@ -1207,17 +1224,20 @@
         ul {
             @include li-reset;
             display: flex;
+            align-content: center;
             li {
-                width: 30%;
+                // width: 30%;
                 flex-grow: 0;
                 flex-shrink: 1;
                 flex-basis: 30%;
                 position: relative;
                 background: #DDD;
                 margin: 0 1.5% .5em;
+                align-self: center;
                 img {
                     width: 100%;
                     display: block;
+
                 }
                 .photoMask {
                     position: absolute;

@@ -990,10 +990,12 @@ div.tag {
             width: 45%;
             height: 400px;
             margin: 0 1em 1em 0;
+            font-size: .875rem;
+            color: #666;
             @include screen('mobile') {
                 float: none;
                 width: 100%;
-                margin: 0 auto 1em;
+                margin: 0 auto 4rem;
             }
             iframe {
                 width: 100%;
