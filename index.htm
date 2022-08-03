@@ -13,63 +13,74 @@
     <!-- hyUI -->
     <link rel="stylesheet" href="css/hyui.css">
     <style>
-    .demo_wrap {
-        max-width: 1000px;
-        margin: 0em auto 1em;
-        padding: 15px 15px 3em;
-        clear: both;
-        background: #FFF
-    }
-    .demo_wrap h1 {
-        display: block;
-        margin: 0px auto;
-        max-width: 300px;
-        float: left;
-        margin-right: 1em
-    }
-    @media screen and (max-width:545px) {
+        .demo_wrap {
+            max-width: 1000px;
+            margin: 0em auto 1em;
+            padding: 15px 15px 3em;
+            clear: both;
+            background: #FFF
+        }
+        
         .demo_wrap h1 {
-            max-width: 100%;
-            float: none;
-            text-align: center
+            display: block;
+            margin: 0px auto;
+            max-width: 300px;
+            float: left;
+            margin-right: 1em
         }
-    }
-    .demo_wrap h1 img {
-        width: 300px
-    }
-    .num {
-        width: 12%
-    }
-    body {
-        counter-reset: num
-    }
-    table {
-        margin-bottom: 1em
-    }
-    table caption {
-        text-align: left;
-        font-weight: bold;
-        font-size: 1.25em;
-        padding: .5em 0;
-        color: #ff5050
-    }
-    tbody tr td:first-child:before {
-        counter-increment: num;
-        display: block;
-        text-align: center;
-        content: counters(num, ".") " "
-    }
-    tbody tr td:nth-child(2) {
-        width: 35%
-    }
-    .btn_grp {
-        text-align: right
-    }
-    @media screen and (max-width:545px) {
+        
+        @media screen and (max-width:545px) {
+            .demo_wrap h1 {
+                max-width: 100%;
+                float: none;
+                text-align: center
+            }
+        }
+        
+        .demo_wrap h1 img {
+            width: 300px
+        }
+        
+        .num {
+            width: 12%
+        }
+        
+        body {
+            counter-reset: num
+        }
+        
+        table {
+            margin-bottom: 1em
+        }
+        
+        table caption {
+            text-align: left;
+            font-weight: bold;
+            font-size: 1.25em;
+            padding: .5em 0;
+            color: #ff5050
+        }
+        
+        tbody tr td:first-child:before {
+            counter-increment: num;
+            display: block;
+            text-align: center;
+            content: counters(num, ".") " "
+        }
+        
+        tbody tr td:nth-child(2) {
+            width: 35%
+        }
+        
         .btn_grp {
-            text-align: center
+            text-align: right
         }
-    }
+        
+        @media screen and (max-width:545px) {
+            .btn_grp {
+                text-align: center
+            }
+        }
     </style>
 </head>
 
@@ -95,42 +106,58 @@
                     <tr>
                         <td></td>
                         <td>會員登入頁</td>
-                        <td><a href="sp_login.htm"></a></td>
+                        <td>
+                            <a href="sp_login.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>會員專區-預設頁</td>
-                        <td><a href="sp_member_default.htm"></a></td>
+                        <td>
+                            <a href="sp_member_default.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>會員專區-主題公路</td>
-                        <td><a href="sp_member_topic.htm"></a></td>
+                        <td>
+                            <a href="sp_member_topic.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>會員專區-私房秘境</td>
-                        <td><a href="sp_member_secret.htm"></a></td>
+                        <td>
+                            <a href="sp_member_secret.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>會員專區-活動紀錄</td>
-                        <td><a href="sp_member_record.htm"></a></td>
+                        <td>
+                            <a href="sp_member_record.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>會員專區-高解析照片下載</td>
-                        <td><a href="sp_member_download.htm"></a></td>
+                        <td>
+                            <a href="sp_member_download.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>【調整】私房秘境內容頁</td>
-                        <td><a href="cp_私房秘境內容頁v1.htm"></a></td>
+                        <td>
+                            <a href="cp_私房秘境內容頁v1.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>【調整】主題公路內容頁</td>
-                        <td><a href="cp_公路內容頁.htm"></a></td>
+                        <td>
+                            <a href="cp_公路內容頁.htm"></a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -149,61 +176,81 @@
                         <td></td>
                         <td>首頁</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="mp.htm"></a></td>
+                        <td>
+                            <a href="mp.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>LP 一般列表頁</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="lp.htm"></a></td>
+                        <td>
+                            <a href="lp.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>LP 一般表格列表頁</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="lp_table.htm"></a></td>
+                        <td>
+                            <a href="lp_table.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>LP 一般相簿列表頁</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="lp_album.htm"></a></td>
+                        <td>
+                            <a href="lp_album.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>CP 一般內容頁</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="cp.htm"></a></td>
+                        <td>
+                            <a href="cp.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>NP 節點頁</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="np.htm"></a></td>
+                        <td>
+                            <a href="np.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>FP 轉寄友人</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="fp.htm"></a></td>
+                        <td>
+                            <a href="fp.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>QP 意見信箱</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="qp.htm"></a></td>
+                        <td>
+                            <a href="qp.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>Sitemap 網站地圖</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="sitemap.htm"></a></td>
+                        <td>
+                            <a href="sitemap.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>搜尋列表頁</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="lp_搜尋列表頁.htm"></a></td>
+                        <td>
+                            <a href="lp_搜尋列表頁.htm"></a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -221,31 +268,57 @@
                     <tr>
                         <td></td>
                         <td>影音專區<span style="display: inline-block;padding: 0em .3em; background:red; color:#FFF;border-radius: .25em;margin-left: .5em;">new</span></td>
-                        <td><a href="lp_影音專區.htm"></a></td>
+                        <td>
+                            <a href="lp_影音專區.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>公路列表頁</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="lp_公路列表頁.htm"></a></td>
+                        <td>
+                            <a href="lp_公路列表頁.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>私房秘境區域列表頁</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="lp_私房秘境區域列表頁.htm"></a></td>
+                        <td>
+                            <a href="lp_私房秘境區域列表頁.htm"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>省道專區<span style="display: inline-block;padding: 0em .3em; background:red; color:#FFF;border-radius: .25em;margin-left: .5em;">new</span></td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td>
+                            <a href="lp_省道專區.htm"></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>省道主題公路列表頁<span style="display: inline-block;padding: 0em .3em; background:red; color:#FFF;border-radius: .25em;margin-left: .5em;">new</span></td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td>
+                            <a href="lp_省道主題公路列表頁.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>私房秘境內容頁v1</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="cp_私房秘境內容頁v1.htm"></a></td>
+                        <td>
+                            <a href="cp_私房秘境內容頁v1.htm"></a>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>公路內容頁</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="cp_公路內容頁.htm"></a></td>
+                        <td>
+                            <a href="cp_公路內容頁.htm"></a>
+                        </td>
                     </tr>
                     <!--  <tr>
                         <td></td>
@@ -263,7 +336,9 @@
                         <td></td>
                         <td>cp關於我們</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="cp_about.htm"></a></td>
+                        <td>
+                            <a href="cp_about.htm"></a>
+                        </td>
                     </tr>
                     <!--   <tr>
                         <td></td>
@@ -275,7 +350,9 @@
                         <td></td>
                         <td>cp_公路蛻變new</td>
                         <!-- 連結放到a裡面就好 -->
-                        <td><a href="cp_公路蛻變new.htm"></a></td>
+                        <td>
+                            <a href="cp_公路蛻變new.htm"></a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -287,12 +364,12 @@
     <script src="js/hyui.js"></script>
     <script src="js/customize.js"></script>
     <script>
-    $(function() {
-        $('tbody').find('a').each(function(index, el) {
-            var Link = $(this).attr('href');
-            $(this).text(Link);
-        });
-    })
+        $(function() {
+            $('tbody').find('a').each(function(index, el) {
+                var Link = $(this).attr('href');
+                $(this).text(Link);
+            });
+        })
     </script>
 </body>
 

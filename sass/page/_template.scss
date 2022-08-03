@@ -1,12 +1,14 @@
 * {
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
     @include screen('mobile') {
         background: #FFF;
     }
 }
+
 body {
     &.noscroll {
         position: static !important;
@@ -18,6 +20,7 @@ body {
         padding: 0;
     }
 }
+
 // 最外圍預設為100%
 .wrapper {
     width: 100%;
@@ -30,6 +33,7 @@ body {
         overflow-y: auto;
     }
 }
+
 // 整體共用container樣式，請注意首頁切版頁面的整齊
 .container {
     padding: 0;
@@ -40,6 +44,7 @@ body {
         @include gutter(0);
     }
 }
+
 .main {
     position: relative;
     margin: 0 auto;
@@ -59,6 +64,7 @@ body {
         font-size: 1.125em;
     }
 }
+
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
@@ -76,7 +82,8 @@ body {
             @include gutter;
         }
     }
-    .inner_img, .feature_img {
+    .inner_img,
+    .feature_img {
         height: 150px;
         width: 100%;
         margin: -1em 0 1em;
@@ -234,7 +241,11 @@ body {
             }
         }
     }
+    .brief {
+        text-align: center;
+    }
 }
+
 .login {
     .btn_grp {
         button {
@@ -256,14 +267,16 @@ body {
             }
             &.btn-line {
                 background: #00B900;
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     background: darken(#00B900, 10);
                     box-shadow: 0px 0px 0px 2px $secondaryColor;
                 }
             }
             &.btn-fb {
                 background: #1877F2;
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     background: darken(#1877F2, 10);
                     box-shadow: 0px 0px 0px 2px $secondaryColor;
                 }
@@ -272,14 +285,16 @@ body {
                 background: #EEE;
                 color: #333;
                 text-shadow: none;
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     background: #FFF;
                     box-shadow: 0px 0px 0px 2px $secondaryColor;
                 }
             }
             &.btn-google {
                 background: #E94335;
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     background: darken(#E94335, 10);
                     box-shadow: 0px 0px 0px 2px $secondaryColor;
                 }
