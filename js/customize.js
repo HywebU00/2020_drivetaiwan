@@ -640,6 +640,12 @@ $(function() {
             $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
+        $('.gotoProvHighway').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.provHighway').offset().top }, 600, 'linear');
+            $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
+            e.preventDefault();
+        });
     }
     //
     $('.map_tag').find('a').each(function(index, el) {
@@ -1063,6 +1069,56 @@ $(function() {
     });
     // 秘境
     $('.relatveSecret .roadSlider').slick({
+        mobileFirst: true,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 200,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }]
+    });
+    // 省道公路
+    $('.provHighway .roadSlider').slick({
         mobileFirst: true,
         dots: false,
         infinite: true,

@@ -2,11 +2,14 @@
 .cp {
     min-height: 500px;
 }
+
 // 文章標題
-h1.title, h2.title {
+h1.title,
+h2.title {
     line-height: 1.25em;
     margin: .4em 0;
 }
+
 .full {
     overflow: hidden;
     padding-left: 0 !important;
@@ -89,7 +92,8 @@ h1.title, h2.title {
                 margin: 0 auto;
             }
         }
-        +.parallax, +.parallax2 {
+        +.parallax,
+        +.parallax2 {
             margin-top: -2em;
         }
         @include screen('mobile') {
@@ -174,6 +178,7 @@ h1.title, h2.title {
         }
     }
 }
+
 .featureSlider {
     margin-bottom: 2.5em !important;
     position: relative;
@@ -196,6 +201,7 @@ h1.title, h2.title {
         }
     }
 }
+
 .cp_story {
     background: #F5F5F5;
     max-width: 100% !important;
@@ -252,6 +258,7 @@ h1.title, h2.title {
         }
     }
 }
+
 .cp_topic {
     border-bottom: 1px dashed #F1F1F1;
     position: relative;
@@ -284,7 +291,12 @@ h1.title, h2.title {
         }
     }
 }
-.cp_story, .cp_topic, .change, .basic, .member {
+
+.cp_story,
+.cp_topic,
+.change,
+.basic,
+.member {
     @extend %clearfix;
     margin: 0 2em;
     padding: 3em 0 1em;
@@ -322,11 +334,14 @@ h1.title, h2.title {
         }
     }
 }
-.change, .othervideo {
+
+.change,
+.othervideo {
     @include screen('mobile') {
         padding: 1em 0 !important;
     }
 }
+
 .cp {
     .pic {
         float: left;
@@ -388,6 +403,7 @@ h1.title, h2.title {
         @include aSetting;
     }
 }
+
 // 文章標籤
 div.tag {
     @extend %clearfix;
@@ -419,13 +435,15 @@ div.tag {
                 border-radius: 4px;
                 border: 1px solid #DDD;
                 padding: .2em .5em;
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     border: 1px solid $aHover;
                 }
             }
         }
     }
 }
+
 // 檔案下載
 .file_download {
     width: 100%;
@@ -519,7 +537,8 @@ div.tag {
                 max-width: 2em;
                 margin: 0px auto .5em 0px;
             }
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 &:before {
                     content: "";
                     z-index: 99;
@@ -664,6 +683,7 @@ div.tag {
         }
     }
 }
+
 // 外部連結
 .web_link {
     width: 100%;
@@ -708,7 +728,9 @@ div.tag {
         }
     }
 }
-.change, .othervideo {
+
+.change,
+.othervideo {
     position: relative;
     overflow: hidden;
     padding: 2em 0 1em;
@@ -727,6 +749,7 @@ div.tag {
         z-index: 1;
     }
 }
+
 .othervideo {
     h3 {
         font-size: 2.5rem;
@@ -741,7 +764,10 @@ div.tag {
         }
     }
 }
-.changeSlider, .othervideoSlider, .basicContent {
+
+.changeSlider,
+.othervideoSlider,
+.basicContent {
     padding: 1em 2em;
     margin: 0 auto;
     position: relative;
@@ -751,7 +777,8 @@ div.tag {
         left: 5px;
         background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, .45);
         background-size: 80%;
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, .75);
             background-size: 80%;
         }
@@ -763,7 +790,8 @@ div.tag {
         right: 5px;
         background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, .45);
         background-size: 80%;
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, .75);
             background-size: 80%;
         }
@@ -805,7 +833,8 @@ div.tag {
         }
     }
     a {
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             .description {
                 h3 {
                     color: $aHover;
@@ -814,10 +843,12 @@ div.tag {
         }
     }
 }
+
 .changeSlider {
     .item {
         a {
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 .img-container {
                     img {
                         transform: scale(1.1);
@@ -877,6 +908,7 @@ div.tag {
         }
     }
 }
+
 .othervideo {
     background: url(../images/othervideo_bg.jpg) no-repeat top center;
     background-size: cover;
@@ -887,9 +919,9 @@ div.tag {
         color: #FFF;
         text-shadow: 0px 0px 5px rgba(0, 0, 0, .75);
         border-bottom: 1px solid #FFF;
-
     }
 }
+
 .othervideoSlider {
     margin: 0 auto;
     width: 50%;
@@ -914,7 +946,8 @@ div.tag {
         }
     }
     a {
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             color: $aHover;
             .img-container {
                 &:after {
@@ -951,6 +984,7 @@ div.tag {
         }
     }
 }
+
 .publish_info {
     font-size: 0.875em;
     line-height: 1.5em;
@@ -978,6 +1012,7 @@ div.tag {
         }
     }
 }
+
 // 基本資料
 .basic {
     padding: 1em 0;
@@ -1104,10 +1139,12 @@ div.tag {
         }
     }
 }
+
 // tab
 .innerpage>.container>.tab_block {
     max-width: 100% !important;
 }
+
 .tab_block {
     max-width: 100%;
     .tabSet {
@@ -1115,6 +1152,7 @@ div.tag {
         margin: 0 auto 1em;
     }
 }
+
 // 比較
 .comparison {
     display: flex;
@@ -1162,7 +1200,8 @@ div.tag {
             margin: 0 auto .25em;
         }
     }
-    .before, .after {
+    .before,
+    .after {
         flex-grow: 1;
         flex-shrink: 1;
         flex-basis: 45%;
@@ -1219,6 +1258,7 @@ div.tag {
         }
     }
 }
+
 // 簡介
 .cp_intro {
     @extend %clearfix;
@@ -1342,7 +1382,8 @@ div.tag {
                     transition: .3s ease-out;
                 }
             }
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 img {
                     transform: scale(1.1);
                 }
@@ -1377,7 +1418,8 @@ div.tag {
                 bottom: 0;
                 overflow: hidden;
             }
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 img {
                     transform: scale(1.1);
                 }
@@ -1419,10 +1461,12 @@ div.tag {
         }
     }
 }
+
 // 秘境傳說
 .innerpage>.container>.cp_legend {
     max-width: 100% !important;
 }
+
 .cp_legend {
     @extend %clearfix;
     margin-bottom: 1em;
@@ -1470,10 +1514,12 @@ div.tag {
         }
     }
 }
+
 // 相關推薦
 .innerpage>.container>.recommend {
     max-width: 100% !important;
 }
+
 .recommend {
     width: auto;
     overflow: hidden;
@@ -1529,7 +1575,8 @@ div.tag {
         a {
             display: block;
             color: #000;
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 color: $aHover;
                 .img-container {
                     img {
@@ -1658,7 +1705,9 @@ div.tag {
         }
     }
 }
-.relatveSecret {
+
+.relatveSecret,
+.provHighway {
     width: auto;
     overflow: hidden;
     padding: 1em 2em;
@@ -1686,7 +1735,8 @@ div.tag {
     }
     a.more {
         margin-top: 0;
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             border: 1px solid $secondaryColor;
         }
     }
@@ -1699,7 +1749,8 @@ div.tag {
         left: -45px;
         background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, .45);
         background-size: 80%;
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, .75);
             background-size: 80%;
         }
@@ -1711,7 +1762,8 @@ div.tag {
         right: -45px;
         background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, .45);
         background-size: 80%;
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, .75);
             background-size: 80%;
         }
@@ -1731,7 +1783,8 @@ div.tag {
         a {
             display: block;
             color: #000;
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 color: $aHover;
                 ~h3 {
                     color: $aHover;
@@ -1906,6 +1959,63 @@ div.tag {
         }
     }
 }
+
+.provHighway {
+    background-color: #F5F5F5;
+    max-width: 100%!important;
+    overflow: initial;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 200px;
+        background: url(../images/provhighway_left.png) no-repeat left top;
+        background-size: contain;
+        left: 20px;
+        top: -50px;
+        transition: .3s ease-out;
+        @include screen('notebook') {
+            left: -20px;
+        }
+        @include screen('tablet') {
+            display: none;
+        }
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        width: 240px;
+        height: 240px;
+        background: url(../images/provhighway_right.png) no-repeat center bottom;
+        background-size: contain;
+        right: 40px;
+        bottom: 0;
+        transition: .3s ease-out;
+        @include screen('notebook') {
+            right: -100px;
+        }
+        @include screen('tablet') {
+            display: none;
+        }
+    }
+    .roadSlider {
+        max-width: 1042px;
+        margin: 0 auto;
+        z-index: 1;
+        @media screen and (max-width: 1200px) {
+            margin: 0 4em;
+        }
+    }
+    .item {
+        .description {
+            height: 13em;
+            p {
+                height: 3em;
+            }
+        }
+    }
+}
+
 .peopleShare {
     width: auto;
     overflow: hidden;
@@ -1934,7 +2044,8 @@ div.tag {
     }
     a.more {
         margin-top: 0;
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             border: 1px solid $secondaryColor;
         }
     }
@@ -1949,20 +2060,20 @@ div.tag {
         .slick-prev {
             background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, .45);
             background-size: 80%;
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, .75);
                 background-size: 80%;
             }
-
         }
         .slick-next {
             background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, .45);
             background-size: 80%;
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, .75);
                 background-size: 80%;
             }
-
         }
         li {
             float: left;
@@ -1980,7 +2091,8 @@ div.tag {
                 padding-bottom: 3em;
                 min-height: 300px;
                 display: block;
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     .img-container {
                         img {
                             transform: scale(1.1);
@@ -2003,8 +2115,6 @@ div.tag {
                 display: block;
                 @include text-overflow;
             }
-
-
         }
     }
 }
