@@ -365,6 +365,566 @@
                         </div>
                     </div>
                 </div>
+                <!-- 逐三小時天氣預報 -->
+                <div class="forecast wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">
+                    <h3>逐三小時天氣預報</h3>
+                    <div class="cp_subContent">
+                        <!-- 桌機版 （在手機尺寸時會隱藏） -->
+                        <div class="weather_pc">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>日期</th>
+                                        <!-- colspan的數字和下一列時間的欄位數需一樣 -->
+                                        <th colspan="3">06/30 週四</th>
+                                        <th colspan="8">07/01 週五</th>
+                                        <th colspan="6" class="holiday">07/02 週六</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>時間</th>
+                                        <th>15:00</th>
+                                        <th>18:00</th>
+                                        <th>21:00</th>
+                                        <th>00:00</th>
+                                        <th>03:00</th>
+                                        <th>06:00</th>
+                                        <th>09:00</th>
+                                        <th>12:00</th>
+                                        <th>15:00</th>
+                                        <th>18:00</th>
+                                        <th>21:00</th>
+                                        <th>00:00</th>
+                                        <th>03:00</th>
+                                        <th>06:00</th>
+                                        <th>09:00</th>
+                                        <th>12:00</th>
+                                        <th>15:00</th>
+                                    </tr>
+                                    <tr>
+                                        <th>天氣狀況</th>
+                                        <td><img src="images/weather_icon/day/01.svg" alt="晴天"></td>
+                                        <td><img src="images/weather_icon/night/01.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/night/02.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/night/03.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/night/04.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/day/02.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/day/03.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/day/04.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/day/05.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/night/05.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/night/06.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/night/07.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/night/08.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/night/09.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/night/10.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/night/11.svg" alt=""></td>
+                                        <td><img src="images/weather_icon/day/06.svg" alt=""></td>
+                                    </tr>
+                                    <tr>
+                                        <th>溫度</th>
+                                        <td>33˚C</td>
+                                        <td>30˚C</td>
+                                        <td>28˚C</td>
+                                        <td>27˚C</td>
+                                        <td>26˚C</td>
+                                        <td>27˚C</td>
+                                        <td>31˚C</td>
+                                        <td>31˚C</td>
+                                        <td>31˚C</td>
+                                        <td>31˚C</td>
+                                        <td>31˚C</td>
+                                        <td>31˚C</td>
+                                        <td>31˚C</td>
+                                        <td>31˚C</td>
+                                        <td>31˚C</td>
+                                        <td>31˚C</td>
+                                        <td>31˚C</td>
+                                    </tr>
+                                    <tr>
+                                        <th>體感溫度</th>
+                                        <td>37˚C</td>
+                                        <td>35˚C</td>
+                                        <td>32˚C</td>
+                                        <td>30˚C</td>
+                                        <td>31˚C</td>
+                                        <td>33˚C</td>
+                                        <td>33˚C</td>
+                                        <td>33˚C</td>
+                                        <td>33˚C</td>
+                                        <td>33˚C</td>
+                                        <td>33˚C</td>
+                                        <td>33˚C</td>
+                                        <td>33˚C</td>
+                                        <td>33˚C</td>
+                                        <td>33˚C</td>
+                                        <td>33˚C</td>
+                                        <td>33˚C</td>
+                                    </tr>
+                                    <tr>
+                                        <th>降雨機率</th>
+                                        <td>40%</td>
+                                        <td colspan="2">10%</td>
+                                        <td colspan="2">20%</td>
+                                        <td colspan="2">50%</td>
+                                        <td colspan="2">0%</td>
+                                        <td colspan="2">0%</td>
+                                        <td colspan="2">10%</td>
+                                        <td colspan="2">0%</td>
+                                        <td colspan="2">0%</td>
+                                    </tr>
+                                    <tr>
+                                        <th>舒適度</th>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                        <td>悶熱</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 桌機版 （在手機尺寸時會隱藏） -->
+                        <div class="weather_m">
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">06/30 週四</div><time>15:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/day/01.svg" alt="晴天">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">06/30 週四</div><time>18:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/night/01.svg" alt="晴天">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">06/30 週四</div><time>21:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/night/02.svg" alt="晴天">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/01 週五</div><time>00:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/night/02.svg" alt="晴天">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/01 週五</div><time>03:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/night/02.svg" alt="晴天">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/01 週五</div><time>06:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/day/04.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/01 週五</div><time>09:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/day/02.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/01 週五</div><time>12:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/day/03.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/01 週五</div><time>12:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/day/03.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/01 週五</div><time>12:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/day/03.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/01 週五</div><time>15:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/day/03.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/01 週五</div><time>18:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/day/04.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/01 週五</div><time>21:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/night/03.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/02 週六</div><time>00:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/night/03.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/02 週六</div><time>03:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/night/03.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/02 週六</div><time>06:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/day/08.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/02 週六</div><time>09:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/day/04.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/02 週六</div><time>12:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/day/04.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="time_grp">
+                                <ul>
+                                    <li class="time">
+                                        <div class="date">07/02 週六</div><time>15:00</time>
+                                    </li>
+                                    <li class="weather_img">
+                                        <img src="images/weather_icon/day/04.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <div class="gh">溫度</div>33˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">體感溫度</div>37˚C
+                                    </li>
+                                    <li>
+                                        <div class="gh">降雨機率</div>40%
+                                    </li>
+                                    <li>
+                                        <div class="gh">舒適度</div>悶熱
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn btn-weather" name="展開">展開</button>
+                    </div>
+                </div>
+                <!-- 即時影像 -->
+                <div class=" wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">
+                    <h3></h3>
+                </div>
                 <!-- 相關推薦 -->
                 <div class="recommend wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".5s">
                     <h3>相關推薦</h3>
@@ -685,10 +1245,10 @@
                 <a href="#" class="gotoBasic"><span>基本資料</span></a>
             </li>
             <li>
-                <a href="#" class=""><span>逐三小時天氣預報</span></a>
+                <a href="#" class="gotoForecast"><span>逐三小時天氣預報</span></a>
             </li>
             <li>
-                <a href="#" class=""><span>即時影像</span></a>
+                <a href="#" class="gotoTrafficVideo"><span>即時影像</span></a>
             </li>
             <li>
                 <a href="#" class="gotoRecommend"><span>相關推薦</span></a>

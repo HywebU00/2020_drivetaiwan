@@ -646,6 +646,18 @@ $(function() {
             $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
+        $('.gotoForecast').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.forecast').offset().top }, 600, 'linear');
+            $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
+            e.preventDefault();
+        });
+        $('.gotoTrafficVideo').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.trafficVideo').offset().top }, 600, 'linear');
+            $(this).blur();
+            $(this).parent().siblings().find('a').removeClass('active');
+            e.preventDefault();
+        });
     }
     //
     $('.map_tag').find('a').each(function(index, el) {
@@ -1222,6 +1234,19 @@ $(function() {
                 arrows: true
             }
         }]
+    });
+
+    $('.btn-weather').click(function(e) {
+        $(this).toggleClass('show');
+        $('.weather_m').toggleClass('show-content');
+        if ($('.weather_m').hasClass('show-content')) {
+            $('.btn-weather').html("收合");
+            $('.btn-weather').attr('name', '顯示較少資料');
+        } else {
+            $('.btn-weather').html("展開");
+            $('.btn-weather').attr('name', '顯示更多資料');
+        }
+
     });
 
 });

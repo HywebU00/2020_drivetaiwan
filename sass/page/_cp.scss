@@ -296,7 +296,8 @@ h2.title {
 .cp_topic,
 .change,
 .basic,
-.member {
+.member,
+.forecast {
     @extend %clearfix;
     margin: 0 2em;
     padding: 3em 0 1em;
@@ -1515,6 +1516,163 @@ div.tag {
     }
 }
 
+//氣象預報
+.innerpage>.container>.forecast {
+    max-width: 100% !important;
+}
+
+.forecast {
+    background: #f5f5f5;
+    .cp_subContent {
+        overflow: hidden;
+        max-width: 1200px;
+        margin: 0 auto;
+        @include gutter;
+        // @include screen('mobile') {
+        //     @include gutter(0);
+        // }
+    }
+    .weather_pc {
+        max-width: 100%;
+        overflow-x: auto;
+        @include screen('mobile') {
+            display: none;
+        }
+        table {
+            margin-bottom: 1em;
+        }
+        thead {
+            th {
+                background: $primaryColor;
+                color: #fff;
+                &.holiday {
+                    background: $importantColor;
+                }
+            }
+        }
+        tbody {
+            tr {
+                th {
+                    &:first-of-type {
+                        background-color: #ececec;
+                    }
+                }
+            }
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td {
+            background-color: #fff;
+        }
+        th,
+        td {
+            text-align: center;
+        }
+        td {
+            img {
+                width: 40px;
+            }
+        }
+    }
+    .weather_m {
+        display: none;
+        height: 540px;
+        overflow: hidden;
+        transition: .3s all;
+        @include screen('mobile') {
+            display: block;
+        }
+        &.show-content {
+            height: auto;
+        }
+        .time_grp {
+            padding: 1em;
+            background-color: #fff;
+            border: 1px solid #fff;
+            margin-bottom: 5px;
+            &:nth-of-type(2n) {
+                background-color: #f0f0f0;
+            }
+            ul {
+                @include li-reset;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            li {
+                flex-basis: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                .gh {
+                    font-weight: bold;
+                    min-width: 70px;
+                    margin-right: 8px;
+                    text-align: left;
+                    color: $color-word;
+                }
+            }
+            .time {
+                flex-basis: 70%;
+                font-weight: bold;
+                margin-bottom: 1em;
+                font-size: 1.125em;
+                .date {
+                    flex-basis: 100%;
+                    text-align: left;
+                    color: $color-word;
+                }
+                time {
+                    line-height: 1.5em;
+                    color: $primaryColor;
+                    // padding-left: 5px;
+                    // border-left: 4px solid $primaryColor;
+                }
+            }
+            .weather_img {
+                flex-basis: 30%;
+                justify-content: flex-end;
+                align-items: flex-start;
+                img {
+                    width: 46px;
+                }
+            }
+        }
+    }
+    .btn-weather {
+        display: none;
+        position: relative;
+        width: 100%;
+        margin: 5px 0;
+        border-radius: 0;
+        color: $primaryColor;
+        border: 1px solid $primaryColor;
+        background-color: transparent;
+        line-height: 2;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border: 2px solid $primaryColor;
+            border-left: none;
+            border-bottom: none;
+            transform: rotate(135deg);
+            left: calc(50% + 24px);
+            top: calc(50% - 6px);
+        }
+        &.show {
+            &::before {
+                transform: rotate(-45deg);
+                top: calc(50% - 3px);
+            }
+        }
+        @include screen('mobile') {
+            display: block;
+        }
+    }
+}
+
 // 相關推薦
 .innerpage>.container>.recommend {
     max-width: 100% !important;
@@ -1961,7 +2119,7 @@ div.tag {
 }
 
 .provHighway {
-    background-color: #F5F5F5;
+    background-color: #EEE;
     max-width: 100%!important;
     overflow: initial;
     &:before {
