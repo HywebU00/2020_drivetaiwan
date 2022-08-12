@@ -323,6 +323,49 @@ $(function() {
             }
         }]
     });
+
+    // 即時影像
+    $('.livevideoSlider').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }, {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }]
+    });
     // 影音專區
     $('.changeSlider').slick({
         mobileFirst: true,
@@ -652,8 +695,8 @@ $(function() {
             $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
         });
-        $('.gotoTrafficVideo').click(function(e) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.trafficVideo').offset().top }, 600, 'linear');
+        $('.gotoliveVideo').click(function(e) {
+            $('html, body').stop(true, true).animate({ scrollTop: $('.livevideo').offset().top }, 600, 'linear');
             $(this).blur();
             $(this).parent().siblings().find('a').removeClass('active');
             e.preventDefault();
@@ -1236,6 +1279,7 @@ $(function() {
         }]
     });
 
+    //逐三小時天氣預報 手機版展開/收合
     $('.btn-weather').click(function(e) {
         $(this).toggleClass('show');
         $('.weather_m').toggleClass('show-content');
