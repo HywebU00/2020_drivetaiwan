@@ -1544,6 +1544,18 @@
             }
         }
     }
+    //省道專區列表
+    &.prov_album {
+        ul {
+            li {
+                .thumbnail {
+                    .img-container {
+                        background: #c4f0f7;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .video_list {
