@@ -1424,7 +1424,7 @@
                     left: 0em;
                     top: 0em;
                     font-size: 0.938rem;
-                    width: 5em;
+                    min-width: 5em;
                     height: 2em;
                     padding: 0.25em 1em;
                     text-align: center;
@@ -1551,6 +1551,16 @@
                 .thumbnail {
                     .img-container {
                         background: #c4f0f7;
+                    }
+                }
+                .caption {
+                    height: 12rem;
+                    p {
+                        height: 4.3em;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
                     }
                 }
             }
