@@ -366,6 +366,20 @@ $(function() {
             }
         }]
     });
+    $('.livevideoSlider').slickLightbox({
+        caption: 'caption',
+        lazyLoad: 'ondemand',
+        useHistoryApi: 'true',
+        ease: 'ease',
+        lazy: true
+    });
+    $('.livevideoBlock').slickLightbox({
+        caption: 'caption',
+        lazyLoad: 'ondemand',
+        useHistoryApi: 'true',
+        ease: 'ease',
+        lazy: true
+    });
     // 影音專區
     $('.changeSlider').slick({
         mobileFirst: true,
@@ -1236,7 +1250,7 @@ $(function() {
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         arrow: true,
         lazyLoaded: true,
         lazyLoad: 'ondemand',

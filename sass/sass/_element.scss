@@ -1,5 +1,6 @@
 // scrollbar
-body::-webkit-scrollbar, body::-webkit-scrollbar-track {
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-track {
     background-color: rgba(0, 0, 0, .4)
 }
 
@@ -11,6 +12,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 0px;
     background-color: $secondaryColor;
 }
+
 // progress
 progress {
     width: 100%;
@@ -37,14 +39,16 @@ progress::-webkit-progress-value {
 progress::-moz-progress-bar {
     background-color: $color-green;
 }
+
 // tab的外框線
 a:focus {
     outline: none;
-    box-shadow: 0 0px 0px 1px $secondaryColor inset;
+    box-shadow: 0 0px 0px 2px $secondaryColor inset;
     @include screen('mobile') {
         box-shadow: none;
     }
 }
+
 // mask
 //設定第1層灰色動畫
 .mask {
@@ -88,6 +92,7 @@ a:focus {
         }
     }
 }
+
 // 導盲磚
 .accesskey {
     position: absolute;
@@ -100,6 +105,7 @@ a:focus {
         display: none;
     }
 }
+
 // more按鈕
 a.more {
     display: block;
@@ -166,6 +172,7 @@ a.more {
         }
     }
 }
+
 // scrollTop
 .scrollToTop {
     width: 50px;
@@ -184,20 +191,24 @@ a.more {
     display: none;
     z-index: 99999999;
     text-indent: -999999px;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         background: url(../images/basic/top.png) no-repeat center top $secondaryColor;
         box-shadow: none;
     }
 }
+
 // img
 img.img-responsive {
     @include img-responsive();
 }
+
 // 表單必填
 .necessary {
     color: red;
     margin: 0px .2em;
 }
+
 .tooltip {
     text-align: center;
     padding: 40px 0;

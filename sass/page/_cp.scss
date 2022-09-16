@@ -949,6 +949,7 @@ div.tag {
         }
     }
     a {
+        display: block;
         &:hover,
         &:focus {
             color: $aHover;
@@ -1431,10 +1432,10 @@ div.tag {
                     position: absolute;
                     content: "";
                     background: rgba(0, 0, 0, .75);
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
+                    width: calc(100% - 4px);
+                    height: calc(100% - 4px);
+                    top: 2px;
+                    left: 2px;
                     z-index: 2;
                 }
                 span {
@@ -1477,7 +1478,6 @@ div.tag {
             min-height: auto;
             position: relative;
             width: 100%;
-            border: 1px solid #FFF;
             position: relative;
             background: none;
             flex-grow: 1;
@@ -1492,6 +1492,7 @@ div.tag {
                 bottom: 0;
                 height: 100%;
                 overflow: hidden;
+                border: 2px solid #FFF;
                 &:after {
                     position: absolute;
                     width: 4em;
@@ -1507,14 +1508,15 @@ div.tag {
                     opacity: .75;
                     transition: .3s ease-out;
                 }
-            }
-            &:hover,
-            &:focus {
-                img {
-                    transform: scale(1.1);
-                }
-                &:after {
-                    opacity: 1;
+                &:hover,
+                &:focus {
+                    border: 2px solid $secondaryColor;
+                    img {
+                        transform: scale(1.1);
+                    }
+                    &:after {
+                        opacity: 1;
+                    }
                 }
             }
             img {
@@ -1533,7 +1535,6 @@ div.tag {
             flex-shrink: 1;
             position: relative;
             width: 100%;
-            border: 1px solid #FFF;
             overflow: hidden;
             a {
                 display: block;
@@ -1543,11 +1544,13 @@ div.tag {
                 right: 0;
                 bottom: 0;
                 overflow: hidden;
-            }
-            &:hover,
-            &:focus {
-                img {
-                    transform: scale(1.1);
+                border: 2px solid #FFF;
+                &:hover,
+                &:focus {
+                    border: 2px solid $secondaryColor;
+                    img {
+                        transform: scale(1.1);
+                    }
                 }
             }
             img {
@@ -2340,10 +2343,11 @@ div.tag {
     }
     ul {
         @include li-reset;
-        padding: 0 4em;
+        padding: 0 3em;
         .slick-prev {
             background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, .45);
             background-size: 80%;
+            left: 15px;
             &:hover,
             &:focus {
                 background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, .75);
@@ -2353,6 +2357,7 @@ div.tag {
         .slick-next {
             background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, .45);
             background-size: 80%;
+            right: 15px;
             &:hover,
             &:focus {
                 background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, .75);
@@ -2360,6 +2365,7 @@ div.tag {
             }
         }
         li {
+            position: relative;
             float: left;
             margin: 0 1% 1em;
             margin: 0 1em 2em;
@@ -2371,9 +2377,9 @@ div.tag {
             @include screen('xs_mobile') {
                 width: 48%;
             }
-            a {
+            >a {
                 padding-bottom: 3em;
-                min-height: 300px;
+                min-height: 270px;
                 display: block;
                 &:hover,
                 &:focus {
@@ -2398,6 +2404,24 @@ div.tag {
                 color: #555;
                 display: block;
                 @include text-overflow;
+            }
+            .shareGrp {
+                display: flex;
+                position: absolute;
+                bottom: 1em;
+                left: calc(5% - 5px);
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 28px;
+                    height: 28px;
+                    margin: 0 5px;
+                    &:hover {}
+                    img {
+                        width: 90%;
+                    }
+                }
             }
         }
     }
