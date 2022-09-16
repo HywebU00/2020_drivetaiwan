@@ -1510,13 +1510,15 @@ div.tag {
                 }
                 &:hover,
                 &:focus {
-                    border: 2px solid $secondaryColor;
                     img {
                         transform: scale(1.1);
                     }
                     &:after {
                         opacity: 1;
                     }
+                }
+                &:focus {
+                    border: 2px solid $secondaryColor;
                 }
             }
             img {
@@ -1547,10 +1549,12 @@ div.tag {
                 border: 2px solid #FFF;
                 &:hover,
                 &:focus {
-                    border: 2px solid $secondaryColor;
                     img {
                         transform: scale(1.1);
                     }
+                }
+                &:focus {
+                    border: 2px solid $secondaryColor;
                 }
             }
             img {
