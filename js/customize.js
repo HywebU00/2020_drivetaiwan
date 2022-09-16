@@ -373,13 +373,13 @@ $(function() {
         ease: 'ease',
         lazy: true
     });
-    $('.livevideoBlock').slickLightbox({
-        caption: 'caption',
-        lazyLoad: 'ondemand',
-        useHistoryApi: 'true',
-        ease: 'ease',
-        lazy: true
-    });
+    // $('.mainLivevideo').slickLightbox({
+    //     caption: 'caption',
+    //     lazyLoad: 'ondemand',
+    //     useHistoryApi: 'true',
+    //     ease: 'ease',
+    //     lazy: true
+    // });
     // 影音專區
     $('.changeSlider').slick({
         mobileFirst: true,
