@@ -1007,6 +1007,32 @@ div.tag {
         a {
             display: block;
         }
+        .caption {
+            margin: .5em 0;
+            font-weight: bold;
+            color: #555;
+            span {
+                display: block;
+                font-size: .875em;
+                font-weight: normal;
+            }
+            .distance {
+                position: relative;
+                padding-left: 1.8em;
+                margin-top: 5px;
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 1.4em;
+                    height: 1.4em;
+                    background: url(../images/icon_distance.png) no-repeat center center;
+                    background-size: contain;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
         .img-container {
             width: 100%;
             @include aspect-ratio(3, 2);
@@ -1058,19 +1084,38 @@ div.tag {
                 font-size: .875em;
                 font-weight: normal;
             }
+            .distance {
+                position: relative;
+                padding-left: 1.8em;
+                margin-top: 5px;
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 1.4em;
+                    height: 1.4em;
+                    background: url(../images/icon_distance.png) no-repeat center center;
+                    background-size: contain;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
         }
     }
     .livevideoBlock {
         padding: 1em 0;
         max-width: 1200px;
-        margin: 0 auto;
+        margin: 0 auto 1em auto;
         h4 {
             text-align: center;
             font-size: 1.5rem;
             margin: 1rem 0 2rem 0;
         }
         &+.livevideoBlock {
-            background-color: rgba(255, 255, 255, 0.55);
+            background-color: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: rgba(99, 99, 99, .2) 0px 2px 5px 0px;
         }
     }
     .livevideoSlider {
@@ -1099,7 +1144,10 @@ div.tag {
             display: flex;
             flex-wrap: wrap;
             //border: 1px solid rgba(255, 255, 255, .5);
-            background-color: rgba(255, 255, 255, 0.55);
+            background-color: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 5px 0px;
             padding: .5em 1.5em;
         }
         li {
