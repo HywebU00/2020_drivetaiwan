@@ -2238,12 +2238,17 @@ div.tag {
                 left: 0;
                 font-size: .938rem;
                 text-align: center;
-                padding: 0rem 1em;
+                padding: 0rem .5em;
                 height: 2rem;
                 line-height: 2rem;
                 z-index: 2;
                 color: #333;
                 background: #DADADA;
+                min-width: 60px;
+                max-width: 50%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             .county {
                 position: absolute;
@@ -2277,7 +2282,7 @@ div.tag {
                 span {
                     background: #FFF;
                     display: inline-block;
-                    padding: 0 1em;
+                    padding: 0 .5em;
                     border-radius: .25rem;
                     text-align: center;
                     color: $importantColor;
