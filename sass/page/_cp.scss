@@ -15,16 +15,23 @@ h2.title {
     padding-left: 0 !important;
     padding-right: 0 !important;
     max-width: 100% !important;
-    h3 {
+    h3,
+    .heading-3 {
         font-size: 3.2em;
-        margin: 0 0 .5em;
+        margin: 0;
+        font-weight: bold;
+        line-height: 1.5em;
         @include screen('xs_mobile') {
             text-align: center;
             font-size: 1.75em;
         }
     }
-    h4 {
+    h4,
+    .heading-4 {
         font-size: 1.75em;
+        font-weight: bold;
+        line-height: 1.5em;
+        margin-bottom: 1em;
         @include screen('xs_mobile') {
             text-align: center;
             font-size: 1.25em;

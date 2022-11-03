@@ -29,7 +29,8 @@
         //     margin-right: .2em;
         //     display: inline-block;
         // }
-        small {
+        &+.small {
+            text-align: center;
             display: block;
             font-size: .875rem;
             font-weight: normal;
@@ -51,7 +52,8 @@
         &:after {
             top: 21px;
         }
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             border: 1px solid $importantColor;
             &:before {
                 background: $importantColor;
@@ -59,6 +61,7 @@
         }
     }
 }
+
 @keyframes maskani {
     0% {
         left: -100px;
@@ -67,6 +70,7 @@
         left: 0px;
     }
 }
+
 .topic {
     background: url(../images/topic_bg_blur.jpg) center center no-repeat;
     background-size: cover;
@@ -83,7 +87,6 @@
     @include screen('mobile') {
         padding-bottom: 0em;
         height: auto;
-
     }
     &.effect {
         &:after {
@@ -135,7 +138,8 @@
                 a {
                     display: block;
                     color: #555;
-                    &:hover, &:focus {
+                    &:hover,
+                    &:focus {
                         color: $aHover;
                         &:after {
                             color: #555;
@@ -156,7 +160,9 @@
         position: relative;
         height: 600px;
         a {
-            &:hover, &:focus, &.active {
+            &:hover,
+            &:focus,
+            &.active {
                 transform: scale(1.05);
                 z-index: 9;
                 span {
@@ -314,7 +320,8 @@
             a {
                 display: block;
                 color: #000;
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     color: $aHover;
                     ~h3 {
                         color: $aHover;
@@ -490,6 +497,7 @@
         }
     }
 }
+
 // secret
 .secret {
     background: url(../images/secret_bg.jpg) center center no-repeat fixed;
@@ -522,7 +530,7 @@
         margin-bottom: 1rem;
         color: #FFF;
         text-shadow: 0px 0px 10px rgba(0, 0, 0, .85);
-        small {
+        &+.small {
             color: #FFF;
         }
     }
@@ -573,13 +581,13 @@
                 flex-basis: 90%;
                 width: 90%;
                 max-width: 300px;
-
             }
             a {
                 display: block;
                 width: 100%;
                 display: flex;
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     h3 {
                         color: $aHover;
                     }
@@ -609,7 +617,8 @@
                     flex-basis: 100%;
                     max-width: 300px;
                 }
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     img {
                         transform: scale(1.1);
                         width: 100% !important;
@@ -732,7 +741,6 @@
                     border-bottom: 1px solid $lightColor;
                     @include text-line(2, 1.45em);
                     height: 3em;
-
                 }
                 p {
                     overflow: hidden;
@@ -747,8 +755,10 @@
         }
     }
 }
+
 // playfun
-.playfun, .wantknow {
+.playfun,
+.wantknow {
     background: #FFF;
     min-height: 200px;
     max-height: 300px;
@@ -819,7 +829,8 @@
                         @include screen('mobile') {
                             font-size: 1.25rem;
                         }
-                        &:hover, &:focus {
+                        &:hover,
+                        &:focus {
                             color: $aHover;
                         }
                         &:before {
@@ -919,6 +930,7 @@
         height: 15px;
     }
 }
+
 .wantknow {
     background: #F5F5F5;
     min-height: 350px;
@@ -976,6 +988,7 @@
         }
     }
 }
+
 // photo
 .photo {
     position: relative;
@@ -1047,7 +1060,8 @@
         }
         .photoSlider {
             box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 .caption {
                     background: #FFF;
                     color: #222;
@@ -1083,7 +1097,8 @@
                     }
                 }
             }
-            .slick-prev, .slick-next {
+            .slick-prev,
+            .slick-next {
                 @include screen('mobile') {
                     display: none;
                 }
@@ -1091,6 +1106,7 @@
         }
     }
 }
+
 @keyframes lane {
     0% {
         transform: translateY(-160px);
@@ -1099,6 +1115,7 @@
         transform: translateY(320px);
     }
 }
+
 @keyframes steer {
     0%,
     100% {
@@ -1108,6 +1125,7 @@
         transform: translateX(-10px) rotate(15deg);
     }
 }
+
 .video {
     background: url(../images/video_bg.jpg) center center no-repeat fixed;
     background-size: cover;
@@ -1155,11 +1173,13 @@
                 box-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
                 outline: none;
             }
-            a, .youtube {
+            a,
+            .youtube {
                 display: block;
                 color: #000;
                 position: relative;
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     color: $aHover;
                     .img-container {
                         &:after {
@@ -1221,6 +1241,7 @@
         }
     }
 }
+
 // 首頁輪播
 .mpSlider {
     width: 100%;
@@ -1232,7 +1253,8 @@
     .img-container {
         @include aspect-ratio(1, 1);
     }
-    .slick-list, .slick-track {
+    .slick-list,
+    .slick-track {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -1260,6 +1282,7 @@
         }
     }
 }
+
 // 廣告輪播
 .adSlider {
     @include gutter(70px);
@@ -1304,6 +1327,7 @@
         }
     }
 }
+
 .quickDot {
     position: fixed;
     transform: translateZ(0);
@@ -1341,7 +1365,9 @@
                     display: none;
                     transition: .3s ease-out;
                 }
-                &:hover, &:focus, &.active {
+                &:hover,
+                &:focus,
+                &.active {
                     background: $color-yellow;
                     span {
                         display: block;
