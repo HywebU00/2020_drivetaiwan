@@ -1707,12 +1707,6 @@ $(function () {
   });
 
   $('[data-fancybox]').fancybox({
-    // afterShow: function (instance, current) {
-    //   // 获取打开的图片的alt文本
-    //   var altText = $(current.src).attr('alt');
-    //   // 将alt文本设置到.fancybox-image上
-    //   $('.fancybox-image').attr('alt', altText);
-    // },
     afterLoad: function (instance, current) {
       current.$image.attr('alt', current.opts.$orig.find('img').attr('alt'));
     },
