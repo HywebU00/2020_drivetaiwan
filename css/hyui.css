@@ -2842,12 +2842,12 @@ progress::-moz-progress-bar {
   background-color: #4a8205;
 }
 
-a:focus {
+a:focus-visible {
   outline: none;
   box-shadow: 0 0px 0px 2px #FF7365 inset;
 }
 @media screen and (max-width: 767px) {
-  a:focus {
+  a:focus-visible {
     box-shadow: none;
   }
 }
@@ -2874,7 +2874,7 @@ a:focus {
   left: auto;
   right: 0;
   top: 0;
-  background-color: #FFF;
+  background-color: #fff;
   z-index: 8;
 }
 .mask.effect:before {
@@ -2924,7 +2924,7 @@ a.more:after {
   content: "";
   width: 12px;
   height: 12px;
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
   transform: rotate(45deg);
   position: absolute;
   right: -10px;
@@ -2964,7 +2964,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   border-radius: 50%;
   background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.35);
   text-align: center;
-  color: #FFF;
+  color: #fff;
   line-height: 50px;
   text-decoration: none;
   position: fixed;
@@ -2998,7 +2998,7 @@ img.img-responsive {
 }
 .tooltip span {
   display: inline-block;
-  background: #DEDEDE;
+  background: #dedede;
   text-align: center;
   padding: 10px;
   width: 100px;
@@ -5311,7 +5311,7 @@ html {
 }
 @media screen and (max-width: 767px) {
   html {
-    background: #FFF;
+    background: #fff;
   }
 }
 
@@ -5333,7 +5333,7 @@ body.noscroll {
 }
 @media screen and (max-width: 767px) {
   .wrapper {
-    background: #FFF;
+    background: #fff;
     overflow: hidden;
     overflow-y: auto;
   }
@@ -5386,7 +5386,7 @@ body.noscroll {
 @media screen and (max-width: 991px) {
   .innerpage {
     padding-top: 60px;
-    background: #FFF;
+    background: #fff;
   }
 }
 .innerpage > .container {
@@ -5424,7 +5424,7 @@ body.noscroll {
   width: 520px;
   height: auto;
   background: rgba(0, 0, 0, 0.65);
-  color: #FFF;
+  color: #fff;
   bottom: 1em;
   left: 10%;
   padding: 2em 4em 2em 1em;
@@ -5518,7 +5518,7 @@ body.noscroll {
 }
 .innerpage .intro_img h2.title {
   margin: 0;
-  color: #FFF;
+  color: #fff;
   text-align: left;
 }
 .innerpage .intro_img img {
@@ -5600,7 +5600,7 @@ body.noscroll {
   margin-bottom: 0.5em;
   padding: 0.75em 1em 0.75em 3.2em;
   font-size: 1em;
-  color: #FFF;
+  color: #fff;
   -moz-text-align-last: left;
        text-align-last: left;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);
@@ -5614,33 +5614,33 @@ body.noscroll {
   top: 0.75em;
 }
 .login .btn_grp button.btn-line {
-  background: #00B900;
+  background: #008a00;
 }
 .login .btn_grp button.btn-line:hover, .login .btn_grp button.btn-line:focus {
-  background: #008600;
+  background: #005700;
   box-shadow: 0px 0px 0px 2px #FF7365;
 }
 .login .btn_grp button.btn-fb {
-  background: #1877F2;
+  background: #1372ed;
 }
 .login .btn_grp button.btn-fb:hover, .login .btn_grp button.btn-fb:focus {
-  background: #0b5fcc;
+  background: #0f5bbe;
   box-shadow: 0px 0px 0px 2px #FF7365;
 }
 .login .btn_grp button.btn-twitter {
-  background: #EEE;
+  background: #eee;
   color: #333;
   text-shadow: none;
 }
 .login .btn_grp button.btn-twitter:hover, .login .btn_grp button.btn-twitter:focus {
-  background: #FFF;
+  background: #fff;
   box-shadow: 0px 0px 0px 2px #FF7365;
 }
 .login .btn_grp button.btn-google {
-  background: #E94335;
+  background: #da3426;
 }
 .login .btn_grp button.btn-google:hover, .login .btn_grp button.btn-google:focus {
-  background: #d42617;
+  background: #af291e;
   box-shadow: 0px 0px 0px 2px #FF7365;
 }
 
@@ -5676,7 +5676,7 @@ body.noscroll {
   font-weight: normal;
   margin: 1em 0;
   line-height: 1.5;
-  color: #888;
+  color: #666;
 }
 @media screen and (max-width: 767px) {
   .section h2 + .small {
@@ -5687,7 +5687,7 @@ body.noscroll {
   margin-top: 1em;
   background: #0a7f75;
   border: 1px solid #0a7f75;
-  color: #FFF;
+  color: #fff;
   height: 3.5em;
   line-height: 3.5em;
 }
@@ -5817,7 +5817,7 @@ body.noscroll {
   white-space: nowrap;
   padding: 0.15em 1em;
   display: block;
-  color: #FFF;
+  color: #fff;
   font-size: 0.813em;
   font-weight: 600;
   z-index: 99;
@@ -6028,7 +6028,7 @@ body.noscroll {
   left: 0;
   width: 100%;
   height: 2rem;
-  background: #F1F1F1;
+  background: #f1f1f1;
   content: "";
   transition: 0.3s ease-out;
 }
@@ -6092,7 +6092,7 @@ body.noscroll {
   line-height: 2rem;
   z-index: 2;
   color: #333;
-  background: #DADADA;
+  background: #dadada;
   min-width: 60px;
   max-width: 50%;
   white-space: nowrap;
@@ -6114,7 +6114,7 @@ body.noscroll {
 .topic .topicContent .item .description .dot {
   position: absolute;
   border-radius: 0.2em;
-  background: #EEE;
+  background: #eee;
   text-align: center;
   min-width: 2em;
   height: 1.4em;
@@ -6129,7 +6129,7 @@ body.noscroll {
   border-radius: 0.2em;
 }
 .topic .topicContent .item .description .dot span {
-  background: #FFF;
+  background: #fff;
   display: inline-block;
   padding: 0 0.5em;
   border-radius: 0.25rem;
@@ -6182,11 +6182,11 @@ body.noscroll {
   position: relative;
   z-index: 2;
   margin-bottom: 1rem;
-  color: #FFF;
+  color: #fff;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.85);
 }
 .secret h2 + .small {
-  color: #FFF;
+  color: #fff;
 }
 .secret .secretContent {
   position: relative;
@@ -6258,6 +6258,9 @@ body.noscroll {
 .secret .secretContent .item a:hover h3, .secret .secretContent .item a:focus h3 {
   color: #4a8205;
 }
+.secret .secretContent .item a:focus-visible {
+  outline: 2px solid #FF7365;
+}
 @media screen and (max-width: 575px) {
   .secret .secretContent .item a {
     flex-flow: row wrap;
@@ -6320,7 +6323,7 @@ body.noscroll {
 }
 .secret .secretContent .item .description {
   flex-basis: 50%;
-  background: #FFF;
+  background: #fff;
   position: relative;
   padding: 2em 1em 1em;
 }
@@ -6390,7 +6393,7 @@ body.noscroll {
   left: 0;
   width: 100%;
   height: 2rem;
-  background: #F1F1F1;
+  background: #f1f1f1;
   content: "";
   transition: 0.3s ease-out;
 }
@@ -6418,7 +6421,7 @@ body.noscroll {
   line-height: 2rem;
   z-index: 2;
   color: #333;
-  background: #DADADA;
+  background: #dadada;
 }
 @media screen and (max-width: 991px) {
   .secret .secretContent .item .description {
@@ -6464,7 +6467,7 @@ body.noscroll {
 
 .playfun,
 .wantknow {
-  background: #FFF;
+  background: #fff;
   min-height: 200px;
   max-height: 300px;
   overflow: hidden;
@@ -6541,7 +6544,7 @@ body.noscroll {
 .wantknow .container .playfunContent ul li {
   display: block;
   margin-bottom: 0.5em;
-  border-bottom: 1px dashed #DDD;
+  border-bottom: 1px dashed #ddd;
   padding: 0.5em 0;
 }
 .playfun .container .playfunContent ul li a,
@@ -6686,7 +6689,7 @@ body.noscroll {
 }
 
 .wantknow {
-  background: #F5F5F5;
+  background: #f5f5f5;
   min-height: 350px;
   max-height: 50em;
   overflow: hidden;
@@ -6789,7 +6792,7 @@ body.noscroll {
 .photo h2 {
   width: 320px;
   z-index: 3;
-  color: #FFF;
+  color: #fff;
   float: left;
   position: relative;
   padding-top: 2em;
@@ -6828,7 +6831,7 @@ body.noscroll {
   box-shadow: 0px 5px 10px rgb(0, 0, 0);
 }
 .photo .photoContent .photoSlider:hover .caption, .photo .photoContent .photoSlider:focus .caption {
-  background: #FFF;
+  background: #fff;
   color: #222;
 }
 .photo .photoContent .photoSlider .slick-prev {
@@ -6838,7 +6841,7 @@ body.noscroll {
   right: 15px;
 }
 .photo .photoContent .photoSlider .img-container {
-  border: 10px solid #FFF;
+  border: 10px solid #fff;
   overflow: hidden;
 }
 .photo .photoContent .photoSlider .img-container:before {
@@ -6924,11 +6927,11 @@ body.noscroll {
   }
 }
 .video h2 {
-  color: #FFF;
+  color: #fff;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.85);
 }
 .video h2 small {
-  color: #FFF;
+  color: #fff;
 }
 .video .videoSlider {
   padding: 0 5em;
@@ -7197,7 +7200,7 @@ body.noscroll {
   width: auto;
   white-space: nowrap;
   background: rgba(0, 0, 0, 0.8);
-  color: #FFF;
+  color: #fff;
   border-radius: 0.2em;
   right: 4em;
   top: -0.3em;
@@ -9050,11 +9053,11 @@ h2.title {
   flex-flow: row nowrap;
 }
 .full article.bgColor {
-  background: #F1F1F1;
+  background: #f1f1f1;
 }
 .full article.bgColor2 {
   background: #093e95;
-  color: #FFF;
+  color: #fff;
 }
 .full article ~ article {
   margin: 2em auto;
@@ -9132,7 +9135,7 @@ h2.title {
   background-size: cover;
   background-attachment: fixed;
   padding: 1em 0 4em;
-  color: #FFF;
+  color: #fff;
 }
 @media screen and (max-width: 767px) {
   .full .about_bottom {
@@ -9192,7 +9195,7 @@ h2.title {
 }
 
 .cp_story {
-  background: #F5F5F5;
+  background: #f5f5f5;
   max-width: 100% !important;
   position: relative;
   padding-top: 2em;
@@ -9263,7 +9266,7 @@ h2.title {
 }
 
 .cp_topic {
-  border-bottom: 1px dashed #F1F1F1;
+  border-bottom: 1px dashed #f1f1f1;
   position: relative;
   padding-top: 2em;
 }
@@ -9400,7 +9403,7 @@ h2.title {
   width: auto;
   width: 45%;
   max-width: 400px;
-  background: #F1F1F1;
+  background: #f1f1f1;
   overflow: hidden;
   padding: 0.5em 0.5em 0.2em;
 }
@@ -9426,7 +9429,7 @@ h2.title {
   }
 }
 .cp table {
-  background: #FFF;
+  background: #fff;
 }
 .cp img.float_left {
   float: left;
@@ -9496,7 +9499,7 @@ div.tag ul li a {
   color: #222;
   text-decoration: none;
   border-radius: 4px;
-  border: 1px solid #DDD;
+  border: 1px solid #ddd;
   padding: 0.2em 0.5em;
 }
 div.tag ul li a:hover, div.tag ul li a:focus {
@@ -9541,7 +9544,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   position: relative;
   margin-bottom: 10px;
   padding-left: 1em;
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid #eee;
   clear: both;
   overflow: hidden;
   padding-bottom: 0.5em;
@@ -9567,7 +9570,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .file_download li .update,
 .file_download li .file_view {
   font-size: 0.813em;
-  color: #AAA;
+  color: #aaa;
   width: 120px;
   padding-left: 35px;
   float: none;
@@ -9747,7 +9750,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .web_link li {
   position: relative;
   margin-bottom: 10px;
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid #eee;
 }
 .web_link li a {
   padding: 0.2em 0px 0.2em 35px;
@@ -9788,7 +9791,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .change:after,
 .othervideo:after,
 .livevideo:after {
-  background: #F1F1F1;
+  background: #f1f1f1;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -9918,6 +9921,9 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   color: #4a8205;
 }
 
+.changeSlider .item > a {
+  display: block;
+}
 .changeSlider .item a:hover .img-container img, .changeSlider .item a:focus .img-container img {
   transform: scale(1.1);
 }
@@ -9938,7 +9944,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .changeSlider .item .categlog span {
   display: inline-block;
-  color: #FFF;
+  color: #fff;
   background: #fbbc00;
   color: #5f3f02;
   padding: 0.25em 1em;
@@ -9980,9 +9986,9 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   display: none;
 }
 .othervideo h3 {
-  color: #FFF;
+  color: #fff;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
-  border-bottom: 1px solid #FFF;
+  border-bottom: 1px solid #fff;
 }
 
 .othervideoSlider {
@@ -10386,7 +10392,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   padding: 1em;
   display: flex;
   flex-flow: row wrap;
-  border-top: 1px solid #DEDEDE;
+  border-top: 1px solid #dedede;
 }
 .basic .basic_info .weather h4 {
   flex: 1 1 100%;
@@ -10475,7 +10481,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   position: relative;
 }
 .comparison h3 span {
-  background: #FFF;
+  background: #fff;
   padding: 0.25em 1em;
   margin: 0 auto;
   position: relative;
@@ -10487,7 +10493,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   top: 50%;
   left: 0;
   content: "";
-  border-bottom: #CCC 1px dashed;
+  border-bottom: #ccc 1px dashed;
   z-index: 1;
 }
 @media screen and (max-width: 575px) {
@@ -10503,7 +10509,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   flex-basis: 45%;
   max-width: 45%;
   margin: 0 2% 2em;
-  background: #FFF;
+  background: #fff;
   border-radius: 0.35em;
   padding: 0.5em 1em 1em;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -10548,7 +10554,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   font-size: 0.813rem;
   margin: 0 0 0.5em 0em;
   padding-left: 1em;
-  border-left: 1px solid #CCC;
+  border-left: 1px solid #ccc;
   height: 4.5em;
   line-height: 1.5em;
   overflow: hidden;
@@ -10568,7 +10574,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   max-width: 100%;
   position: relative;
   max-width: 100% !important;
-  background: url(../images/cp_infro.png) no-repeat center bottom #F1F1F1;
+  background: url(../images/cp_infro.png) no-repeat center bottom #f1f1f1;
 }
 .cp_intro .cp_subContent {
   position: relative;
@@ -10621,7 +10627,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .cp_intro .photoSet > div:nth-child(5) span {
   position: absolute;
   z-index: 3;
-  color: #FFF;
+  color: #fff;
   top: 50%;
   left: 50%;
   width: 100%;
@@ -10675,7 +10681,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   bottom: 0;
   height: 100%;
   overflow: hidden;
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
 }
 .cp_intro .photoSet .video a:after {
   position: absolute;
@@ -10711,7 +10717,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
      object-fit: cover;
 }
 .cp_intro .photoSet .img {
-  background: #F1F1F1;
+  background: #f1f1f1;
   flex-basis: 33%;
   flex-grow: 1;
   flex-shrink: 1;
@@ -10727,7 +10733,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   right: 0;
   bottom: 0;
   overflow: hidden;
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
 }
 .cp_intro .photoSet .img a:hover img, .cp_intro .photoSet .img a:focus img {
   transform: scale(1.1);
@@ -10787,14 +10793,14 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   padding: 2em 0;
   max-width: 100%;
   background: #0a7f75;
-  color: #FFF;
+  color: #fff;
 }
 .cp_legend img {
   float: left;
   width: 40%;
   min-width: 300px;
   margin: 0 2em 0 0;
-  border: 8px solid #FFF;
+  border: 8px solid #fff;
   box-shadow: 0px 0px 2em -1em rgba(0, 0, 0, 0.65);
 }
 @media screen and (max-width: 575px) {
@@ -10810,7 +10816,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   line-height: 1.45em;
   margin: 0 auto 0.5rem;
   padding-bottom: 1rem;
-  color: #FFF;
+  color: #fff;
 }
 @media screen and (max-width: 575px) {
   .cp_legend h3 {
@@ -10832,7 +10838,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .cp_legend .cp_subContent p {
   line-height: 1.7em;
   font-size: 1.25rem;
-  color: #FFF;
+  color: #fff;
   text-align: justify;
 }
 
@@ -11014,7 +11020,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   margin: 0 auto 1rem;
   border-bottom: #fff 1px solid;
   max-width: 600px;
-  color: #FFF;
+  color: #fff;
 }
 @media screen and (max-width: 575px) {
   .recommend h3 {
@@ -11069,6 +11075,9 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .recommend .item a:hover .description:after, .recommend .item a:focus .description:after {
   background: #0a7f75;
 }
+.recommend .item a:focus-visible {
+  outline: 2px solid #FF7365;
+}
 .recommend .item .img-container {
   margin-bottom: 0;
   background: #000;
@@ -11112,7 +11121,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   left: 0;
   width: 100%;
   height: 2rem;
-  background: #F1F1F1;
+  background: #f1f1f1;
   content: "";
   transition: 0.3s ease-out;
 }
@@ -11143,7 +11152,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   line-height: 2rem;
   z-index: 2;
   color: #333;
-  background: #DADADA;
+  background: #dadada;
 }
 .recommend .item .description .county {
   position: absolute;
@@ -11155,12 +11164,12 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   padding: 0.25em 1em;
   text-align: center;
   background: #4a8205;
-  color: #FFF;
+  color: #fff;
 }
 .recommend .item .description .dot {
   position: absolute;
   border-radius: 0.2em;
-  background: #EEE;
+  background: #eee;
   text-align: center;
   min-width: 2em;
   height: 1.4em;
@@ -11169,7 +11178,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   bottom: 0.3em;
   color: #444;
   z-index: 2;
-  background: #FFF;
+  background: #fff;
   border-radius: 0.2em;
 }
 .recommend .item .description .dot:before {
@@ -11284,6 +11293,10 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   box-shadow: 0px 5px 10px rgb(0, 0, 0);
   outline: none;
 }
+.relatveSecret .item > a:focus-visible,
+.provHighway .item > a:focus-visible {
+  outline: 2px solid #FF7365;
+}
 .relatveSecret .item a,
 .provHighway .item a {
   display: block;
@@ -11357,7 +11370,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   left: 0;
   width: 100%;
   height: 2rem;
-  background: #F1F1F1;
+  background: #f1f1f1;
   content: "";
   transition: 0.3s ease-out;
 }
@@ -11428,7 +11441,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   line-height: 2rem;
   z-index: 2;
   color: #333;
-  background: #DADADA;
+  background: #dadada;
   min-width: 60px;
   max-width: 50%;
   white-space: nowrap;
@@ -11452,7 +11465,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .provHighway .item .description .dot {
   position: absolute;
   border-radius: 0.2em;
-  background: #EEE;
+  background: #eee;
   text-align: center;
   min-width: 2em;
   height: 1.4em;
@@ -11468,7 +11481,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .relatveSecret .item .description .dot span,
 .provHighway .item .description .dot span {
-  background: #FFF;
+  background: #fff;
   display: inline-block;
   padding: 0 0.5em;
   border-radius: 0.25rem;
@@ -11489,7 +11502,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 
 .provHighway {
-  background-color: #EEE;
+  background-color: #eee;
   max-width: 100% !important;
   overflow: initial;
   padding: 2em 0;
@@ -11730,7 +11743,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .sp .download_list ul li {
   display: block;
-  background: #F1F1F1;
+  background: #f1f1f1;
   margin: 0 auto 1em;
   max-width: 100%;
 }
@@ -11802,7 +11815,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   padding: 0.5em;
   float: left;
   margin: 0 1em 1em 0;
-  color: #FFF;
+  color: #fff;
   font-size: 0.875rem;
 }
 @media screen and (max-width: 575px) {
@@ -11825,7 +11838,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .sp .download_list ul li .photo_info .tag ul li {
   width: auto;
   float: left;
-  background: #FFF;
+  background: #fff;
   margin: 0 0.5em 0.25em 0;
 }
 .sp .download_list ul li .photo_info .tag ul li a:before {
@@ -11834,7 +11847,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   margin-right: 0.25em;
 }
 .sp .download_list ul li .photo_info .download_content {
-  background: #FFF;
+  background: #fff;
   padding: 1em;
 }
 .sp .download_list ul li .photo_info .download_content ul {
@@ -11842,8 +11855,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   list-style-position: inside;
 }
 .sp .download_list ul li .photo_info .download_content ul li {
-  border-bottom: 1px dashed #CCC;
-  background: #FFF;
+  border-bottom: 1px dashed #ccc;
+  background: #fff;
   padding-left: 1em;
   font-size: 0.938rem;
   list-style-type: decimal;
@@ -11859,7 +11872,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   background: #555;
   border-radius: 50%;
 }
-.sp .download_list ul li .photo_info .download_content ul li a, .sp .download_list ul li .photo_info .download_content ul li span {
+.sp .download_list ul li .photo_info .download_content ul li a,
+.sp .download_list ul li .photo_info .download_content ul li span {
   display: inline-block;
   margin: 0 0.25em;
 }
@@ -11868,7 +11882,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   margin-bottom: 0.25em;
   color: #777;
 }
-.sp .download_list ul li .photo_info .download_count a, .sp .download_list ul li .photo_info .download_count span {
+.sp .download_list ul li .photo_info .download_count a,
+.sp .download_list ul li .photo_info .download_count span {
   color: #4a8205;
   font-weight: bold;
   text-decoration: underline;
@@ -11898,7 +11913,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   background: #4a8205;
   padding: 1em;
   margin: 0 1em 1em;
-  color: #FFF;
+  color: #fff;
   display: none;
 }
 .sp .adv_filter .form_grid {
@@ -11907,8 +11922,9 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .sp .adv_filter .form_grp {
   border: none;
 }
-.sp .adv_filter .form_title, .sp .adv_filter .form_content {
-  color: #FFF;
+.sp .adv_filter .form_title,
+.sp .adv_filter .form_content {
+  color: #fff;
 }
 .sp p {
   font-size: 0.875rem;
@@ -11926,8 +11942,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   flex-shrink: 1;
   flex-basis: 47%;
   padding: 3em 2em 1.5em;
-  background: #FFF;
-  border: 1px solid #DDD;
+  background: #fff;
+  border: 1px solid #ddd;
   margin: 0 1.5% 2em;
   position: relative;
 }
@@ -11940,7 +11956,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   height: 2em;
   padding: 0.25em 1em;
   text-align: center;
-  background: #FF7365;
+  background: #ff7365;
   color: #fff;
   z-index: 9;
 }
@@ -11977,7 +11993,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   overflow: hidden;
   width: 100%;
   margin-bottom: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }
 .sp .photo_download ul li .img-container:before {
   display: inline-block;
@@ -12135,7 +12151,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   max-width: 300px;
   margin: 0 auto 3em;
   padding: 1em;
-  background: #EEE;
+  background: #eee;
   border-radius: 0.5em;
 }
 .sp .login p {
@@ -12154,33 +12170,33 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   margin: 0 0 0.5em;
 }
 .sp .login button.btn-line {
-  background: #00B900;
+  background: #008a00;
 }
 .sp .login button.btn-line:hover, .sp .login button.btn-line:focus {
-  background: #008600;
+  background: #005700;
   box-shadow: 0px 0px 0px 2px #FF7365;
 }
 .sp .login button.btn-fb {
-  background: #1877F2;
+  background: #1372ed;
 }
 .sp .login button.btn-fb:hover, .sp .login button.btn-fb:focus {
-  background: #0b5fcc;
+  background: #0f5bbe;
   box-shadow: 0px 0px 0px 2px #FF7365;
 }
 .sp .login button.btn-twitter {
-  background: #EEE;
+  background: #eee;
   color: #333;
   text-shadow: none;
 }
 .sp .login button.btn-twitter:hover, .sp .login button.btn-twitter:focus {
-  background: #FFF;
+  background: #fff;
   box-shadow: 0px 0px 0px 2px #FF7365;
 }
 .sp .login button.btn-google {
-  background: #E94335;
+  background: #da3426;
 }
 .sp .login button.btn-google:hover, .sp .login button.btn-google:focus {
-  background: #d42617;
+  background: #af291e;
   box-shadow: 0px 0px 0px 2px #FF7365;
 }
 .sp .member {
@@ -12190,7 +12206,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .sp .member .myInfo {
   display: flex;
-  background: #F1F1F1;
+  background: #f1f1f1;
   padding: 1em;
   border-radius: 0.5em;
   margin-bottom: 2em;
@@ -12220,7 +12236,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   overflow: hidden;
   border-radius: 50%;
   margin: 0 1em 1em 0;
-  background: #FFF;
+  background: #fff;
 }
 @media screen and (max-width: 991px) {
   .sp .member .myInfo .profile .headshot {
@@ -12260,7 +12276,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   flex-shrink: 1;
   flex-basis: 25%;
   max-width: 23%;
-  background: #FFF;
+  background: #fff;
   border-radius: 0.25em;
   margin: 0 1%;
   padding: 1em;
@@ -12282,7 +12298,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   }
 }
 .sp .member .myInfo .item h3 {
-  border-bottom: 1px solid #AAA;
+  border-bottom: 1px solid #aaa;
   padding-bottom: 0.25em;
   margin: 0 0 0.5em;
   font-size: 1.25rem;
@@ -12300,7 +12316,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   flex-basis: 80px;
   margin: 0 2px 5px;
   text-align: center;
-  background: #FFF;
+  background: #fff;
 }
 .sp .member .myInfo .item ul li a {
   width: 80px;
@@ -12334,105 +12350,135 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .sp .member .scroltable-container {
   margin-bottom: 1em;
 }
-.sp .member .topicNewest, .sp .member .secretNewest {
+.sp .member .topicNewest,
+.sp .member .secretNewest {
   width: auto;
   overflow: hidden;
   padding: 2.5em 4em;
   background: transparent;
   transition: 0.3s ease-out;
 }
-.sp .member .topicNewest a.more, .sp .member .secretNewest a.more {
+.sp .member .topicNewest a.more,
+.sp .member .secretNewest a.more {
   margin-top: 0;
 }
-.sp .member .topicNewest a.more:hover, .sp .member .topicNewest a.more:focus, .sp .member .secretNewest a.more:hover, .sp .member .secretNewest a.more:focus {
+.sp .member .topicNewest a.more:hover, .sp .member .topicNewest a.more:focus,
+.sp .member .secretNewest a.more:hover,
+.sp .member .secretNewest a.more:focus {
   border: 1px solid #FF7365;
 }
-.sp .member .topicNewest h3, .sp .member .secretNewest h3 {
+.sp .member .topicNewest h3,
+.sp .member .secretNewest h3 {
   text-align: center;
   font-size: 1.5rem;
 }
-.sp .member .topicNewest h3 img, .sp .member .secretNewest h3 img {
+.sp .member .topicNewest h3 img,
+.sp .member .secretNewest h3 img {
   width: 1em;
   height: 1em;
   display: inline-block;
 }
 @media screen and (max-width: 767px) {
-  .sp .member .topicNewest, .sp .member .secretNewest {
+  .sp .member .topicNewest,
+  .sp .member .secretNewest {
     max-width: 100%;
     margin: 0 auto;
     padding: 1.5em 2em 4em;
   }
 }
-.sp .member .topicNewest .slick-prev, .sp .member .secretNewest .slick-prev {
+.sp .member .topicNewest .slick-prev,
+.sp .member .secretNewest .slick-prev {
   left: -40px;
   background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, 0.45);
   background-size: 80%;
 }
-.sp .member .topicNewest .slick-prev:hover, .sp .member .topicNewest .slick-prev:focus, .sp .member .secretNewest .slick-prev:hover, .sp .member .secretNewest .slick-prev:focus {
+.sp .member .topicNewest .slick-prev:hover, .sp .member .topicNewest .slick-prev:focus,
+.sp .member .secretNewest .slick-prev:hover,
+.sp .member .secretNewest .slick-prev:focus {
   background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat rgba(0, 0, 0, 0.75);
   background-size: 80%;
 }
 @media screen and (max-width: 575px) {
-  .sp .member .topicNewest .slick-prev, .sp .member .secretNewest .slick-prev {
+  .sp .member .topicNewest .slick-prev,
+  .sp .member .secretNewest .slick-prev {
     left: -30px;
   }
 }
-.sp .member .topicNewest .slick-next, .sp .member .secretNewest .slick-next {
+.sp .member .topicNewest .slick-next,
+.sp .member .secretNewest .slick-next {
   right: -40px;
   background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, 0.45);
   background-size: 80%;
 }
-.sp .member .topicNewest .slick-next:hover, .sp .member .topicNewest .slick-next:focus, .sp .member .secretNewest .slick-next:hover, .sp .member .secretNewest .slick-next:focus {
+.sp .member .topicNewest .slick-next:hover, .sp .member .topicNewest .slick-next:focus,
+.sp .member .secretNewest .slick-next:hover,
+.sp .member .secretNewest .slick-next:focus {
   background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat rgba(0, 0, 0, 0.75);
   background-size: 80%;
 }
 @media screen and (max-width: 575px) {
-  .sp .member .topicNewest .slick-next, .sp .member .secretNewest .slick-next {
+  .sp .member .topicNewest .slick-next,
+  .sp .member .secretNewest .slick-next {
     right: -30px;
   }
 }
-.sp .member .topicNewest .item, .sp .member .secretNewest .item {
+.sp .member .topicNewest .item,
+.sp .member .secretNewest .item {
   margin: 0 1em 2em;
   background: rgb(255, 255, 255);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.45);
   position: relative;
 }
-.sp .member .topicNewest .item:focus, .sp .member .secretNewest .item:focus {
+.sp .member .topicNewest .item:focus,
+.sp .member .secretNewest .item:focus {
   box-shadow: 0px 5px 10px rgb(0, 0, 0);
   outline: none;
 }
-.sp .member .topicNewest .item a, .sp .member .secretNewest .item a {
+.sp .member .topicNewest .item a,
+.sp .member .secretNewest .item a {
   display: block;
   color: #000;
 }
-.sp .member .topicNewest .item a:hover, .sp .member .topicNewest .item a:focus, .sp .member .secretNewest .item a:hover, .sp .member .secretNewest .item a:focus {
+.sp .member .topicNewest .item a:hover, .sp .member .topicNewest .item a:focus,
+.sp .member .secretNewest .item a:hover,
+.sp .member .secretNewest .item a:focus {
   color: #4a8205;
 }
-.sp .member .topicNewest .item a:hover ~ h3, .sp .member .topicNewest .item a:focus ~ h3, .sp .member .secretNewest .item a:hover ~ h3, .sp .member .secretNewest .item a:focus ~ h3 {
+.sp .member .topicNewest .item a:hover ~ h3, .sp .member .topicNewest .item a:focus ~ h3,
+.sp .member .secretNewest .item a:hover ~ h3,
+.sp .member .secretNewest .item a:focus ~ h3 {
   color: #4a8205;
 }
-.sp .member .topicNewest .item a:hover .img-container img, .sp .member .topicNewest .item a:focus .img-container img, .sp .member .secretNewest .item a:hover .img-container img, .sp .member .secretNewest .item a:focus .img-container img {
+.sp .member .topicNewest .item a:hover .img-container img, .sp .member .topicNewest .item a:focus .img-container img,
+.sp .member .secretNewest .item a:hover .img-container img,
+.sp .member .secretNewest .item a:focus .img-container img {
   opacity: 1;
   transform: scale(1.1);
 }
-.sp .member .topicNewest .item a:hover .description:after, .sp .member .topicNewest .item a:focus .description:after, .sp .member .secretNewest .item a:hover .description:after, .sp .member .secretNewest .item a:focus .description:after {
+.sp .member .topicNewest .item a:hover .description:after, .sp .member .topicNewest .item a:focus .description:after,
+.sp .member .secretNewest .item a:hover .description:after,
+.sp .member .secretNewest .item a:focus .description:after {
   background: #0a7f75;
 }
-.sp .member .topicNewest .item .img-container, .sp .member .secretNewest .item .img-container {
+.sp .member .topicNewest .item .img-container,
+.sp .member .secretNewest .item .img-container {
   margin-bottom: 0;
   background: #000;
 }
-.sp .member .topicNewest .item .img-container img, .sp .member .secretNewest .item .img-container img {
+.sp .member .topicNewest .item .img-container img,
+.sp .member .secretNewest .item .img-container img {
   transition: 0.3s ease-out;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.sp .member .topicNewest .item .description, .sp .member .secretNewest .item .description {
+.sp .member .topicNewest .item .description,
+.sp .member .secretNewest .item .description {
   position: relative;
   height: 16rem;
   padding-top: 1em;
 }
-.sp .member .topicNewest .item .description p, .sp .member .secretNewest .item .description p {
+.sp .member .topicNewest .item .description p,
+.sp .member .secretNewest .item .description p {
   height: 6em;
   overflow: hidden;
   display: block;
@@ -12443,7 +12489,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   line-height: 1.5em;
   margin: 0rem 1rem 2rem;
 }
-.sp .member .topicNewest .item .description h3, .sp .member .secretNewest .item .description h3 {
+.sp .member .topicNewest .item .description h3,
+.sp .member .secretNewest .item .description h3 {
   height: 3em;
   overflow: hidden;
   display: block;
@@ -12453,17 +12500,19 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   line-height: 1.5em;
   margin: 1.15rem 1rem 0.5rem;
 }
-.sp .member .topicNewest .item .description:after, .sp .member .secretNewest .item .description:after {
+.sp .member .topicNewest .item .description:after,
+.sp .member .secretNewest .item .description:after {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 2rem;
-  background: #F1F1F1;
+  background: #f1f1f1;
   content: "";
   transition: 0.3s ease-out;
 }
-.sp .member .topicNewest .item .description .collect, .sp .member .secretNewest .item .description .collect {
+.sp .member .topicNewest .item .description .collect,
+.sp .member .secretNewest .item .description .collect {
   position: absolute;
   top: 4px;
   text-indent: -9999px;
@@ -12475,11 +12524,13 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   font-size: 0.875rem;
   display: block;
 }
-.sp .member .topicNewest .item .description .collect.active, .sp .member .secretNewest .item .description .collect.active {
+.sp .member .topicNewest .item .description .collect.active,
+.sp .member .secretNewest .item .description .collect.active {
   background: url(../images/icon_collect_active.svg) no-repeat center center;
   background-size: contain;
 }
-.sp .member .topicNewest .item .description .lovest, .sp .member .secretNewest .item .description .lovest {
+.sp .member .topicNewest .item .description .lovest,
+.sp .member .secretNewest .item .description .lovest {
   position: absolute;
   top: 4px;
   text-indent: -9999px;
@@ -12491,11 +12542,13 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   font-size: 0.875rem;
   display: block;
 }
-.sp .member .topicNewest .item .description .lovest.active, .sp .member .secretNewest .item .description .lovest.active {
+.sp .member .topicNewest .item .description .lovest.active,
+.sp .member .secretNewest .item .description .lovest.active {
   background: url(../images/icon_lovest_active.svg) no-repeat center center;
   background-size: contain;
 }
-.sp .member .topicNewest .item .description .visit, .sp .member .secretNewest .item .description .visit {
+.sp .member .topicNewest .item .description .visit,
+.sp .member .secretNewest .item .description .visit {
   position: absolute;
   top: 4px;
   text-indent: -9999px;
@@ -12507,11 +12560,13 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   font-size: 0.875rem;
   display: block;
 }
-.sp .member .topicNewest .item .description .visit.active, .sp .member .secretNewest .item .description .visit.active {
+.sp .member .topicNewest .item .description .visit.active,
+.sp .member .secretNewest .item .description .visit.active {
   background: url(../images/icon_visit_active.svg) no-repeat center center;
   background-size: contain;
 }
-.sp .member .topicNewest .item .description .road, .sp .member .secretNewest .item .description .road {
+.sp .member .topicNewest .item .description .road,
+.sp .member .secretNewest .item .description .road {
   display: block;
   position: absolute;
   bottom: 0;
@@ -12523,9 +12578,10 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   line-height: 2rem;
   z-index: 2;
   color: #333;
-  background: #DADADA;
+  background: #dadada;
 }
-.sp .member .topicNewest .item .description .county, .sp .member .secretNewest .item .description .county {
+.sp .member .topicNewest .item .description .county,
+.sp .member .secretNewest .item .description .county {
   position: absolute;
   left: 0em;
   top: 0em;
@@ -12537,10 +12593,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   background: #fbbc00;
   color: #5f3f02;
 }
-.sp .member .topicNewest .item .description .dot, .sp .member .secretNewest .item .description .dot {
+.sp .member .topicNewest .item .description .dot,
+.sp .member .secretNewest .item .description .dot {
   position: absolute;
   border-radius: 0.2em;
-  background: #EEE;
+  background: #eee;
   text-align: center;
   min-width: 2em;
   height: 1.4em;
@@ -12554,8 +12611,9 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   color: #666;
   border-radius: 0.2em;
 }
-.sp .member .topicNewest .item .description .dot span, .sp .member .secretNewest .item .description .dot span {
-  background: #FFF;
+.sp .member .topicNewest .item .description .dot span,
+.sp .member .secretNewest .item .description .dot span {
+  background: #fff;
   display: inline-block;
   padding: 0 1em;
   border-radius: 0.25rem;
@@ -12563,7 +12621,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   color: #cb3e3a;
   font-weight: bold;
 }
-.sp .member .topicNewest .item .description .dot:before, .sp .member .secretNewest .item .description .dot:before {
+.sp .member .topicNewest .item .description .dot:before,
+.sp .member .secretNewest .item .description .dot:before {
   position: absolute;
   width: 1em;
   height: 1em;
@@ -12573,29 +12632,35 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   left: -1.2em;
   top: 0.4em;
 }
-.sp .member .album ul li .caption, .sp .member .video_list ul li .caption {
+.sp .member .album ul li .caption,
+.sp .member .video_list ul li .caption {
   height: 12em;
 }
-.sp .member .album ul li, .sp .member .video_list ul li {
+.sp .member .album ul li,
+.sp .member .video_list ul li {
   width: 23%;
 }
 @media screen and (max-width: 991px) {
-  .sp .member .album ul li, .sp .member .video_list ul li {
+  .sp .member .album ul li,
+  .sp .member .video_list ul li {
     width: 31.3333%;
   }
 }
 @media screen and (max-width: 767px) {
-  .sp .member .album ul li, .sp .member .video_list ul li {
+  .sp .member .album ul li,
+  .sp .member .video_list ul li {
     width: 48%;
   }
 }
 @media screen and (max-width: 575px) {
-  .sp .member .album ul li, .sp .member .video_list ul li {
+  .sp .member .album ul li,
+  .sp .member .video_list ul li {
     width: 96%;
     margin: 0 auto 1em;
   }
 }
-.sp .member .album ul li .thumbnail, .sp .member .video_list ul li .thumbnail {
+.sp .member .album ul li .thumbnail,
+.sp .member .video_list ul li .thumbnail {
   box-shadow: 0px 0px 2em -1em rgba(0, 0, 0, 0.5);
 }
 .sp .member .link_grp {
@@ -12604,8 +12669,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .sp .member .link_grp a.more {
   float: left;
-  border: 1px solid #E1E1E1;
-  background: #E1E1E1;
+  border: 1px solid #e1e1e1;
+  background: #e1e1e1;
   color: #555;
   margin: 0;
   margin-right: 0.5em;
@@ -12627,7 +12692,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   }
 }
 .sp .member .link_grp a.more:hover, .sp .member .link_grp a.more:focus {
-  color: #FFF;
+  color: #fff;
   border: 1px solid #FF7365;
 }
 
@@ -12663,13 +12728,13 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .change_item ul li.active a {
   background: #4a8205;
-  color: #FFF;
+  color: #fff;
   border-bottom: #4a8205 3px solid;
 }
 @media screen and (max-width: 575px) {
   .change_item ul li.active a {
     background: #4a8205;
-    color: #FFF;
+    color: #fff;
     border-bottom: none;
   }
 }
@@ -12683,13 +12748,13 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   color: #000;
 }
 .change_item ul li a:hover, .change_item ul li a:focus {
-  background: #FFF;
+  background: #fff;
   color: #4a8205;
   border-bottom: #4a8205 3px solid;
 }
 @media screen and (max-width: 575px) {
   .change_item ul li a:hover:hover, .change_item ul li a:hover:focus, .change_item ul li a:focus:hover, .change_item ul li a:focus:focus {
-    color: #FFF;
+    color: #fff;
     background: #4a8205;
     border-bottom: #4a8205 0px solid;
   }
@@ -12698,7 +12763,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   .change_item ul li a {
     font-size: 0.938rem;
     border-bottom: none;
-    background: #F1F1F1;
+    background: #f1f1f1;
     margin-bottom: 2px;
   }
 }
@@ -12838,7 +12903,12 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .change_info .info_block .overflow {
   overflow: hidden;
 }
-.change_info .info_block h2, .change_info .info_block h3, .change_info .info_block h4, .change_info .info_block ul, .change_info .info_block ol, .change_info .info_block p {
+.change_info .info_block h2,
+.change_info .info_block h3,
+.change_info .info_block h4,
+.change_info .info_block ul,
+.change_info .info_block ol,
+.change_info .info_block p {
   display: block;
   margin: 0;
   line-height: 1.75em;
@@ -12923,12 +12993,13 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .change_info .comparison .slick-slide p {
   margin-bottom: 0;
-  color: #FFF;
+  color: #fff;
   padding: 0;
   line-height: 3em;
 }
 
-.before-nav, .after-nav {
+.before-nav,
+.after-nav {
   display: none !important;
 }
 
@@ -12943,7 +13014,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   border-bottom: 1px solid #0a7f75;
 }
 .photoShare .locationInfo {
-  background: #F1F1F1;
+  background: #f1f1f1;
   border-radius: 0.5em;
   padding: 0.75em 0.5em;
 }
@@ -12968,7 +13039,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   margin: 0;
 }
 .photoShare .uploadPhoto {
-  background: #F1F1F1;
+  background: #f1f1f1;
   padding: 1em;
   margin: 2em 0;
 }
@@ -12987,8 +13058,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .photoShare .uploadPhoto ul li {
   width: 19%;
   padding: 0.25em;
-  border: 1px solid #AAA;
-  background: #FFF;
+  border: 1px solid #aaa;
+  background: #fff;
   position: relative;
   margin: 0 5px 5px;
   flex-grow: 0;
@@ -13027,7 +13098,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   z-index: 9;
   right: -1px;
   bottom: -1px;
-  background: #AAA;
+  background: #aaa;
   padding: 3px;
 }
 .photoShare .uploadPhoto ul li .deleteThis img {
@@ -13050,7 +13121,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .photoShare .photoEdit {
   position: relative;
-  background: #DDD;
+  background: #ddd;
   min-height: 120px;
   margin-bottom: 0.5em;
 }
@@ -13094,7 +13165,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   top: 0;
 }
 .photoShare .chooseTemplate {
-  background: #F1F1F1;
+  background: #f1f1f1;
   padding: 1em;
 }
 .photoShare .chooseTemplate ul {
@@ -13109,7 +13180,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   flex-shrink: 1;
   flex-basis: 30%;
   position: relative;
-  background: #DDD;
+  background: #ddd;
   margin: 0 1.5% 0.5em;
   align-self: center;
 }
