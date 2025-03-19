@@ -16,7 +16,8 @@
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/animate.css" />
     <!-- animate.css -->
-    <link rel="stylesheet" href="vendor/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="vendor/fancybox/fancybox.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" /> -->
     <!-- fancybox -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon" />
     <!-- favicon -->
@@ -173,7 +174,7 @@
               <div class="photoSet">
                 <div class="video">
                   <!-- youtube 只要替換下面的url，其餘的autoplay...都不要改 -->
-                  <a href="https://www.youtube.com/embed/jijL_mz4uoI&amp;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0" data-fancybox="gallery">
+                  <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=L9szn1QQfas&autoplay=1&rel=0&controls=0&showinfo=0" data-type="video" data-fancybox>
                     <img src="images/topic_bg.jpg" alt="圖片說明" />
                   </a>
                 </div>
@@ -1615,7 +1616,10 @@
     <!-- 客製js -->
     <script src="js/wow.min.js"></script>
     <!-- wow -->
-    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <!-- <script src="vendor/fancybox/jquery.fancybox.min.js"></script> -->
+    <!-- fancybox -->
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
+    <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
     <script>
       wow = new WOW({
         boxClass: 'wow', // default
@@ -1627,10 +1631,22 @@
       new WOW().init();
     </script>
     <script>
-      $(document).ready(function () {
-        $('[data-fancybox]').fancybox({
-          afterLoad: function (instance, current) {
-            current.$image.attr('alt', current.opts.$orig.find('img').attr('alt'));
+      // $(document).ready(function () {
+      //   $('[data-fancybox]').fancybox({
+      //     afterLoad: function (instance, current) {
+      //       current.$image.attr('alt', current.opts.$orig.find('img').attr('alt'));
+      //     },
+      //   });
+      // });
+      document.addEventListener('DOMContentLoaded', function () {
+        Fancybox.bind('[data-fancybox]', {
+          on: {
+            done: (fancybox, slide) => {
+              const img = slide.$el.querySelector('img');
+              if (img) {
+                slide.$el.setAttribute('alt', img.getAttribute('alt'));
+              }
+            },
           },
         });
       });

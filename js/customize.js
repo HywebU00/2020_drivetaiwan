@@ -1706,9 +1706,9 @@ $(function () {
     }
   });
 
-  $('[data-fancybox]').fancybox({
-    afterLoad: function (instance, current) {
-      current.$image.attr('alt', current.opts.$orig.find('img').attr('alt'));
-    },
-  });
+  // $('[data-fancybox]').fancybox({
+  //   afterLoad: function (instance, current) {
+  //     current.$image.attr('alt', current.opts.$orig.find('img').attr('alt'));
+  //   },
+  // });
 });
